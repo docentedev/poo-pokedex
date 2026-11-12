@@ -1,0 +1,417 @@
+{
+  "version": 1,
+  "historyId": "995ff082-5935-4593-a5ab-8a453789b3d0",
+  "currentRevision": "5f41fa51-7477-45a9-ba34-b1214a86d4ee",
+  "pendingChanges": false,
+  "files": {
+    "GUION.md": {
+      "hash": "f1b97024da93c71957db301a6fc91936e1d1e57cdee1926ead9acfe6246d95b3",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/f1/f1b97024da93c71957db301a6fc91936e1d1e57cdee1926ead9acfe6246d95b3"
+    },
+    "hyperframes.json": {
+      "hash": "03b956509204c341d06a8f1e4f1a25af492ece277c36dcc4bc97965629cd04ee",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/03/03b956509204c341d06a8f1e4f1a25af492ece277c36dcc4bc97965629cd04ee"
+    },
+    "index.html": {
+      "hash": "ea1b8a41fba040b6583216a912b86a96cf6918b872ece6216381ab51cfe3f8d2",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/ea/ea1b8a41fba040b6583216a912b86a96cf6918b872ece6216381ab51cfe3f8d2"
+    },
+    "lib/gsap.min.js": {
+      "hash": "96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/96/96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6"
+    },
+    "styles.css": {
+      "hash": "fca437b336d520060faf039a52999d0f815f04fadc8fbb7d1e82ac07537a2fd6",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/fc/fca437b336d520060faf039a52999d0f815f04fadc8fbb7d1e82ac07537a2fd6"
+    },
+    "timeline.js": {
+      "hash": "068e0ff9105d76b71e173a9d3ed8e4bbac60620d4714ee24e08cf87791561536",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/06/068e0ff9105d76b71e173a9d3ed8e4bbac60620d4714ee24e08cf87791561536"
+    },
+    "README.md": {
+      "hash": "1f277eff11d79a9c85f19a1a16c8f99a36b92f5874a3efd3212c03e44baf487b",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/1f/1f277eff11d79a9c85f19a1a16c8f99a36b92f5874a3efd3212c03e44baf487b"
+    }
+  },
+  "revisions": {
+    "9352210a-53c0-4cd0-a57d-4671b5556dac": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794463562235,
+      "endedAt": 1794463562236,
+      "files": {
+        "index.html": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/15/1563c258f119c48e8aa855c307065cbf75ca19bd0b76baeb3e32ea1ef3c24280",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/e1/e154a5b2657c813398acbcbf32721fa8a97d3cd516da8522832bfec6c41d355b"
+        },
+        "styles.css": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/58/58ef032e9b1b2598110879e5bf0b50d6a52e4993ac02afe5bc8a839972a99e3b",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/c2/c211d938dcc865a4f154edd634a10c0658040c4d2a16475c2716ba28627855f8"
+        },
+        "timeline.js": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/99/99e56f646f89321c09d82c45f35fb1539d0c88f2ddd4af4134fb7ac0b3d0f359",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/54/5404f52e44aaeb0b8ea28e7696c86ab2f35f66044a7a124f5d81b9a59a3e43ed"
+        }
+      }
+    },
+    "e09c88aa-d3c8-4de2-85c8-11be0f6160b1": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794463597793,
+      "endedAt": 1794463597794,
+      "files": {
+        "README.md": {
+          "before": null,
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/f3/f331148e542569083562a8ac2b79dcc429dcef7de118e68846dfecf6609670ae"
+        },
+        "styles.css": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/c2/c211d938dcc865a4f154edd634a10c0658040c4d2a16475c2716ba28627855f8",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/19/196953b26e0a5588474601e1725b173abf514448d3b47b611230e2089bbeb4b9"
+        }
+      }
+    },
+    "82f1ce84-2bdd-4ee1-b67f-39d13edea464": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794464249622,
+      "endedAt": 1794464249632,
+      "files": {
+        "index.html": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/e1/e154a5b2657c813398acbcbf32721fa8a97d3cd516da8522832bfec6c41d355b",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/ea/ea1b8a41fba040b6583216a912b86a96cf6918b872ece6216381ab51cfe3f8d2"
+        },
+        "styles.css": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/19/196953b26e0a5588474601e1725b173abf514448d3b47b611230e2089bbeb4b9",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/fc/fca437b336d520060faf039a52999d0f815f04fadc8fbb7d1e82ac07537a2fd6"
+        },
+        "timeline.js": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/54/5404f52e44aaeb0b8ea28e7696c86ab2f35f66044a7a124f5d81b9a59a3e43ed",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/06/068e0ff9105d76b71e173a9d3ed8e4bbac60620d4714ee24e08cf87791561536"
+        }
+      }
+    },
+    "5f41fa51-7477-45a9-ba34-b1214a86d4ee": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794464330412,
+      "endedAt": 1794464330419,
+      "files": {
+        "GUION.md": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/d9/d94589e6644370de798e6ab74e4b7dfbd72320cb4dbecf29ff5394e2562f658a",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/f1/f1b97024da93c71957db301a6fc91936e1d1e57cdee1926ead9acfe6246d95b3"
+        },
+        "README.md": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/f3/f331148e542569083562a8ac2b79dcc429dcef7de118e68846dfecf6609670ae",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/995ff082-5935-4593-a5ab-8a453789b3d0/blobs/1f/1f277eff11d79a9c85f19a1a16c8f99a36b92f5874a3efd3212c03e44baf487b"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "e09c88aa-d3c8-4de2-85c8-11be0f6160b1",
+      "id": "f780a82b-6bbc-423d-b18b-dff70501a3a7"
+    },
+    "revisions": {
+      "9352210a-53c0-4cd0-a57d-4671b5556dac": [
+        {
+          "id": "0f2404ac-e1db-4613-9b6d-3e75cadbef9d",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "at": [
+                6,
+                16,
+                24,
+                33,
+                38,
+                47,
+                53,
+                58,
+                64,
+                71,
+                78,
+                83,
+                89,
+                93,
+                99,
+                106,
+                110,
+                114,
+                120,
+                126,
+                134,
+                139,
+                145,
+                152,
+                156,
+                162,
+                176,
+                190,
+                204,
+                210,
+                218,
+                226,
+                238,
+                244,
+                250,
+                258,
+                266,
+                276,
+                284,
+                290,
+                296
+              ],
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": false,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794463570623,
+          "contentHash": "e783a5966df58231522da7b5ad015b2aadb599f70e03dea6790ed351ee8c7fb0",
+          "revision": "9352210a-53c0-4cd0-a57d-4671b5556dac",
+          "inputFingerprint": "37a37e60c0e05c1ec678aae7aa43bf53f9ee44a2416e588ef7b3751d963736ee",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "ef5a756e-88e4-4130-aa11-b911bb99cfd5"
+        }
+      ],
+      "e09c88aa-d3c8-4de2-85c8-11be0f6160b1": [
+        {
+          "id": "f780a82b-6bbc-423d-b18b-dff70501a3a7",
+          "scope": "project",
+          "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/.hyperframes/artifacts/checks/f780a82b-6bbc-423d-b18b-dff70501a3a7.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "at": [
+                162,
+                218,
+                190,
+                238,
+                284
+              ],
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": false,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794463603115,
+          "contentHash": "3fdb81f486d43c46606fbd0513ebd8cf5dc6c20c0c3654a50d7389f6ef532f82",
+          "revision": "e09c88aa-d3c8-4de2-85c8-11be0f6160b1",
+          "inputFingerprint": "0131900354fdcb5dd63964dd0b0a2f3c5d981ee9f32f7924692091c03777d97c",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "82f1ce84-2bdd-4ee1-b67f-39d13edea464": [
+        {
+          "id": "a2488bbd-25ae-4f4d-b56d-c162b29851cf",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "at": [
+                6,
+                20,
+                40,
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                108,
+                116,
+                124,
+                130,
+                140,
+                150,
+                160,
+                166,
+                172,
+                180,
+                186,
+                192,
+                198,
+                204,
+                210,
+                216,
+                222,
+                228,
+                234,
+                242,
+                252,
+                262,
+                272,
+                280,
+                290,
+                300,
+                310,
+                320,
+                330,
+                340,
+                350,
+                360,
+                370,
+                376
+              ],
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": false,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794464268509,
+          "contentHash": "be752db19ec1d80c2d868e4892aa98e6c5b2fbfa06e46ba0146c3098bdcfbd5a",
+          "revision": "82f1ce84-2bdd-4ee1-b67f-39d13edea464",
+          "inputFingerprint": "2d8f5c23585628ff660b9be0a95f80755c5fbed54fa4b31e82ed3a93955e56ce",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "c3324e1f-eef3-4fb3-997e-83b6d992fbfb"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "5762995f-5098-4832-bc2b-1a211cf3377c",
+        "scope": "project",
+        "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/.hyperframes/artifacts/checks/5762995f-5098-4832-bc2b-1a211cf3377c.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "at": [
+              6,
+              16,
+              24,
+              33,
+              38,
+              47,
+              53,
+              58,
+              64,
+              71,
+              78,
+              83,
+              89,
+              93,
+              99,
+              106,
+              110,
+              114,
+              120,
+              126,
+              134,
+              139,
+              145,
+              152,
+              156,
+              162,
+              176,
+              190,
+              204,
+              210,
+              218,
+              226,
+              238,
+              244,
+              250,
+              258,
+              266,
+              276,
+              284,
+              290,
+              296
+            ],
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794463502269,
+        "contentHash": "89d03194e82f1e3030d83797c5bb7d5169925fa86df9ca844abe947d53182518",
+        "revision": null,
+        "inputFingerprint": "0040b7404511741d875226e8faa82b0ed820cab4325fbdb5a7e85f5a07ee31ef",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "c3324e1f-eef3-4fb3-997e-83b6d992fbfb",
+      "completedAt": 1794464681954,
+      "output": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/renders/guia-intellij.mp4",
+      "status": "completed",
+      "revision": "5f41fa51-7477-45a9-ba34-b1214a86d4ee"
+    },
+    "retainedRevisions": [
+      "5f41fa51-7477-45a9-ba34-b1214a86d4ee",
+      "e09c88aa-d3c8-4de2-85c8-11be0f6160b1"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

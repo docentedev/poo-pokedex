@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Pokédex de Cartas — Análisis técnico</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="lib/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- ================================================================
+         COMPOSICIÓN · 1920×1080 · 30 fps · 45 s · 1350 frames
+         Escena 1: frames 0–240    (0.00–8.00 s)
+         Escena 2: frames 241–630  (8.03–21.00 s)
+         Escena 3: frames 631–1080 (21.03–36.00 s)
+         Escena 4: frames 1081–1350 (36.03–45.00 s)
+         ================================================================ -->
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="45"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- ---------- Fondo global ---------- -->
+      <div id="bg" class="clip" data-start="0" data-duration="45" data-track-index="0">
+        <div class="bg-base"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-glow bg-glow--blue" id="glow-blue"></div>
+        <div class="bg-glow bg-glow--green" id="glow-green"></div>
+        <div class="bg-vignette"></div>
+      </div>
+
+      <!-- ===================== ESCENA 1 · INTRODUCCIÓN ===================== -->
+      <section id="scene-1" class="clip scene-section" data-start="0" data-duration="8" data-track-index="1">
+        <div class="scene" id="s1">
+          <div class="scene-tag">ESCENA 01 · INTRODUCCIÓN</div>
+
+          <div class="s1-center">
+            <div class="eyebrow" id="s1-eyebrow">EVALUACIÓN PARCIAL 2 · DSY1102 PROGRAMACIÓN ORIENTADA A OBJETOS</div>
+            <h1 class="hero-title" id="s1-title">Pokédex de <span class="accent">Cartas</span></h1>
+            <div class="hero-rule" id="s1-rule"></div>
+            <p class="hero-lede" id="s1-lede">
+              Aplicación de escritorio <strong>JavaFX</strong> que registra, valora y persiste una colección de
+              cartas <strong>Pokémon</strong> y <strong>Energía</strong> en dos archivos JSON.
+            </p>
+            <div class="badges" id="s1-badges">
+              <span class="badge badge--blue">OpenJDK 21</span>
+              <span class="badge badge--blue">JavaFX 21.0.6</span>
+              <span class="badge badge--green">Gson 2.11.0</span>
+              <span class="badge badge--green">MVC + DAO/Repository</span>
+              <span class="badge">Maven</span>
+              <span class="badge">cl.duoc.pokedex</span>
+            </div>
+          </div>
+
+          <div class="lower-third" id="s1-lt">
+            <span class="lt-bar"></span>
+            <p>Una sola ventana: registrar, eliminar y conservar los datos entre ejecuciones.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 2 · ARQUITECTURA ===================== -->
+      <section id="scene-2" class="clip scene-section" data-start="8" data-duration="13" data-track-index="2">
+        <div class="scene" id="s2">
+          <div class="scene-tag">ESCENA 02 · ARQUITECTURA</div>
+
+          <header class="scene-head" id="s2-head">
+            <div class="kicker">DISEÑO DE CAPAS</div>
+            <h2>Flujo <span class="accent">MVC + DAO/Repository</span></h2>
+          </header>
+
+          <div class="flow" id="s2-flow">
+            <div class="node" id="node-vista">
+              <div class="node-ring"></div>
+              <div class="node-kind">VIEW</div>
+              <div class="node-title">Vista</div>
+              <div class="node-file">pokedex-view.fxml</div>
+              <div class="node-desc">ComboBox · TableView<br />botones con <code>onAction</code></div>
+            </div>
+
+            <div class="link" id="link-1">
+              <span class="link-line"></span>
+              <span class="link-dot"></span>
+              <span class="link-arrow"></span>
+              <span class="link-label">eventos</span>
+            </div>
+
+            <div class="node" id="node-ctrl">
+              <div class="node-ring"></div>
+              <div class="node-kind">CONTROLLER</div>
+              <div class="node-title">Controlador</div>
+              <div class="node-file">PokedexController.java</div>
+              <div class="node-desc">valida · construye<br />actualiza la tabla</div>
+            </div>
+
+            <div class="link" id="link-2">
+              <span class="link-line"></span>
+              <span class="link-dot"></span>
+              <span class="link-arrow"></span>
+              <span class="link-label">Carta</span>
+            </div>
+
+            <div class="node" id="node-repo">
+              <div class="node-ring"></div>
+              <div class="node-kind">REPOSITORY</div>
+              <div class="node-title">Repository</div>
+              <div class="node-file">CartaRepository.java</div>
+              <div class="node-desc">colección en memoria<br />copy-on-write</div>
+            </div>
+
+            <div class="link" id="link-3">
+              <span class="link-line"></span>
+              <span class="link-dot"></span>
+              <span class="link-arrow"></span>
+              <span class="link-label">interfaz DAO</span>
+            </div>
+
+            <div class="node" id="node-dao">
+              <div class="node-ring"></div>
+              <div class="node-kind">DAO</div>
+              <div class="node-title">DAO JSON</div>
+              <div class="node-file">CartaDaoJson.java</div>
+              <div class="node-desc">Gson · lectura<br />y escritura</div>
+            </div>
+          </div>
+
+          <div class="flow-sub" id="s2-sub">
+            <div class="sub-gap"></div>
+            <div class="sub-card" id="sub-model">
+              <div class="sub-kind">MODELO DEL DOMINIO</div>
+              <div class="sub-line"><code>Carta</code> · <code>CartaPokemon</code> · <code>CartaEnergia</code></div>
+              <div class="sub-note"><code>calcularValorEstimado()</code> · interfaz <code>Evolucionable</code></div>
+            </div>
+            <div class="sub-gap sub-gap--wide"></div>
+            <div class="sub-card sub-card--files" id="sub-files">
+              <div class="sub-kind">PERSISTENCIA</div>
+              <div class="sub-line"><code>pokemons.json</code> · <code>energias.json</code></div>
+              <div class="sub-note">se reescribe tras cada registro o eliminación</div>
+            </div>
+          </div>
+
+          <div class="lower-third" id="s2-lt-1">
+            <span class="lt-bar"></span>
+            <p>La vista FXML declara la interfaz: los eventos <code>onAction</code> invocan métodos del controlador.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-2">
+            <span class="lt-bar"></span>
+            <p><code>PokedexController</code> valida el formulario y actualiza la tabla — nunca toca archivos.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-3">
+            <span class="lt-bar"></span>
+            <p><code>CartaRepository</code> mantiene la colección en memoria y delega la escritura al DAO con Gson.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 3 · CÓDIGO CLAVE ===================== -->
+      <section id="scene-3" class="clip scene-section" data-start="21" data-duration="15" data-track-index="3">
+        <div class="scene" id="s3">
+          <div class="scene-tag">ESCENA 03 · CÓDIGO CLAVE</div>
+
+          <header class="scene-head" id="s3-head">
+            <div class="kicker">CONTROLADOR</div>
+            <h2><span class="mono">PokedexController</span>.<span class="accent">registrarCarta()</span></h2>
+          </header>
+
+          <div class="editor" id="s3-editor">
+            <div class="editor-bar">
+              <span class="dot dot--r"></span>
+              <span class="dot dot--y"></span>
+              <span class="dot dot--g"></span>
+              <span class="editor-path">src/main/java/cl/duoc/pokedex/controller/PokedexController.java</span>
+            </div>
+            <div class="editor-body">
+              <div class="focus-band" id="focus-band"></div>
+              <div class="code-line" id="cl-1"><span class="ln">1</span><span class="src"><span class="cm">// PokedexController.registrarCarta()</span></span></div>
+              <div class="code-line" id="cl-2"><span class="ln">2</span><span class="src"><span class="k">int</span> anio = <span class="fn">leerEntero</span>(anioField.<span class="fn">getText</span>(), <span class="st">"año de edición"</span>);</span></div>
+              <div class="code-line" id="cl-3"><span class="ln">3</span><span class="src"><span class="k">if</span> (anio &lt; <span class="nu">1996</span> || anio &gt; <span class="nu">2026</span>) {</span></div>
+              <div class="code-line" id="cl-4"><span class="ln">4</span><span class="src">    <span class="k">throw new</span> <span class="ty">IllegalArgumentException</span>(<span class="st">"El año debe estar entre 1996 y 2026."</span>);</span></div>
+              <div class="code-line" id="cl-5"><span class="ln">5</span><span class="src">}</span></div>
+              <div class="code-line" id="cl-6"><span class="ln">6</span><span class="src"><span class="ty">Carta</span> carta;</span></div>
+              <div class="code-line" id="cl-7"><span class="ln">7</span><span class="src"><span class="k">if</span> (<span class="fl">CATEGORIA_POKEMON</span>.<span class="fn">equals</span>(categoria)) {</span></div>
+              <div class="code-line" id="cl-8"><span class="ln">8</span><span class="src">    carta = <span class="k">new</span> <span class="ty">CartaPokemon</span>(nombre, anio, cantidad,</span></div>
+              <div class="code-line" id="cl-9"><span class="ln">9</span><span class="src">            tipoElemental.<span class="fn">trim</span>(), brillanteCheckBox.<span class="fn">isSelected</span>());</span></div>
+              <div class="code-line" id="cl-10"><span class="ln">10</span><span class="src">} <span class="k">else</span> {</span></div>
+              <div class="code-line" id="cl-11"><span class="ln">11</span><span class="src">    carta = <span class="k">new</span> <span class="ty">CartaEnergia</span>(nombre, anio, cantidad,</span></div>
+              <div class="code-line" id="cl-12"><span class="ln">12</span><span class="src">            <span class="fn">leerDecimal</span>(cantidadEnergiaField.<span class="fn">getText</span>()));</span></div>
+              <div class="code-line" id="cl-13"><span class="ln">13</span><span class="src">}</span></div>
+              <div class="code-line" id="cl-14"><span class="ln">14</span><span class="src">repository.<span class="fn">registrar</span>(carta);   <span class="cm">// Gson → pokemons.json / energias.json</span></span></div>
+              <div class="code-line" id="cl-15"><span class="ln">15</span><span class="src">cartas.<span class="fn">add</span>(carta);             <span class="cm">// la TableView se actualiza al instante</span></span></div>
+            </div>
+          </div>
+
+          <aside class="ex-card" id="ex-1">
+            <div class="ex-step">PASO 01 · VALIDACIÓN</div>
+            <h3>Verificar antes de construir</h3>
+            <p>Se valida nombre, año (1996–2026), cantidad y tipo elemental.</p>
+            <p class="ex-note">El error indica el campo y el motivo en pantalla.</p>
+          </aside>
+
+          <aside class="ex-card" id="ex-2">
+            <div class="ex-step">PASO 02 · POLIMORFISMO</div>
+            <h3>Una variable, dos tipos</h3>
+            <p>Según la categoría se instancia <code>CartaPokemon</code> o <code>CartaEnergia</code>.</p>
+            <p class="ex-note">Ambas heredan de la clase abstracta <code>Carta</code>.</p>
+          </aside>
+
+          <aside class="ex-card" id="ex-3">
+            <div class="ex-step">PASO 03 · PERSISTENCIA</div>
+            <h3>Delegar y guardar</h3>
+            <p><code>repository.registrar()</code> escribe los dos JSON con Gson.</p>
+            <p class="ex-note">Copy-on-write: solo se actualiza si el guardado funciona.</p>
+          </aside>
+
+          <div class="lower-third" id="s3-lt-1">
+            <span class="lt-bar"></span>
+            <p>PokedexController.java · líneas 147–150 — validación del rango de edición</p>
+          </div>
+          <div class="lower-third" id="s3-lt-2">
+            <span class="lt-bar"></span>
+            <p>PokedexController.java · líneas 157–177 — construcción polimórfica de la carta</p>
+          </div>
+          <div class="lower-third" id="s3-lt-3">
+            <span class="lt-bar"></span>
+            <p>CartaRepository.registrar() → CartaDaoJson — escritura atómica en dos archivos</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 4 · RESUMEN ===================== -->
+      <section id="scene-4" class="clip scene-section" data-start="36" data-duration="9" data-track-index="4">
+        <div class="scene" id="s4">
+          <div class="scene-tag">ESCENA 04 · RESUMEN</div>
+
+          <header class="scene-head scene-head--center" id="s4-head">
+            <div class="kicker">CIERRE TÉCNICO</div>
+            <h2>Lo que sostiene <span class="accent">la implementación</span></h2>
+          </header>
+
+          <div class="summary" id="s4-summary">
+            <div class="sum-item" id="sum-1">
+              <span class="sum-check">✓</span>
+              <div>
+                <strong>Desacoplamiento real</strong>
+                <p>MVC + DAO: el controlador no lee ni escribe archivos.</p>
+              </div>
+            </div>
+            <div class="sum-item" id="sum-2">
+              <span class="sum-check">✓</span>
+              <div>
+                <strong>Validación en dos niveles</strong>
+                <p>Formulario con mensajes en pantalla y modelo con setters que rechazan datos inválidos.</p>
+              </div>
+            </div>
+            <div class="sum-item" id="sum-3">
+              <span class="sum-check">✓</span>
+              <div>
+                <strong>Persistencia automática</strong>
+                <p>Gson reescribe <code>pokemons.json</code> y <code>energias.json</code> tras cada operación.</p>
+              </div>
+            </div>
+            <div class="sum-item" id="sum-4">
+              <span class="sum-check">✓</span>
+              <div>
+                <strong>Interfaz sin ruido</strong>
+                <p>Cada mensaje reemplaza al anterior; cero salidas por consola.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="closing" id="s4-closing">
+            <div class="closing-eyebrow">ANÁLISIS DEL PROYECTO</div>
+            <div class="closing-title">Pokédex de <span class="accent">Cartas</span></div>
+            <div class="closing-rule"></div>
+            <div class="closing-sub">cl.duoc.pokedex · JavaFX 21 · Gson · mvn javafx:run</div>
+            <div class="closing-foot">DSY1102 Programación Orientada a Objetos · 45 s · 1350 frames</div>
+          </div>
+
+          <div class="lower-third" id="s4-lt">
+            <span class="lt-bar"></span>
+            <p>Cuatro decisiones de diseño que hacen mantenible el proyecto.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- HUD global ---------- -->
+      <div id="hud" class="clip" data-start="0" data-duration="45" data-track-index="8">
+        <div class="hud-brand"><span class="hud-dot"></span>cl.duoc.pokedex · análisis técnico</div>
+        <div class="hud-meta">1920×1080 · 30 fps · 45 s · 1350 frames</div>
+      </div>
+
+      <div id="progress" class="clip" data-start="0" data-duration="45" data-track-index="9">
+        <div id="progress-fill"></div>
+      </div>
+
+      <div id="blackout" class="clip" data-start="44.3" data-duration="0.7" data-track-index="10"></div>
+    </div>
+
+    <script src="timeline.js"></script>
+  </body>
+</html>

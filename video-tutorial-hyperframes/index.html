@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Tutorial JavaFX — Controles y tabla paso a paso</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="lib/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- ================================================================
+         COMPOSICIÓN · 1920×1080 · 30 fps · 120 s · 3600 frames
+         Escena 1:   0– 10 s   Introducción y hoja de ruta
+         Escena 2:  10– 34 s   PASO 01 · ComboBox
+         Escena 3:  34– 64 s   PASO 02 · Tabla con campo calculado
+         Escena 4:  64– 84 s   PASO 03 · CheckBox
+         Escena 5:  84–112 s   PASO 04 · ¿Qué clase uso? + listar
+         Escena 6: 112–120 s   Cierre
+         ================================================================ -->
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="120"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- ---------- Fondo global ---------- -->
+      <div id="bg" class="clip" data-start="0" data-duration="120" data-track-index="0">
+        <div class="bg-base"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-glow bg-glow--blue" id="glow-blue"></div>
+        <div class="bg-glow bg-glow--green" id="glow-green"></div>
+        <div class="bg-vignette"></div>
+      </div>
+
+      <!-- ===================== ESCENA 1 · INTRODUCCIÓN ===================== -->
+      <section id="scene-1" class="clip scene-section" data-start="0" data-duration="10" data-track-index="1">
+        <div class="scene" id="s1">
+          <div class="scene-tag">TUTORIAL · 4 PASOS</div>
+
+          <div class="s1-center">
+            <div class="eyebrow" id="s1-eyebrow">JAVAFX + FXML · DESDE CERO</div>
+            <h1 class="hero-title" id="s1-title">Controles y tabla<br /><span class="accent">paso a paso</span></h1>
+            <div class="hero-rule" id="s1-rule"></div>
+            <p class="hero-lede" id="s1-lede">
+              Construye el formulario de la <strong>Pokédex de Cartas</strong>: elegir, calcular, marcar y listar.
+              Sin prisa y con el código a la vista.
+            </p>
+
+            <div class="roadmap" id="s1-roadmap">
+              <div class="road-item">
+                <span class="road-num">01</span>
+                <div>
+                  <div class="road-label">ComboBox</div>
+                  <div class="road-sub">elegir una opción</div>
+                </div>
+              </div>
+              <div class="road-item">
+                <span class="road-num">02</span>
+                <div>
+                  <div class="road-label">Tabla</div>
+                  <div class="road-sub">campos calculados</div>
+                </div>
+              </div>
+              <div class="road-item">
+                <span class="road-num">03</span>
+                <div>
+                  <div class="road-label">CheckBox</div>
+                  <div class="road-sub">marcar sí / no</div>
+                </div>
+              </div>
+              <div class="road-item">
+                <span class="road-num">04</span>
+                <div>
+                  <div class="road-label">Clases</div>
+                  <div class="road-sub">cuál usar y listar</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="s1-note" id="s1-note">Cada paso: <span class="mono">FXML</span> → controlador → resultado en pantalla.</p>
+          </div>
+
+          <div class="lower-third" id="s1-lt">
+            <span class="lt-bar"></span>
+            <p>Primero los controles, después la tabla. Al final sabrás qué clase crear para cada carta.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 2 · PASO 01 COMBOBOX ===================== -->
+      <section id="scene-2" class="clip scene-section" data-start="10" data-duration="24" data-track-index="2">
+        <div class="scene" id="s2">
+          <div class="scene-tag">PASO 01 · COMBOBOX</div>
+
+          <header class="scene-head" id="s2-head">
+            <div class="kicker">ELEGIR UNA OPCIÓN</div>
+            <h2>ComboBox: <span class="accent">categoría de la carta</span></h2>
+          </header>
+
+          <div class="code-card code-card--s2" id="s2-code">
+            <div class="file-head">
+              <span class="file-name">pokedex-view.fxml</span>
+              <span class="file-tag">FXML</span>
+            </div>
+            <div class="code-body" id="s2-fxml">
+              <div class="cl"><span class="ln">1</span><span class="src">&lt;<span class="ty">ComboBox</span> <span class="an">fx:id</span>=<span class="st">"categoriaComboBox"</span></span></div>
+              <div class="cl"><span class="ln">2</span><span class="src">          <span class="an">maxWidth</span>=<span class="st">"Infinity"</span>/&gt;</span></div>
+            </div>
+
+            <div class="file-head">
+              <span class="file-name">PokedexController.java</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s2-java">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">ComboBox</span>&lt;<span class="ty">String</span>&gt; categoriaComboBox;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">3</span><span class="src"><span class="cm">// 1) Definir las opciones</span></span></div>
+              <div class="cl"><span class="ln">4</span><span class="src">categoriaComboBox.<span class="fn">setItems</span>(</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">    <span class="ty">FXCollections</span>.<span class="fn">observableArrayList</span>(</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">        <span class="st">"Pokémon"</span>, <span class="st">"Energía"</span>));</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">8</span><span class="src"><span class="cm">// 2) Elegir la primera opción</span></span></div>
+              <div class="cl"><span class="ln">9</span><span class="src">categoriaComboBox.<span class="fn">getSelectionModel</span>().<span class="fn">selectFirst</span>();</span></div>
+              <div class="cl"><span class="ln">10</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">11</span><span class="src"><span class="cm">// 3) Leer la opción elegida</span></span></div>
+              <div class="cl"><span class="ln">12</span><span class="src"><span class="ty">String</span> categoria = categoriaComboBox.<span class="fn">getValue</span>();</span></div>
+            </div>
+          </div>
+
+          <aside class="panel mock-panel" id="s2-mock">
+            <div class="panel-title">Resultado en pantalla</div>
+            <div class="field-label">Categoría:</div>
+            <div class="combo-control">
+              <span id="s2-combo-value">Pokémon</span>
+              <span class="combo-chev">▾</span>
+            </div>
+            <div class="combo-list" id="s2-combo-list">
+              <div class="combo-opt combo-opt--active">Pokémon</div>
+              <div class="combo-opt">Energía</div>
+            </div>
+            <div class="combo-readout" id="s2-readout">
+              <span class="mono">categoria</span> = <span class="st">"Pokémon"</span>
+            </div>
+          </aside>
+
+          <aside class="panel explain" id="s2-explain">
+            <div class="panel-title">Cómo funciona</div>
+            <div class="steps">
+              <div class="step" id="s2-st1">
+                <span class="n">1</span>
+                <div><strong>fx:id + @FXML</strong><span>Mismo nombre en el FXML y en Java.</span></div>
+              </div>
+              <div class="step" id="s2-st2">
+                <span class="n">2</span>
+                <div><strong>setItems(...)</strong><span>Llena la lista de opciones.</span></div>
+              </div>
+              <div class="step" id="s2-st3">
+                <span class="n">3</span>
+                <div><strong>getValue()</strong><span>Lee la opción elegida (puede ser null).</span></div>
+              </div>
+              <div class="step" id="s2-st4">
+                <span class="n">4</span>
+                <div><strong>valueProperty()</strong><span>Avisa cuando la selección cambia.</span></div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="lower-third" id="s2-lt-1">
+            <span class="lt-bar"></span>
+            <p><code>fx:id</code> en el FXML y el campo <code>@FXML</code> del controlador deben llamarse igual: así se conectan.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-2">
+            <span class="lt-bar"></span>
+            <p><code>setItems(...)</code> recibe un <code>ObservableList</code> con las opciones; <code>selectFirst()</code> elige una por defecto.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-3">
+            <span class="lt-bar"></span>
+            <p><code>getValue()</code> devuelve la opción elegida. Si no hay selección devuelve <code>null</code>: valida antes de usarla.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 3 · PASO 02 TABLA ===================== -->
+      <section id="scene-3" class="clip scene-section" data-start="34" data-duration="30" data-track-index="3">
+        <div class="scene" id="s3">
+          <div class="scene-tag">PASO 02 · TABLA</div>
+
+          <header class="scene-head" id="s3-head">
+            <div class="kicker">COLUMNAS Y CAMPOS CALCULADOS</div>
+            <h2>TableView: <span class="accent">valor estimado</span></h2>
+          </header>
+
+          <div class="code-card code-card--s3" id="s3-code">
+            <div class="file-head">
+              <span class="file-name">pokedex-view.fxml</span>
+              <span class="file-tag">FXML</span>
+            </div>
+            <div class="code-body" id="s3-fxml">
+              <div class="cl"><span class="ln">1</span><span class="src">&lt;<span class="ty">TableView</span> <span class="an">fx:id</span>=<span class="st">"cartasTable"</span>&gt;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src">  &lt;<span class="ty">columns</span>&gt;</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src">    &lt;<span class="ty">TableColumn</span> <span class="an">fx:id</span>=<span class="st">"valorColumn"</span></span></div>
+              <div class="cl"><span class="ln">4</span><span class="src">                 <span class="an">text</span>=<span class="st">"Valor estimado"</span>/&gt;</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">  &lt;/<span class="ty">columns</span>&gt;</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">&lt;/<span class="ty">TableView</span>&gt;</span></div>
+            </div>
+
+            <div class="file-head">
+              <span class="file-name">PokedexController.java</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s3-java">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">TableView</span>&lt;<span class="ty">Carta</span>&gt; cartasTable;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">TableColumn</span>&lt;<span class="ty">Carta</span>, <span class="ty">String</span>&gt; valorColumn;</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">4</span><span class="src">valorColumn.<span class="fn">setCellValueFactory</span>(dato -&gt;</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">    <span class="k">new</span> <span class="ty">SimpleStringProperty</span>(</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">        <span class="fn">formatearMoneda</span>(dato.<span class="fn">getValue</span>()</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src">            .<span class="fn">calcularValorEstimado</span>())));</span></div>
+              <div class="cl"><span class="ln">8</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">9</span><span class="src">cartasTable.<span class="fn">setItems</span>(cartas);</span></div>
+            </div>
+          </div>
+
+          <aside class="panel table-panel" id="s3-table">
+            <div class="panel-title">La tabla en ejecución</div>
+            <div class="tbl">
+              <div class="tbl-head"><span>Categoría</span><span>Nombre</span><span class="calc">Valor estimado</span></div>
+              <div class="tbl-row" id="s3-row-1"><span>Pokémon</span><span>Pikachu</span><span class="calc">$4.200</span></div>
+              <div class="tbl-row" id="s3-row-2"><span>Pokémon</span><span>Charmander</span><span class="calc">$3.000</span></div>
+              <div class="tbl-row" id="s3-row-3"><span>Energía</span><span>Fuego</span><span class="calc">$1.200</span></div>
+            </div>
+            <div class="tbl-caption" id="s3-caption">La columna azul no guarda datos: se calcula por fila.</div>
+          </aside>
+
+          <aside class="panel formula-panel" id="s3-formulas">
+            <div class="panel-title">Dos fórmulas, un método</div>
+            <div class="formula-row" id="s3-f1">
+              <span class="f-dot f-dot--blue"></span>
+              <div><strong>CartaPokemon</strong><p>base $3.000 · +40% si es brillante</p></div>
+            </div>
+            <div class="formula-row" id="s3-f2">
+              <span class="f-dot f-dot--green"></span>
+              <div><strong>CartaEnergia</strong><p>base $1.000 · +20% si energía &gt; 3.0</p></div>
+            </div>
+            <div class="formula-note" id="s3-note">
+              La tabla pide <code>calcularValorEstimado()</code> a cada objeto y el polimorfismo elige la fórmula.
+            </div>
+          </aside>
+
+          <div class="lower-third" id="s3-lt-1">
+            <span class="lt-bar"></span>
+            <p><code>TableColumn&lt;Carta, String&gt;</code>: la fila es una <code>Carta</code> y la celda muestra un <code>String</code>.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-2">
+            <span class="lt-bar"></span>
+            <p><code>setCellValueFactory</code> recibe una función: <code>dato.getValue()</code> es la <code>Carta</code> de esa fila.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-3">
+            <span class="lt-bar"></span>
+            <p>El valor no se guarda en la tabla: se pide a <code>calcularValorEstimado()</code> cada vez que se dibuja.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-4">
+            <span class="lt-bar"></span>
+            <p><code>setItems(cartas)</code> conecta la <code>ObservableList</code>: cualquier cambio se refleja en la tabla.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 4 · PASO 03 CHECKBOX ===================== -->
+      <section id="scene-4" class="clip scene-section" data-start="64" data-duration="20" data-track-index="4">
+        <div class="scene" id="s4">
+          <div class="scene-tag">PASO 03 · CHECKBOX</div>
+
+          <header class="scene-head" id="s4-head">
+            <div class="kicker">MARCAR SÍ / NO</div>
+            <h2>CheckBox: <span class="accent">brillante y evolución</span></h2>
+          </header>
+
+          <div class="code-card code-card--s4" id="s4-code">
+            <div class="file-head">
+              <span class="file-name">pokedex-view.fxml</span>
+              <span class="file-tag">FXML</span>
+            </div>
+            <div class="code-body" id="s4-fxml">
+              <div class="cl"><span class="ln">1</span><span class="src">&lt;<span class="ty">CheckBox</span> <span class="an">fx:id</span>=<span class="st">"brillanteCheckBox"</span></span></div>
+              <div class="cl"><span class="ln">2</span><span class="src">          <span class="an">text</span>=<span class="st">"Sí"</span>/&gt;</span></div>
+            </div>
+
+            <div class="file-head">
+              <span class="file-name">PokedexController.java</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s4-java">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">CheckBox</span> brillanteCheckBox;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">3</span><span class="src"><span class="cm">// ¿Está marcado?</span></span></div>
+              <div class="cl"><span class="ln">4</span><span class="src"><span class="k">boolean</span> brillante =</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">    brillanteCheckBox.<span class="fn">isSelected</span>();</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">7</span><span class="src"><span class="cm">// Apagarlo si no es Pokémon</span></span></div>
+              <div class="cl"><span class="ln">8</span><span class="src">brillanteCheckBox.<span class="fn">setDisable</span>(!esPokemon);</span></div>
+              <div class="cl"><span class="ln">9</span><span class="src"><span class="cm">// Limpiarlo al terminar</span></span></div>
+              <div class="cl"><span class="ln">10</span><span class="src">brillanteCheckBox.<span class="fn">setSelected</span>(<span class="k">false</span>);</span></div>
+            </div>
+          </div>
+
+          <aside class="panel mock-panel" id="s4-mock">
+            <div class="panel-title">En el formulario</div>
+            <div class="chk-list">
+              <div class="chk-row" id="s4-chk-1">
+                <span class="chk-box"><span class="chk-tick" id="s4-tick-1">✓</span></span>
+                <span class="chk-label">Brillante</span>
+              </div>
+              <div class="chk-row" id="s4-chk-2">
+                <span class="chk-box"><span class="chk-tick" id="s4-tick-2">✓</span></span>
+                <span class="chk-label">Evolución activa</span>
+              </div>
+            </div>
+            <div class="chk-hint" id="s4-hint">marcado = <span class="mono">true</span> · desmarcado = <span class="mono">false</span></div>
+          </aside>
+
+          <aside class="panel effect-panel" id="s4-effect">
+            <div class="panel-title">Qué cambia al marcarlo</div>
+            <div class="effect-eq" id="s4-eq1">
+              <span class="f-dot f-dot--green"></span>
+              <code>brillante = true</code>
+            </div>
+            <p class="effect-text">El modelo suma un bono del <strong>40%</strong> al valor estimado.</p>
+            <div class="effect-result" id="s4-result">
+              <span class="mono">$3.000 → $4.200</span>
+            </div>
+            <p class="effect-note" id="s4-note">Al limpiar el formulario: <code>setSelected(false)</code>.</p>
+          </aside>
+
+          <div class="lower-third" id="s4-lt-1">
+            <span class="lt-bar"></span>
+            <p>Un <code>CheckBox</code> tiene dos estados: marcado (<code>true</code>) o desmarcado (<code>false</code>).</p>
+          </div>
+          <div class="lower-third" id="s4-lt-2">
+            <span class="lt-bar"></span>
+            <p><code>isSelected()</code> devuelve el estado; se usa al construir el objeto <code>CartaPokemon</code>.</p>
+          </div>
+          <div class="lower-third" id="s4-lt-3">
+            <span class="lt-bar"></span>
+            <p><code>setDisable(...)</code> lo apaga si la categoría no lo necesita; <code>setSelected(false)</code> lo limpia.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 5 · PASO 04 QUÉ CLASE USAR ===================== -->
+      <section id="scene-5" class="clip scene-section" data-start="84" data-duration="28" data-track-index="5">
+        <div class="scene" id="s5">
+          <div class="scene-tag">PASO 04 · ¿QUÉ CLASE USO?</div>
+
+          <header class="scene-head" id="s5-head">
+            <div class="kicker">DECIDIR Y LISTAR</div>
+            <h2>Una variable <span class="accent">Carta</span>, dos objetos posibles</h2>
+          </header>
+
+          <!-- Fase A: jerarquía -->
+          <div class="hier" id="s5-diagram">
+            <div class="hier-card hier-card--parent" id="s5-parent">
+              <div class="hier-kind">CLASE ABSTRACTA</div>
+              <div class="hier-title">Carta</div>
+              <div class="hier-fields">nombre · anioEdicion · cantidad</div>
+              <div class="hier-note"><code>calcularValorEstimado()</code></div>
+            </div>
+
+            <div class="hier-conn hier-conn--v" id="s5-l1"></div>
+            <div class="hier-conn hier-conn--h" id="s5-l2"></div>
+            <div class="hier-conn hier-conn--v hier-conn--left" id="s5-l3"></div>
+            <div class="hier-conn hier-conn--v hier-conn--right" id="s5-l4"></div>
+            <div class="hier-tag" id="s5-tag">extends</div>
+
+            <div class="hier-card hier-card--child hier-card--left" id="s5-child-p">
+              <div class="hier-kind">SUBCLASE</div>
+              <div class="hier-title">CartaPokemon</div>
+              <div class="hier-fields">tipoElemental · brillante · evolucionActiva</div>
+              <div class="hier-note">valor $3.000 <span class="hier-bonus">+40% si es brillante</span></div>
+            </div>
+
+            <div class="hier-card hier-card--child hier-card--right" id="s5-child-e">
+              <div class="hier-kind">SUBCLASE</div>
+              <div class="hier-title">CartaEnergia</div>
+              <div class="hier-fields">cantidadEnergia</div>
+              <div class="hier-note">valor $1.000 <span class="hier-bonus">+20% si energía &gt; 3.0</span></div>
+            </div>
+
+            <div class="rule-pills" id="s5-rules">
+              <div class="rule-pill">
+                <div class="rule-q">¿Tipo elemental o brillante?</div>
+                <div class="rule-a">→ CartaPokemon</div>
+              </div>
+              <div class="rule-pill">
+                <div class="rule-q">¿Puntos de energía?</div>
+                <div class="rule-a">→ CartaEnergia</div>
+              </div>
+              <div class="rule-pill">
+                <div class="rule-q">¿Solo los datos comunes?</div>
+                <div class="rule-a rule-a--muted">→ Carta es abstracta</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fase B: crear y listar -->
+          <div class="code-card code-card--s5" id="s5-code">
+            <div class="file-head">
+              <span class="file-name">PokedexController.registrarCarta()</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s5-java">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="ty">Carta</span> carta;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src"><span class="k">if</span> (<span class="st">"Pokémon"</span>.<span class="fn">equals</span>(categoria)) {</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src">    carta = <span class="k">new</span> <span class="ty">CartaPokemon</span>(nombre, anio,</span></div>
+              <div class="cl"><span class="ln">4</span><span class="src">            cantidad, tipoElemental,</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">            brillanteCheckBox.<span class="fn">isSelected</span>());</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">} <span class="k">else</span> {</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src">    carta = <span class="k">new</span> <span class="ty">CartaEnergia</span>(nombre, anio,</span></div>
+              <div class="cl"><span class="ln">8</span><span class="src">            cantidad, cantidadEnergia);</span></div>
+              <div class="cl"><span class="ln">9</span><span class="src">}</span></div>
+              <div class="cl"><span class="ln">10</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">11</span><span class="src">cartas.<span class="fn">add</span>(carta); <span class="cm">// ObservableList&lt;Carta&gt;</span></span></div>
+            </div>
+          </div>
+
+          <aside class="tip-card" id="s5-tip">
+            <strong>Carta</strong> es el tipo común: la variable acepta cualquier subclase. Por eso
+            <code>TableView&lt;Carta&gt;</code> muestra Pokémon y Energía en la misma tabla.
+          </aside>
+
+          <aside class="panel table-panel" id="s5-table">
+            <div class="panel-title">La misma tabla, dos clases</div>
+            <div class="tbl tbl--wide">
+              <div class="tbl-head"><span>Categoría</span><span>Nombre</span><span class="calc">Valor</span></div>
+              <div class="tbl-row" id="s5-row-1"><span>Pokémon</span><span>Pikachu</span><span class="calc">$4.200</span></div>
+              <div class="tbl-row" id="s5-row-2"><span>Pokémon</span><span>Charmander</span><span class="calc">$3.000</span></div>
+              <div class="tbl-row" id="s5-row-3"><span>Energía</span><span>Fuego</span><span class="calc">$1.200</span></div>
+            </div>
+            <div class="tbl-caption" id="s5-caption">cartas.add(carta) → la tabla se entera sola.</div>
+          </aside>
+
+          <aside class="concept-card" id="s5-concept">
+            <div class="concept-row"><span class="mono">variable</span><span>Carta</span></div>
+            <div class="concept-row"><span class="mono">objeto</span><span>CartaPokemon · CartaEnergia</span></div>
+            <div class="concept-row"><span class="mono">lista</span><span>ObservableList&lt;Carta&gt;</span></div>
+          </aside>
+
+          <div class="lower-third" id="s5-lt-1">
+            <span class="lt-bar"></span>
+            <p>Primero decide qué datos necesita la carta. Esa decisión define qué clase instanciar.</p>
+          </div>
+          <div class="lower-third" id="s5-lt-2">
+            <span class="lt-bar"></span>
+            <p>La variable se declara como <code>Carta</code>, pero el objeto real es <code>CartaPokemon</code> o <code>CartaEnergia</code>.</p>
+          </div>
+          <div class="lower-third" id="s5-lt-3">
+            <span class="lt-bar"></span>
+            <p><code>cartas</code> es una <code>ObservableList&lt;Carta&gt;</code>: al agregar el objeto, la <code>TableView</code> lo muestra al instante.</p>
+          </div>
+          <div class="lower-third" id="s5-lt-4">
+            <span class="lt-bar"></span>
+            <p><code>calcularValorEstimado()</code> se resuelve en ejecución: cada subclase usa su fórmula.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 6 · CIERRE ===================== -->
+      <section id="scene-6" class="clip scene-section" data-start="112" data-duration="8" data-track-index="6">
+        <div class="scene" id="s6">
+          <div class="scene-tag">CIERRE</div>
+
+          <header class="scene-head scene-head--center" id="s6-head">
+            <div class="kicker">LO QUE YA SABES HACER</div>
+            <h2>Cuatro piezas, <span class="accent">un formulario</span></h2>
+          </header>
+
+          <div class="know-cards" id="s6-cards">
+            <div class="know-card">
+              <span class="know-num">01</span>
+              <div class="know-text"><strong>ComboBox</strong><span>fx:id + setItems + getValue()</span></div>
+            </div>
+            <div class="know-card">
+              <span class="know-num">02</span>
+              <div class="know-text"><strong>Tabla calculada</strong><span>CellValueFactory + modelo</span></div>
+            </div>
+            <div class="know-card">
+              <span class="know-num">03</span>
+              <div class="know-text"><strong>CheckBox</strong><span>isSelected + setDisable</span></div>
+            </div>
+            <div class="know-card">
+              <span class="know-num">04</span>
+              <div class="know-text"><strong>Clase correcta</strong><span>Carta + ObservableList</span></div>
+            </div>
+          </div>
+
+          <div class="closing" id="s6-closing">
+            <div class="closing-eyebrow">AHORA TE TOCA</div>
+            <div class="closing-title">Pokédex de <span class="accent">Cartas</span></div>
+            <div class="closing-rule"></div>
+            <div class="closing-sub">cl.duoc.pokedex · JavaFX 21 · FXML + MVC</div>
+            <div class="closing-foot">Repite el ejercicio con tus propios datos</div>
+          </div>
+
+          <div class="lower-third" id="s6-lt">
+            <span class="lt-bar"></span>
+            <p>Cambia la clase y las columnas: ese es el siguiente paso para dominar el patrón.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- HUD global ---------- -->
+      <div id="hud" class="clip" data-start="0" data-duration="120" data-track-index="8">
+        <div class="hud-brand"><span class="hud-dot"></span>cl.duoc.pokedex · tutorial JavaFX</div>
+        <div id="steps-meter">
+          <span class="seg"><i id="seg-1"></i></span>
+          <span class="seg"><i id="seg-2"></i></span>
+          <span class="seg"><i id="seg-3"></i></span>
+          <span class="seg"><i id="seg-4"></i></span>
+        </div>
+        <div class="hud-meta">1920×1080 · 30 fps · 120 s</div>
+      </div>
+
+      <div id="progress" class="clip" data-start="0" data-duration="120" data-track-index="9">
+        <div id="progress-fill"></div>
+      </div>
+
+      <div id="blackout" class="clip" data-start="119.2" data-duration="0.8" data-track-index="10"></div>
+    </div>
+
+    <script src="timeline.js"></script>
+  </body>
+</html>

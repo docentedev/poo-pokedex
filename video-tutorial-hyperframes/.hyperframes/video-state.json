@@ -1,0 +1,323 @@
+{
+  "version": 1,
+  "historyId": "56ae8151-d831-4137-88b0-60e60a9dee38",
+  "currentRevision": "1dbfa952-439f-4b0a-b5bd-af9f632090c7",
+  "pendingChanges": false,
+  "files": {
+    "README.md": {
+      "hash": "c98ff6a2834743efa80032bfa6606f5c82821f9fcedfdf8a56f7d475384d64f0",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/c9/c98ff6a2834743efa80032bfa6606f5c82821f9fcedfdf8a56f7d475384d64f0"
+    },
+    "hyperframes.json": {
+      "hash": "3b2eb239134f69dc74fcffe7c40a1be430c66fdd6d92a6cde3e703956a4257e6",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/3b/3b2eb239134f69dc74fcffe7c40a1be430c66fdd6d92a6cde3e703956a4257e6"
+    },
+    "index.html": {
+      "hash": "0455398189df26cfb2dd5a18b7a1a31b420334392d87087fa2c25ec1d6a89b36",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/04/0455398189df26cfb2dd5a18b7a1a31b420334392d87087fa2c25ec1d6a89b36"
+    },
+    "lib/gsap.min.js": {
+      "hash": "96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/96/96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6"
+    },
+    "styles.css": {
+      "hash": "31d7c6bcbbd0e4a285b874dc9e78dc20341e3581677a29924be078cb4bfa692a",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/31/31d7c6bcbbd0e4a285b874dc9e78dc20341e3581677a29924be078cb4bfa692a"
+    },
+    "timeline.js": {
+      "hash": "72c6aa48317c03c2d0f9d5e9c3d7c8c236f6a00eee1b13a50702f65a7b941bad",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/72/72c6aa48317c03c2d0f9d5e9c3d7c8c236f6a00eee1b13a50702f65a7b941bad"
+    }
+  },
+  "revisions": {
+    "1dbfa952-439f-4b0a-b5bd-af9f632090c7": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794462476534,
+      "endedAt": 1794462476535,
+      "files": {
+        "index.html": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/ae/ae0653cbac19188cfb5dd9fd6ce6643eac95e1d64c5aa9714d7cd275d9fde1c5",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/04/0455398189df26cfb2dd5a18b7a1a31b420334392d87087fa2c25ec1d6a89b36"
+        },
+        "styles.css": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/55/55e3c126fee65daa5d6799cce6bc8f359db7707eb6c31a6cbc38bccacec2a9a3",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/56ae8151-d831-4137-88b0-60e60a9dee38/blobs/31/31d7c6bcbbd0e4a285b874dc9e78dc20341e3581677a29924be078cb4bfa692a"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "1dbfa952-439f-4b0a-b5bd-af9f632090c7",
+      "id": "3f36da79-1878-4af2-a178-3b883f4fbc70"
+    },
+    "revisions": {
+      "1dbfa952-439f-4b0a-b5bd-af9f632090c7": [
+        {
+          "id": "3f36da79-1878-4af2-a178-3b883f4fbc70",
+          "scope": "project",
+          "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/checks/3f36da79-1878-4af2-a178-3b883f4fbc70.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "at": [
+                2,
+                8,
+                12,
+                16,
+                22,
+                27,
+                32,
+                36,
+                40,
+                44,
+                52,
+                60,
+                66,
+                70,
+                74,
+                78,
+                82,
+                88,
+                92,
+                96,
+                100,
+                104,
+                108,
+                114,
+                118
+              ],
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794462488186,
+          "contentHash": "25c57a993280465f3319a2bdd54ca7b13b916383e437bd2e52d8b3d546801dba",
+          "revision": "1dbfa952-439f-4b0a-b5bd-af9f632090c7",
+          "inputFingerprint": "dce88a91361e17339bd1ed56898362e016bb96415fb657ff52a40856b6dfbd67",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "0f5cf855-6909-4661-aa72-b937f09b6344",
+        "scope": "project",
+        "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/checks/0f5cf855-6909-4661-aa72-b937f09b6344.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "at": [
+              4,
+              12,
+              20,
+              27,
+              40,
+              44,
+              52,
+              60,
+              68,
+              73,
+              80,
+              88,
+              98,
+              104,
+              118
+            ],
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": true,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794462422265,
+        "contentHash": "a0f765b2be9d2c4146f3427e1e5c56aeba9cfcf7f06b7bfe43748ef42fb34107",
+        "revision": null,
+        "inputFingerprint": "55876ba9643336e020f37d40a9eaedb0ee0f01dca0525d371d6efb7b7ca7c7d1",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "952cbcbd-ae7a-4d3e-9892-9f3431540385",
+        "scope": "project",
+        "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/checks/952cbcbd-ae7a-4d3e-9892-9f3431540385.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "at": [
+              4,
+              12,
+              20,
+              27,
+              40,
+              44,
+              52,
+              60,
+              68,
+              73,
+              80,
+              88,
+              98,
+              104,
+              118
+            ],
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794462433393,
+        "contentHash": "bf598cfbee9777299cc9ea0b284d0986c94ae3632d20d467bf1263ec19b80ea8",
+        "revision": null,
+        "inputFingerprint": "55876ba9643336e020f37d40a9eaedb0ee0f01dca0525d371d6efb7b7ca7c7d1",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": null,
+      "id": "0f5cf855-6909-4661-aa72-b937f09b6344-4"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "0f5cf855-6909-4661-aa72-b937f09b6344-0",
+        "scope": "full",
+        "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/snapshots/ffccc191-4da7-4f72-828e-ebab6f45211e/frame-00-at-4.0s.png",
+        "time": 4,
+        "metadata": {
+          "checkId": "0f5cf855-6909-4661-aa72-b937f09b6344",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1794462422265,
+        "contentHash": "53b4997b8fcf42ae13f65881440f3290de82f027c6eaad89d714461fff0be572",
+        "revision": null,
+        "inputFingerprint": "55876ba9643336e020f37d40a9eaedb0ee0f01dca0525d371d6efb7b7ca7c7d1",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "0f5cf855-6909-4661-aa72-b937f09b6344-1",
+        "scope": "full",
+        "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/snapshots/ffccc191-4da7-4f72-828e-ebab6f45211e/frame-01-at-27.0s.png",
+        "time": 27,
+        "metadata": {
+          "checkId": "0f5cf855-6909-4661-aa72-b937f09b6344",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1794462422265,
+        "contentHash": "9bac870de2b8b60a8fb71805c1c4b7cb526bdf607f005d7b8800da8828baf31a",
+        "revision": null,
+        "inputFingerprint": "55876ba9643336e020f37d40a9eaedb0ee0f01dca0525d371d6efb7b7ca7c7d1",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "0f5cf855-6909-4661-aa72-b937f09b6344-2",
+        "scope": "full",
+        "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/snapshots/ffccc191-4da7-4f72-828e-ebab6f45211e/frame-02-at-60.0s.png",
+        "time": 60,
+        "metadata": {
+          "checkId": "0f5cf855-6909-4661-aa72-b937f09b6344",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1794462422265,
+        "contentHash": "635252df4adea93d82947236bc3df3b606a01ca6386c4f8a02527dcf01d24d28",
+        "revision": null,
+        "inputFingerprint": "55876ba9643336e020f37d40a9eaedb0ee0f01dca0525d371d6efb7b7ca7c7d1",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "0f5cf855-6909-4661-aa72-b937f09b6344-3",
+        "scope": "full",
+        "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/snapshots/ffccc191-4da7-4f72-828e-ebab6f45211e/frame-03-at-80.0s.png",
+        "time": 80,
+        "metadata": {
+          "checkId": "0f5cf855-6909-4661-aa72-b937f09b6344",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1794462422265,
+        "contentHash": "d0579a94b1e8f4892a2cdb7f1f80f8d7884dce3c9b1540ab4eb83d7007881616",
+        "revision": null,
+        "inputFingerprint": "55876ba9643336e020f37d40a9eaedb0ee0f01dca0525d371d6efb7b7ca7c7d1",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "0f5cf855-6909-4661-aa72-b937f09b6344-4",
+        "scope": "full",
+        "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/.hyperframes/artifacts/snapshots/ffccc191-4da7-4f72-828e-ebab6f45211e/frame-04-at-118.0s.png",
+        "time": 118,
+        "metadata": {
+          "checkId": "0f5cf855-6909-4661-aa72-b937f09b6344",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1794462422265,
+        "contentHash": "a055083881565003df34e5c5fee13ea7df61100b579a55374bdbba700b1419b3",
+        "revision": null,
+        "inputFingerprint": "55876ba9643336e020f37d40a9eaedb0ee0f01dca0525d371d6efb7b7ca7c7d1",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "renders": {
+    "latest": {
+      "id": "369470bf-ef5e-4449-bbef-8285d7c81d71",
+      "completedAt": 1794462589893,
+      "output": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-tutorial-hyperframes/renders/tutorial-controles.mp4",
+      "status": "completed",
+      "revision": "1dbfa952-439f-4b0a-b5bd-af9f632090c7"
+    },
+    "retainedRevisions": [
+      "1dbfa952-439f-4b0a-b5bd-af9f632090c7"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

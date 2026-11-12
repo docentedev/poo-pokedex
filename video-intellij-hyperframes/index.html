@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>JavaFX en IntelliJ — Guía completa paso a paso</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="lib/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- ================================================================
+         COMPOSICIÓN · 1920×1080 · 30 fps · 300 s · 9000 frames
+         Escena 1:   0– 12 s   Introducción
+         Escena 2:  12– 56 s   Cap. 01 · Crear el proyecto en IntelliJ
+         Escena 3:  56–112 s   Cap. 02 · module-info y errores de opens
+         Escena 4: 112–158 s   Cap. 03 · Vista ↔ Controlador
+         Escena 5: 158–214 s   Cap. 04 · Patrón de capas
+         Escena 6: 214–248 s   Cap. 05 · Cómo organizar
+         Escena 7: 248–288 s   Cap. 06 · Errores comunes
+         Escena 8: 288–300 s   Cap. 07 · Cierre
+         ================================================================ -->
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="380"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- ---------- Fondo global ---------- -->
+      <div id="bg" class="clip" data-start="0" data-duration="380" data-track-index="0">
+        <div class="bg-base"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-glow bg-glow--blue" id="glow-blue"></div>
+        <div class="bg-glow bg-glow--green" id="glow-green"></div>
+        <div class="bg-vignette"></div>
+      </div>
+
+      <!-- ===================== ESCENA 1 · INTRO ===================== -->
+      <section id="scene-1" class="clip scene-section" data-start="0" data-duration="12" data-track-index="1">
+        <div class="scene" id="s1">
+          <div class="scene-tag">GUÍA COMPLETA · 6 MIN</div>
+
+          <div class="s1-center">
+            <div class="eyebrow" id="s1-eyebrow">JAVAFX · INTELLIJ IDEA · MVC</div>
+            <h1 class="hero-title" id="s1-title">De cero a tu app<br /><span class="accent">en IntelliJ</span></h1>
+            <div class="hero-rule" id="s1-rule"></div>
+            <p class="hero-lede" id="s1-lede">
+              Crear el proyecto, entender el <strong>module-info</strong>, conectar la vista con el controlador,
+              saber dónde inicializar cada control y ubicar cada responsabilidad en su capa.
+            </p>
+
+            <div class="roadmap" id="s1-roadmap">
+              <div class="road-item">
+                <span class="road-num">01</span>
+                <div><div class="road-label">Proyecto</div><div class="road-sub">IntelliJ + Maven</div></div>
+              </div>
+              <div class="road-item">
+                <span class="road-num">02</span>
+                <div><div class="road-label">module-info</div><div class="road-sub">requires · opens</div></div>
+              </div>
+              <div class="road-item">
+                <span class="road-num">03</span>
+                <div><div class="road-label">Vista + Controlador</div><div class="road-sub">fx:id · @FXML</div></div>
+              </div>
+              <div class="road-item">
+                <span class="road-num">04</span>
+                <div><div class="road-label">Inicializar y capas</div><div class="road-sub">atributo · initialize()</div></div>
+              </div>
+            </div>
+
+            <p class="s1-note" id="s1-note">6 minutos · ritmo lento · cada error tiene su porqué.</p>
+          </div>
+
+          <div class="lower-third" id="s1-lt">
+            <span class="lt-bar"></span>
+            <p>Al final tendrás un proyecto que compila, abre la ventana y guarda datos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 2 · PROYECTO ===================== -->
+      <section id="scene-2" class="clip scene-section" data-start="12" data-duration="44" data-track-index="2">
+        <div class="scene" id="s2">
+          <div class="scene-tag">CAPÍTULO 01 · PROYECTO</div>
+
+          <header class="scene-head" id="s2-head">
+            <div class="kicker">CREAR EL PROYECTO</div>
+            <h2>IntelliJ: <span class="accent">New Project</span></h2>
+          </header>
+
+          <!-- 2A · asistente -->
+          <div class="panel wizard" id="s2-wizard">
+            <div class="wiz-bar">
+              <span class="dot dot--r"></span>
+              <span class="dot dot--y"></span>
+              <span class="dot dot--g"></span>
+              <span class="wiz-title">New Project</span>
+            </div>
+            <div class="wiz-body">
+              <div class="wiz-field">
+                <span class="wiz-label">Name</span>
+                <span class="wiz-value">PokedexCartas</span>
+              </div>
+              <div class="wiz-field">
+                <span class="wiz-label">Location</span>
+                <span class="wiz-value wiz-value--mono">~/IdeaProjects/PokedexCartas</span>
+              </div>
+              <div class="wiz-field">
+                <span class="wiz-label">Language</span>
+                <span class="wiz-chip">Java</span>
+              </div>
+              <div class="wiz-field">
+                <span class="wiz-label">Build system</span>
+                <span class="wiz-chip wiz-chip--blue">Maven</span>
+              </div>
+              <div class="wiz-field">
+                <span class="wiz-label">JDK</span>
+                <span class="wiz-chip wiz-chip--green">21 · OpenJDK</span>
+              </div>
+              <div class="wiz-field wiz-field--check">
+                <span class="wiz-label">Add sample code</span>
+                <span class="wiz-off">desactivado</span>
+              </div>
+              <div class="wiz-actions">
+                <span class="wiz-btn" id="s2-create">Create</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="panel explain explain--s2" id="s2-steps">
+            <div class="panel-title">Paso a paso</div>
+            <div class="steps">
+              <div class="step" id="s2-st1">
+                <span class="n">1</span>
+                <div><strong>File → New → Project…</strong><span>En la barra superior de IntelliJ.</span></div>
+              </div>
+              <div class="step" id="s2-st2">
+                <span class="n">2</span>
+                <div><strong>Nombre y ubicación</strong><span>PokedexCartas en tu carpeta de proyectos.</span></div>
+              </div>
+              <div class="step" id="s2-st3">
+                <span class="n">3</span>
+                <div><strong>Build system: Maven</strong><span>JDK 21. Sin Gradle y sin sample code.</span></div>
+              </div>
+              <div class="step" id="s2-st4">
+                <span class="n">4</span>
+                <div><strong>Create</strong><span>Maven descarga JavaFX y Gson.</span></div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- 2B · estructura -->
+          <aside class="panel tree-panel" id="s2-tree">
+            <div class="panel-title">Estructura del proyecto</div>
+            <div class="tree">
+              <div class="tree-line tree-root">PokedexCartas/</div>
+              <div class="tree-line">├─ src/main/java/cl/duoc/pokedex/</div>
+              <div class="tree-line">│&nbsp;&nbsp;├─ App.java</div>
+              <div class="tree-line">│&nbsp;&nbsp;├─ Launcher.java</div>
+              <div class="tree-line">│&nbsp;&nbsp;├─ controller/PokedexController.java</div>
+              <div class="tree-line">│&nbsp;&nbsp;├─ model/ · repository/ · dao/</div>
+              <div class="tree-line">├─ src/main/resources/cl/duoc/pokedex/view/</div>
+              <div class="tree-line">│&nbsp;&nbsp;└─ pokedex-view.fxml</div>
+              <div class="tree-line">└─ pom.xml</div>
+            </div>
+          </aside>
+
+          <div class="code-card code-card--pom" id="s2-pom">
+            <div class="file-head">
+              <span class="file-name">pom.xml</span>
+              <span class="file-tag">MAVEN</span>
+            </div>
+            <div class="code-body">
+              <div class="cl"><span class="ln">1</span><span class="src">&lt;<span class="ty">dependency</span>&gt;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src">  &lt;<span class="ty">groupId</span>&gt;org.openjfx&lt;/<span class="ty">groupId</span>&gt;</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src">  &lt;<span class="ty">artifactId</span>&gt;javafx-controls&lt;/<span class="ty">artifactId</span>&gt;</span></div>
+              <div class="cl"><span class="ln">4</span><span class="src">&lt;/<span class="ty">dependency</span>&gt;</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">&lt;<span class="ty">dependency</span>&gt;</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">  &lt;<span class="ty">groupId</span>&gt;org.openjfx&lt;/<span class="ty">groupId</span>&gt;</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src">  &lt;<span class="ty">artifactId</span>&gt;javafx-fxml&lt;/<span class="ty">artifactId</span>&gt;</span></div>
+              <div class="cl"><span class="ln">8</span><span class="src">&lt;/<span class="ty">dependency</span>&gt;</span></div>
+            </div>
+            <div class="pom-note" id="s2-pom-note">+ Gson 2.11.0 · javafx-maven-plugin</div>
+          </div>
+
+          <aside class="panel run-panel" id="s2-run">
+            <div class="panel-title">Ejecutar</div>
+            <div class="run-cmd"><span class="run-prompt">$</span> mvn javafx:run</div>
+            <div class="run-status" id="s2-run-status"><span class="run-ok">✓</span> BUILD SUCCESS · ventana abierta</div>
+          </aside>
+
+          <div class="lower-third" id="s2-lt-1">
+            <span class="lt-bar"></span>
+            <p><code>File → New → Project</code>. Elige Java y Maven: Maven descarga JavaFX y Gson por ti.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-2">
+            <span class="lt-bar"></span>
+            <p><strong>JDK 21</strong> y «Add sample code» desactivado: partimos de un proyecto limpio.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-3">
+            <span class="lt-bar"></span>
+            <p>El código va en <code>src/main/java</code>; el FXML en <code>src/main/resources</code>, con la misma ruta del paquete.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-4">
+            <span class="lt-bar"></span>
+            <p>Ejecuta con <code>mvn javafx:run</code> o con el botón <strong>Run</strong> de IntelliJ.</p>
+          </div>
+          <div class="lower-third" id="s2-lt-5">
+            <span class="lt-bar"></span>
+            <p>Maven administra las dependencias: JavaFX y Gson se descargan solos al sincronizar.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 3 · MODULE-INFO ===================== -->
+      <section id="scene-3" class="clip scene-section" data-start="56" data-duration="56" data-track-index="3">
+        <div class="scene" id="s3">
+          <div class="scene-tag">CAPÍTULO 02 · MODULE-INFO</div>
+
+          <header class="scene-head" id="s3-head">
+            <div class="kicker">EL ERROR QUE A TODOS NOS PASA</div>
+            <h2>Módulos: <span class="accent">requires, opens y exports</span></h2>
+          </header>
+
+          <!-- 3A · el error -->
+          <div class="panel term" id="s3-term">
+            <div class="term-bar">
+              <span class="dot dot--r"></span>
+              <span class="dot dot--y"></span>
+              <span class="dot dot--g"></span>
+              <span class="term-title">Run · PokedexCartas</span>
+            </div>
+            <div class="term-body">
+              <div class="term-line term-line--err">Exception in Application start method</div>
+              <div class="term-line term-line--err">Caused by: java.lang.IllegalAccessException:</div>
+              <div class="term-line">  module cl.duoc.pokedex does not</div>
+              <div class="term-line term-line--hi" id="s3-hi">  "opens cl.duoc.pokedex.controller"</div>
+              <div class="term-line term-line--hi">  to module javafx.fxml</div>
+              <div class="term-line term-line--dim">  at javafx.fxml.FXMLLoader…</div>
+            </div>
+          </div>
+
+          <aside class="panel why-panel" id="s3-why">
+            <div class="panel-title">¿Por qué pasa?</div>
+            <div class="why-item" id="s3-w1">
+              <span class="why-num">1</span>
+              <p>FXML <strong>no hace <code>new PokedexController()</code></strong>: lo crea por reflexión.</p>
+            </div>
+            <div class="why-item" id="s3-w2">
+              <span class="why-num">2</span>
+              <p>La reflexión necesita un <strong>permiso explícito</strong> del módulo.</p>
+            </div>
+            <div class="why-item" id="s3-w3">
+              <span class="why-num">3</span>
+              <p>Ese permiso se escribe en <code>module-info.java</code> con <code>opens</code>.</p>
+            </div>
+          </aside>
+
+          <!-- 3B · module-info -->
+          <div class="code-card code-card--module" id="s3-code">
+            <div class="file-head">
+              <span class="file-name">module-info.java</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s3-java">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="k">module</span> cl.duoc.pokedex {</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src">    <span class="fn">requires</span> javafx.controls;</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src">    <span class="fn">requires</span> javafx.fxml;</span></div>
+              <div class="cl"><span class="ln">4</span><span class="src">    <span class="fn">requires</span> com.google.gson;</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">    <span class="fn">opens</span> cl.duoc.pokedex.controller</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src">        <span class="k">to</span> javafx.fxml;</span></div>
+              <div class="cl"><span class="ln">8</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">9</span><span class="src">    <span class="fn">opens</span> cl.duoc.pokedex.model</span></div>
+              <div class="cl"><span class="ln">10</span><span class="src">        <span class="k">to</span> com.google.gson;</span></div>
+              <div class="cl"><span class="ln">11</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">12</span><span class="src">    <span class="fn">exports</span> cl.duoc.pokedex;</span></div>
+              <div class="cl"><span class="ln">13</span><span class="src">}</span></div>
+            </div>
+          </div>
+
+          <aside class="panel legend" id="s3-legend">
+            <div class="panel-title">Qué significa cada línea</div>
+            <div class="leg-row" id="s3-leg1">
+              <span class="leg-dot leg-dot--blue"></span>
+              <div><strong class="leg-k leg-k--blue">requires</strong><p>Mi módulo necesita este otro módulo.</p></div>
+            </div>
+            <div class="leg-row" id="s3-leg2">
+              <span class="leg-dot leg-dot--green"></span>
+              <div><strong class="leg-k leg-k--green">opens … to</strong><p>Permite reflexión, solo al módulo indicado.</p></div>
+            </div>
+            <div class="leg-row" id="s3-leg3">
+              <span class="leg-dot leg-dot--amber"></span>
+              <div><strong class="leg-k leg-k--amber">exports</strong><p>Hace público un paquete para otros módulos.</p></div>
+            </div>
+            <div class="leg-note" id="s3-leg-note">Abre solo lo necesario: no todo el proyecto.</div>
+          </aside>
+
+          <!-- 3C · comparación -->
+          <div class="panel cmp-panel" id="s3-cmp">
+            <div class="panel-title">opens no es lo mismo que exports</div>
+            <div class="cmp">
+              <div class="cmp-head"><span>Directiva</span><span>Qué permite</span><span>Cuándo usarla</span></div>
+              <div class="cmp-row" id="s3-cmp1">
+                <span class="mono cmp-k">requires</span>
+                <span>Usar otro módulo.</span>
+                <span>JavaFX, FXML, Gson.</span>
+              </div>
+              <div class="cmp-row" id="s3-cmp2">
+                <span class="mono cmp-k cmp-k--green">opens … to</span>
+                <span>Acceso por reflexión.</span>
+                <span>FXML → controlador · Gson → modelo.</span>
+              </div>
+              <div class="cmp-row" id="s3-cmp3">
+                <span class="mono cmp-k cmp-k--amber">exports</span>
+                <span>Acceso público normal.</span>
+                <span>Cuando otro módulo importa tus clases.</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="panel rules-panel" id="s3-rules">
+            <div class="panel-title">Regla práctica</div>
+            <div class="mini-rule" id="s3-r1"><span class="mini-dot"></span><p>¿La clase se carga desde FXML? → <code>opens … to javafx.fxml</code></p></div>
+            <div class="mini-rule" id="s3-r2"><span class="mini-dot"></span><p>¿Gson lee o escribe el modelo? → <code>opens … to com.google.gson</code></p></div>
+            <div class="mini-rule" id="s3-r3"><span class="mini-dot"></span><p>¿Solo lo usa tu app? → no necesitas <code>exports</code>.</p></div>
+          </aside>
+
+          <div class="lower-third" id="s3-lt-1">
+            <span class="lt-bar"></span>
+            <p>Este es el error más común al empezar: el módulo no abre el paquete del controlador a <code>javafx.fxml</code>.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-2">
+            <span class="lt-bar"></span>
+            <p>FXML crea el controlador por reflexión; sin <code>opens</code>, la JVM bloquea el acceso.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-3">
+            <span class="lt-bar"></span>
+            <p><code>requires</code> declara lo que necesitas; <code>opens … to</code> autoriza la reflexión; <code>exports</code> publica un paquete.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-4">
+            <span class="lt-bar"></span>
+            <p>Abre solo lo necesario: el controlador a <code>javafx.fxml</code> y el modelo a Gson.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-5">
+            <span class="lt-bar"></span>
+            <p><code>exports</code> no reemplaza a <code>opens</code>: uno publica clases, el otro permite reflexión.</p>
+          </div>
+          <div class="lower-third" id="s3-lt-6">
+            <span class="lt-bar"></span>
+            <p>Si el error menciona un paquete, abre ese paquete al módulo que lo pide.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 4 · VISTA ↔ CONTROLADOR ===================== -->
+      <section id="scene-4" class="clip scene-section" data-start="112" data-duration="46" data-track-index="4">
+        <div class="scene" id="s4">
+          <div class="scene-tag">CAPÍTULO 03 · VISTA + CONTROLADOR</div>
+
+          <header class="scene-head" id="s4-head">
+            <div class="kicker">CÓMO SE CONECTAN</div>
+            <h2>FXML ↔ Controlador: <span class="accent">tres nombres que deben coincidir</span></h2>
+          </header>
+
+          <!-- 4A · mapa -->
+          <div class="map" id="s4-map">
+            <div class="map-row" id="s4-map1">
+              <div class="map-chip">
+                <span class="map-tag">FXML · VBox</span>
+                <span class="mono map-code">fx:controller="cl.duoc.pokedex.controller.PokedexController"</span>
+              </div>
+              <div class="map-mid"><span class="map-arrow">→</span><span class="map-label">crea la clase</span></div>
+              <div class="map-chip map-chip--java">
+                <span class="map-tag">JAVA</span>
+                <span class="mono map-code">public class PokedexController</span>
+              </div>
+            </div>
+
+            <div class="map-row" id="s4-map2">
+              <div class="map-chip">
+                <span class="map-tag">FXML · ComboBox</span>
+                <span class="mono map-code">&lt;ComboBox fx:id="categoriaComboBox"/&gt;</span>
+              </div>
+              <div class="map-mid"><span class="map-arrow">→</span><span class="map-label">mismo nombre</span></div>
+              <div class="map-chip map-chip--java">
+                <span class="map-tag">JAVA</span>
+                <span class="mono map-code">@FXML private ComboBox&lt;String&gt; categoriaComboBox;</span>
+              </div>
+            </div>
+
+            <div class="map-row" id="s4-map3">
+              <div class="map-chip">
+                <span class="map-tag">FXML · Button</span>
+                <span class="mono map-code">&lt;Button onAction="#registrarCarta"/&gt;</span>
+              </div>
+              <div class="map-mid"><span class="map-arrow">→</span><span class="map-label">mismo nombre + @FXML</span></div>
+              <div class="map-chip map-chip--java">
+                <span class="map-tag">JAVA</span>
+                <span class="mono map-code">@FXML private void registrarCarta() { … }</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="map-note" id="s4-map-note">Si un nombre no coincide: el campo queda en <code>null</code> o el botón no hace nada.</p>
+
+          <!-- 4B · código -->
+          <div class="code-card code-card--fxml" id="s4-fxml">
+            <div class="file-head">
+              <span class="file-name">pokedex-view.fxml</span>
+              <span class="file-tag">FXML</span>
+            </div>
+            <div class="code-body">
+              <div class="cl"><span class="ln">1</span><span class="src">&lt;<span class="ty">VBox</span></span></div>
+              <div class="cl"><span class="ln">2</span><span class="src">    <span class="an">fx:controller</span>=<span class="st">"cl.duoc.pokedex.controller.PokedexController"</span>&gt;</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src">    &lt;<span class="ty">ComboBox</span> <span class="an">fx:id</span>=<span class="st">"categoriaComboBox"</span>/&gt;</span></div>
+              <div class="cl"><span class="ln">4</span><span class="src">    &lt;<span class="ty">Button</span> <span class="an">text</span>=<span class="st">"Registrar"</span></span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">            <span class="an">onAction</span>=<span class="st">"#registrarCarta"</span>/&gt;</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">&lt;/<span class="ty">VBox</span>&gt;</span></div>
+            </div>
+          </div>
+
+          <div class="code-card code-card--ctrl" id="s4-java">
+            <div class="file-head">
+              <span class="file-name">PokedexController.java</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s4-java-body">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">ComboBox</span>&lt;<span class="ty">String</span>&gt; categoriaComboBox;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">3</span><span class="src"><span class="an">@FXML</span></span></div>
+              <div class="cl"><span class="ln">4</span><span class="src"><span class="k">public void</span> <span class="fn">initialize</span>() {</span></div>
+              <div class="cl"><span class="ln">5</span><span class="src">    categoriaComboBox.<span class="fn">setItems</span>(…);</span></div>
+              <div class="cl"><span class="ln">6</span><span class="src">}</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">8</span><span class="src"><span class="an">@FXML</span></span></div>
+              <div class="cl"><span class="ln">9</span><span class="src"><span class="k">private void</span> <span class="fn">registrarCarta</span>() {</span></div>
+              <div class="cl"><span class="ln">10</span><span class="src">    <span class="cm">// se ejecuta al presionar el botón</span></span></div>
+              <div class="cl"><span class="ln">11</span><span class="src">}</span></div>
+            </div>
+          </div>
+
+          <div class="rules" id="s4-rules">
+            <div class="rule" id="s4-rule1"><span class="rule-num">1</span><p><code>fx:controller</code> usa el <strong>nombre completo</strong> de la clase.</p></div>
+            <div class="rule" id="s4-rule2"><span class="rule-num">2</span><p><code>fx:id</code> = nombre exacto del campo <code>@FXML</code>.</p></div>
+            <div class="rule" id="s4-rule3"><span class="rule-num">3</span><p><code>onAction</code> = método <code>@FXML</code>, aunque sea <code>private</code>.</p></div>
+            <div class="rule" id="s4-rule4"><span class="rule-num">4</span><p><code>initialize()</code> corre después de inyectar los campos.</p></div>
+          </div>
+
+          <!-- 4C · flujo del clic -->
+          <div class="flow" id="s4-flow">
+            <div class="flow-chip">Button</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-chip">onAction</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-chip flow-chip--blue">Controlador</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-chip flow-chip--green">Repository / DAO</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-chip">TableView</div>
+          </div>
+          <p class="flow-caption" id="s4-flow-caption">
+            Un clic recorre las capas y vuelve a la tabla: la vista nunca guarda datos por su cuenta.
+          </p>
+
+          <div class="lower-third" id="s4-lt-1">
+            <span class="lt-bar"></span>
+            <p><code>fx:controller</code> apunta a la clase; <code>fx:id</code> debe coincidir con el campo; <code>onAction</code> con el método.</p>
+          </div>
+          <div class="lower-third" id="s4-lt-2">
+            <span class="lt-bar"></span>
+            <p>Si un nombre no coincide, el campo queda en <code>null</code> o el botón no hace nada.</p>
+          </div>
+          <div class="lower-third" id="s4-lt-3">
+            <span class="lt-bar"></span>
+            <p><code>initialize()</code> se ejecuta al cargar la vista, cuando los campos <code>@FXML</code> ya están listos.</p>
+          </div>
+          <div class="lower-third" id="s4-lt-4">
+            <span class="lt-bar"></span>
+            <p>El método de <code>onAction</code> puede ser privado, pero debe llamarse igual y llevar <code>@FXML</code>.</p>
+          </div>
+          <div class="lower-third" id="s4-lt-5">
+            <span class="lt-bar"></span>
+            <p>Un clic recorre las capas y vuelve a la tabla: la vista nunca guarda datos por su cuenta.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 4B · INICIALIZACIÓN ===================== -->
+      <section id="scene-4b" class="clip scene-section" data-start="158" data-duration="80" data-track-index="4">
+        <div class="scene" id="s4b">
+          <div class="scene-tag">CAPÍTULO 04 · INICIALIZACIÓN</div>
+
+          <header class="scene-head" id="s4b-head">
+            <div class="kicker">ATRIBUTO · CONSTRUCTOR · initialize()</div>
+            <h2>¿Quién crea cada objeto <span class="accent">y cuándo?</span></h2>
+          </header>
+
+          <!-- 4B.1 · orden de ejecución -->
+          <div class="exec" id="s4b-exec">
+            <div class="exec-step" id="s4b-x1">
+              <span class="exec-num">1</span>
+              <div class="exec-body">
+                <strong>Se crea el controlador</strong>
+                <span class="exec-code mono">new PokedexController()</span>
+                <p>FXMLLoader instancia la clase. Los campos <code>@FXML</code> todavía valen <code>null</code>.</p>
+              </div>
+            </div>
+
+            <div class="exec-step" id="s4b-x2">
+              <span class="exec-num">2</span>
+              <div class="exec-body">
+                <strong>FXML crea los controles</strong>
+                <span class="exec-code mono">&lt;ComboBox fx:id="categoriaComboBox"/&gt;</span>
+                <p>El loader lee el archivo y construye cada control del layout.</p>
+              </div>
+            </div>
+
+            <div class="exec-step" id="s4b-x3">
+              <span class="exec-num">3</span>
+              <div class="exec-body">
+                <strong>Inyección de campos</strong>
+                <span class="exec-code mono">categoriaComboBox = &lt;el ComboBox creado&gt;</span>
+                <p>Por reflexión, JavaFX asigna cada control al campo con el mismo <code>fx:id</code>.</p>
+              </div>
+            </div>
+
+            <div class="exec-step" id="s4b-x4">
+              <span class="exec-num">4</span>
+              <div class="exec-body">
+                <strong>JavaFX llama initialize()</strong>
+                <span class="exec-code mono">initialize() → setItems(...)</span>
+                <p>Los campos ya existen: aquí se configuran. Después se muestra la ventana.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="panel state-panel" id="s4b-note">
+            <div class="panel-title">El campo cambia de estado</div>
+            <div class="state-row" id="s4b-s1">
+              <span class="mono">categoriaComboBox</span>
+              <span class="state-null">null</span>
+            </div>
+            <div class="state-row" id="s4b-s2">
+              <span class="mono">categoriaComboBox</span>
+              <span class="state-obj">ComboBox@1a2b</span>
+            </div>
+            <div class="state-row" id="s4b-s3">
+              <span class="mono">categoriaComboBox</span>
+              <span class="state-ok">3 opciones · listo</span>
+            </div>
+            <p class="state-hint" id="s4b-hint">
+              Si tocas el campo antes del paso 3: <code>NullPointerException</code>.
+            </p>
+          </aside>
+
+          <!-- 4B.2 · ComboBox -->
+          <div class="code-card code-card--combo" id="s4b-code">
+            <div class="file-head">
+              <span class="file-name">PokedexController.java</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s4b-java">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="cm">// ATRIBUTO: solo se declara, no se crea</span></span></div>
+              <div class="cl"><span class="ln">2</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">ComboBox</span>&lt;<span class="ty">String</span>&gt; categoriaComboBox;</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">4</span><span class="src"><span class="cm">// initialize(): JavaFX ya lo inyectó</span></span></div>
+              <div class="cl"><span class="ln">5</span><span class="src"><span class="an">@FXML</span></span></div>
+              <div class="cl"><span class="ln">6</span><span class="src"><span class="k">public void</span> <span class="fn">initialize</span>() {</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src">    categoriaComboBox.<span class="fn">setItems</span>(</span></div>
+              <div class="cl"><span class="ln">8</span><span class="src">        <span class="ty">FXCollections</span>.<span class="fn">observableArrayList</span>(</span></div>
+              <div class="cl"><span class="ln">9</span><span class="src">            <span class="st">"Pokémon"</span>, <span class="st">"Energía"</span>, <span class="st">"Entrenador"</span>));</span></div>
+              <div class="cl"><span class="ln">10</span><span class="src">    categoriaComboBox.<span class="fn">getSelectionModel</span>()</span></div>
+              <div class="cl"><span class="ln">11</span><span class="src">        .<span class="fn">selectFirst</span>();</span></div>
+              <div class="cl"><span class="ln">12</span><span class="src">}</span></div>
+            </div>
+          </div>
+
+          <aside class="panel why-init" id="s4b-why">
+            <div class="panel-title">¿Por qué no en el constructor?</div>
+            <div class="why-item why-item--plain" id="s4b-w1">
+              <span class="why-num why-num--red">✗</span>
+              <p>El constructor corre <strong>antes</strong> de que FXML inyecte los campos.</p>
+            </div>
+            <div class="why-item why-item--plain" id="s4b-w2">
+              <span class="why-num why-num--red">✗</span>
+              <p><code>categoriaComboBox</code> todavía es <code>null</code>: cualquier llamada falla.</p>
+            </div>
+            <div class="why-item why-item--plain" id="s4b-w3">
+              <span class="why-num why-num--green">✓</span>
+              <p><code>initialize()</code> corre <strong>después</strong> de inyectar y <strong>antes</strong> de mostrar la ventana.</p>
+            </div>
+
+            <div class="bad-code" id="s4b-bad">
+              <div><span class="k">public</span> <span class="ty">PokedexController</span>() {</div>
+              <div>    categoriaComboBox.<span class="fn">setItems</span>(...);</div>
+              <div>    <span class="bad">// ✗ NullPointerException</span></div>
+              <div>}</div>
+            </div>
+
+            <div class="combo-readout" id="s4b-readout">
+              <span class="mono">getValue()</span> → <span class="state-ok">"Pokémon"</span>
+            </div>
+          </aside>
+
+          <!-- 4B.3 · TableView -->
+          <div class="code-card code-card--table" id="s4b-table">
+            <div class="file-head">
+              <span class="file-name">PokedexController.java</span>
+              <span class="file-tag file-tag--java">JAVA</span>
+            </div>
+            <div class="code-body" id="s4b-table-java">
+              <div class="cl"><span class="ln">1</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">TableView</span>&lt;<span class="ty">Carta</span>&gt; cartasTable;</span></div>
+              <div class="cl"><span class="ln">2</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">TableColumn</span>&lt;<span class="ty">Carta</span>, <span class="ty">String</span>&gt; nombreColumn;</span></div>
+              <div class="cl"><span class="ln">3</span><span class="src"><span class="an">@FXML</span> <span class="k">private</span> <span class="ty">TableColumn</span>&lt;<span class="ty">Carta</span>, <span class="ty">String</span>&gt; valorColumn;</span></div>
+              <div class="cl"><span class="ln">4</span><span class="src"></span></div>
+              <div class="cl"><span class="ln">5</span><span class="src"><span class="an">@FXML</span></span></div>
+              <div class="cl"><span class="ln">6</span><span class="src"><span class="k">public void</span> <span class="fn">initialize</span>() {</span></div>
+              <div class="cl"><span class="ln">7</span><span class="src">    nombreColumn.<span class="fn">setCellValueFactory</span>(</span></div>
+              <div class="cl"><span class="ln">8</span><span class="src">        c -&gt; <span class="k">new</span> <span class="ty">SimpleStringProperty</span>(c.<span class="fn">getValue</span>().<span class="fn">getNombre</span>()));</span></div>
+              <div class="cl"><span class="ln">9</span><span class="src">    valorColumn.<span class="fn">setCellValueFactory</span>(</span></div>
+              <div class="cl"><span class="ln">10</span><span class="src">        c -&gt; <span class="k">new</span> <span class="ty">SimpleStringProperty</span>(<span class="st">"$"</span></span></div>
+              <div class="cl"><span class="ln">11</span><span class="src">            + c.<span class="fn">getValue</span>().<span class="fn">calcularValorEstimado</span>()));</span></div>
+              <div class="cl"><span class="ln">12</span><span class="src">    cartasTable.<span class="fn">setItems</span>(cartas);</span></div>
+              <div class="cl"><span class="ln">13</span><span class="src">}</span></div>
+            </div>
+          </div>
+
+          <aside class="panel mini-table-panel" id="s4b-mock">
+            <div class="panel-title">Lo que produce ese initialize()</div>
+            <div class="mini-tbl">
+              <div class="mini-head"><span>Nombre</span><span class="calc">Valor</span></div>
+              <div class="mini-row" id="s4b-row1"><span>Pikachu</span><span class="calc">$4.200</span></div>
+              <div class="mini-row" id="s4b-row2"><span>Energía Fuego</span><span class="calc">$1.200</span></div>
+            </div>
+            <p class="mini-note" id="s4b-mocknote">
+              La columna también es un campo <code>@FXML</code>: si su <code>fx:id</code> no coincide, queda en <code>null</code>.
+            </p>
+            <p class="mini-note mini-note--calc" id="s4b-mocknote2">
+              El valor no se guarda: lo calcula el modelo con <code>calcularValorEstimado()</code>.
+            </p>
+          </aside>
+
+          <!-- 4B.4 · regla de oro -->
+          <div class="panel place-panel" id="s4b-place">
+            <div class="panel-title">Regla de oro: cada cosa en su lugar</div>
+            <div class="place-head">
+              <span>Dónde</span>
+              <span>Qué va ahí</span>
+              <span>Por qué</span>
+            </div>
+            <div class="place-row" id="s4b-p1">
+              <span class="place-k">Atributo</span>
+              <span>Declarar los <code>@FXML</code>; listas con <code>new</code>.</span>
+              <span>FXML llena los <code>@FXML</code>; las listas existen desde el inicio.</span>
+            </div>
+            <div class="place-row" id="s4b-p2">
+              <span class="place-k">Constructor</span>
+              <span>Dependencias que no son de la vista.</span>
+              <span>Corre antes de la inyección: no toques controles.</span>
+            </div>
+            <div class="place-row" id="s4b-p3">
+              <span class="place-k">initialize()</span>
+              <span>Items, columnas, selección, listeners.</span>
+              <span>Corre después de inyectar y antes de mostrar.</span>
+            </div>
+            <div class="place-row" id="s4b-p4">
+              <span class="place-k">onAction</span>
+              <span>Reaccionar al clic del usuario.</span>
+              <span>La ventana ya está visible y los datos cargados.</span>
+            </div>
+            <p class="place-note" id="s4b-placenote">
+              Si el FXML tiene <code>fx:id</code>, <strong>no</strong> lo crees con <code>new</code>: el objeto lo crea el FXML.
+            </p>
+          </div>
+
+          <div class="lower-third" id="s4b-lt-1">
+            <span class="lt-bar"></span>
+            <p>FXMLLoader crea el controlador, crea los controles y los inyecta: todo antes de <code>initialize()</code>.</p>
+          </div>
+          <div class="lower-third" id="s4b-lt-2">
+            <span class="lt-bar"></span>
+            <p>Por eso el constructor no sirve para tocar un <code>ComboBox</code>: en ese momento el campo todavía es <code>null</code>.</p>
+          </div>
+          <div class="lower-third" id="s4b-lt-3">
+            <span class="lt-bar"></span>
+            <p>El atributo <strong>declara</strong> el control; <code>initialize()</code> lo <strong>configura</strong>: opciones y selección.</p>
+          </div>
+          <div class="lower-third" id="s4b-lt-4">
+            <span class="lt-bar"></span>
+            <p><code>initialize()</code> se ejecuta una vez, después de la inyección y antes de que aparezca la ventana.</p>
+          </div>
+          <div class="lower-third" id="s4b-lt-5">
+            <span class="lt-bar"></span>
+            <p>La <code>TableView</code> también se declara como campo y se arma en <code>initialize()</code>: columnas, factories y datos.</p>
+          </div>
+          <div class="lower-third" id="s4b-lt-6">
+            <span class="lt-bar"></span>
+            <p>Cada columna es un campo <code>@FXML</code> con su <code>fx:id</code>: si no coincide, la columna queda en <code>null</code>.</p>
+          </div>
+          <div class="lower-third" id="s4b-lt-7">
+            <span class="lt-bar"></span>
+            <p>Atributo: declara. Constructor: dependencias. <code>initialize()</code>: configura. <code>onAction</code>: reacciona.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 5 · CAPAS ===================== -->
+      <section id="scene-5" class="clip scene-section" data-start="238" data-duration="56" data-track-index="5">
+        <div class="scene" id="s5">
+          <div class="scene-tag">CAPÍTULO 05 · CAPAS</div>
+
+          <header class="scene-head" id="s5-head">
+            <div class="kicker">PATRÓN DE CAPAS</div>
+            <h2>Cada pieza con <span class="accent">una sola responsabilidad</span></h2>
+          </header>
+
+          <div class="layers" id="s5-layers">
+            <div class="layer" id="s5-l1">
+              <span class="layer-num">1</span>
+              <div class="layer-id"><strong>App / Launcher</strong><span>arranque</span></div>
+              <div class="layer-do"><span class="do-tag">HACE</span><p>Arranca JavaFX y carga el FXML.</p></div>
+              <div class="layer-dont"><span class="dont-tag">NO HACE</span><p>Lógica de negocio.</p></div>
+            </div>
+
+            <div class="layer" id="s5-l2">
+              <span class="layer-num">2</span>
+              <div class="layer-id"><strong>Vista</strong><span>pokedex-view.fxml</span></div>
+              <div class="layer-do"><span class="do-tag">HACE</span><p>Declara controles, layout y eventos.</p></div>
+              <div class="layer-dont"><span class="dont-tag">NO HACE</span><p>Validar ni guardar datos.</p></div>
+            </div>
+
+            <div class="layer" id="s5-l3">
+              <span class="layer-num">3</span>
+              <div class="layer-id"><strong>Controlador</strong><span>PokedexController</span></div>
+              <div class="layer-do"><span class="do-tag">HACE</span><p>Recibe eventos, valida y actualiza la tabla.</p></div>
+              <div class="layer-dont"><span class="dont-tag">NO HACE</span><p>Leer o escribir archivos.</p></div>
+            </div>
+
+            <div class="layer" id="s5-l4">
+              <span class="layer-num">4</span>
+              <div class="layer-id"><strong>Modelo</strong><span>Carta · CartaPokemon · CartaEnergia</span></div>
+              <div class="layer-do"><span class="do-tag">HACE</span><p>Datos, reglas y <code>calcularValorEstimado()</code>.</p></div>
+              <div class="layer-dont"><span class="dont-tag">NO HACE</span><p>Conocer JavaFX o JSON.</p></div>
+            </div>
+
+            <div class="layer" id="s5-l5">
+              <span class="layer-num">5</span>
+              <div class="layer-id"><strong>Repository + DAO</strong><span>memoria · Gson · JSON</span></div>
+              <div class="layer-do"><span class="do-tag">HACE</span><p>Colección en memoria y persistencia con Gson.</p></div>
+              <div class="layer-dont"><span class="dont-tag">NO HACE</span><p>Mostrar mensajes ni tocar la vista.</p></div>
+            </div>
+          </div>
+
+          <div class="dep-strip" id="s5-dep">
+            <span class="dep-label">DEPENDENCIAS</span>
+            <div class="dep-chip">Vista</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip">Controlador</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip">Modelo / Repository</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip">DAO</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip dep-chip--green">JSON</div>
+          </div>
+
+          <div class="lower-third" id="s5-lt-1">
+            <span class="lt-bar"></span>
+            <p>Cada capa tiene una sola responsabilidad: si una hace dos cosas, algo está mal ubicado.</p>
+          </div>
+          <div class="lower-third" id="s5-lt-2">
+            <span class="lt-bar"></span>
+            <p>La vista declara; el controlador coordina; el modelo decide; el repository y el DAO guardan.</p>
+          </div>
+          <div class="lower-third" id="s5-lt-3">
+            <span class="lt-bar"></span>
+            <p>El controlador nunca lee archivos: delega en <code>Repository</code>, que usa el DAO con Gson.</p>
+          </div>
+          <div class="lower-third" id="s5-lt-4">
+            <span class="lt-bar"></span>
+            <p>El modelo no conoce JavaFX: por eso se puede probar y reutilizar sin la interfaz.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 6 · ORGANIZAR ===================== -->
+      <section id="scene-6" class="clip scene-section" data-start="294" data-duration="34" data-track-index="6">
+        <div class="scene" id="s6">
+          <div class="scene-tag">CAPÍTULO 06 · ORGANIZAR</div>
+
+          <header class="scene-head" id="s6-head">
+            <div class="kicker">ORDEN DEL PROYECTO</div>
+            <h2>Paquetes por <span class="accent">responsabilidad</span></h2>
+          </header>
+
+          <aside class="panel tree-panel tree-panel--big" id="s6-tree">
+            <div class="panel-title">src/main/java/cl/duoc/pokedex</div>
+            <div class="tree tree--big">
+              <div class="tree-line tree-root">cl.duoc.pokedex</div>
+              <div class="tree-line">├─ App.java · Launcher.java</div>
+              <div class="tree-line">├─ controller/ <span class="tree-note">eventos y validación</span></div>
+              <div class="tree-line">├─ model/ <span class="tree-note">datos y reglas</span></div>
+              <div class="tree-line">├─ repository/ <span class="tree-note">colección en memoria</span></div>
+              <div class="tree-line">├─ dao/ <span class="tree-note">lectura / escritura JSON</span></div>
+              <div class="tree-line">└─ view/ <span class="tree-note">pokedex-view.fxml (resources)</span></div>
+            </div>
+          </aside>
+
+          <aside class="panel rules-panel rules-panel--wide" id="s6-rules">
+            <div class="panel-title">Reglas de organización</div>
+            <div class="mini-rule" id="s6-r1"><span class="mini-dot"></span><p>Un paquete por responsabilidad, no por tipo de archivo.</p></div>
+            <div class="mini-rule" id="s6-r2"><span class="mini-dot"></span><p>Nombres en singular: <code>Carta</code>, <code>CartaDaoJson</code>.</p></div>
+            <div class="mini-rule" id="s6-r3"><span class="mini-dot"></span><p>El FXML vive en <code>src/main/resources</code> con la ruta del paquete.</p></div>
+            <div class="mini-rule" id="s6-r4"><span class="mini-dot"></span><p>El modelo <strong>no</strong> importa <code>javafx.*</code>.</p></div>
+            <div class="mini-rule" id="s6-r5"><span class="mini-dot"></span><p>La vista <strong>no</strong> importa <code>java.io.*</code>.</p></div>
+          </aside>
+
+          <div class="dep-strip dep-strip--low" id="s6-dep">
+            <span class="dep-label">DIRECCIÓN</span>
+            <div class="dep-chip">Vista</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip">Controlador</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip">Modelo / Repository</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip">DAO</div>
+            <span class="dep-arrow">→</span>
+            <div class="dep-chip dep-chip--green">JSON</div>
+            <span class="dep-never">nunca al revés</span>
+          </div>
+
+          <div class="lower-third" id="s6-lt-1">
+            <span class="lt-bar"></span>
+            <p>Organiza por responsabilidad, no por tipo de archivo. Un paquete por capa.</p>
+          </div>
+          <div class="lower-third" id="s6-lt-2">
+            <span class="lt-bar"></span>
+            <p>El FXML va en <code>resources</code> con la misma ruta del paquete; el modelo no importa JavaFX.</p>
+          </div>
+          <div class="lower-third" id="s6-lt-3">
+            <span class="lt-bar"></span>
+            <p>La dependencia siempre baja: vista → controlador → modelo/repository → DAO. Nunca al revés.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 7 · ERRORES ===================== -->
+      <section id="scene-7" class="clip scene-section" data-start="328" data-duration="40" data-track-index="7">
+        <div class="scene" id="s7">
+          <div class="scene-tag">CAPÍTULO 07 · ERRORES</div>
+
+          <header class="scene-head" id="s7-head">
+            <div class="kicker">DIAGNÓSTICO RÁPIDO</div>
+            <h2>Seis errores, <span class="accent">seis salidas</span></h2>
+          </header>
+
+          <div class="err-grid" id="s7-grid">
+            <aside class="err-card" id="s7-e1">
+              <div class="err-top"><span class="err-num">01</span><span class="err-tag">EJECUTAR</span></div>
+              <div class="err-symptom mono">JavaFX runtime components are missing</div>
+              <p class="err-cause"><strong>Causa:</strong> ejecutar sin el plugin o sin módulo.</p>
+              <p class="err-fix"><strong>Fix:</strong> usa <code>mvn javafx:run</code>.</p>
+            </aside>
+
+            <aside class="err-card" id="s7-e2">
+              <div class="err-top"><span class="err-num">02</span><span class="err-tag">MÓDULO</span></div>
+              <div class="err-symptom mono">does not "opens … to module javafx.fxml"</div>
+              <p class="err-cause"><strong>Causa:</strong> falta abrir el paquete del controlador.</p>
+              <p class="err-fix"><strong>Fix:</strong> <code>opens …controller to javafx.fxml;</code></p>
+            </aside>
+
+            <aside class="err-card" id="s7-e3">
+              <div class="err-top"><span class="err-num">03</span><span class="err-tag">EVENTO</span></div>
+              <div class="err-symptom mono">Controller method not found</div>
+              <p class="err-cause"><strong>Causa:</strong> <code>onAction</code> no coincide o falta <code>@FXML</code>.</p>
+              <p class="err-fix"><strong>Fix:</strong> iguala el nombre y anota el método.</p>
+            </aside>
+
+            <aside class="err-card" id="s7-e4">
+              <div class="err-top"><span class="err-num">04</span><span class="err-tag">NULL</span></div>
+              <div class="err-symptom mono">NullPointerException en initialize()</div>
+              <p class="err-cause"><strong>Causa:</strong> el <code>fx:id</code> no coincide con el campo.</p>
+              <p class="err-fix"><strong>Fix:</strong> mismo nombre en FXML y en Java.</p>
+            </aside>
+
+            <aside class="err-card" id="s7-e5">
+              <div class="err-top"><span class="err-num">05</span><span class="err-tag">RUTA</span></div>
+              <div class="err-symptom mono">Location is not set</div>
+              <p class="err-cause"><strong>Causa:</strong> la ruta del FXML no existe.</p>
+              <p class="err-fix"><strong>Fix:</strong> <code>getResource("/cl/duoc/…/pokedex-view.fxml")</code></p>
+            </aside>
+
+            <aside class="err-card" id="s7-e6">
+              <div class="err-top"><span class="err-num">06</span><span class="err-tag">GSON</span></div>
+              <div class="err-symptom mono">Cannot access field / JSON inválido</div>
+              <p class="err-cause"><strong>Causa:</strong> falta <code>opens</code> del modelo o JSON corrupto.</p>
+              <p class="err-fix"><strong>Fix:</strong> abre <code>model</code> a Gson y valida el JSON.</p>
+            </aside>
+          </div>
+
+          <p class="err-note" id="s7-note">Lee la primera línea del error: casi siempre dice el módulo o el nombre que no coincide.</p>
+
+          <div class="lower-third" id="s7-lt-1">
+            <span class="lt-bar"></span>
+            <p>«JavaFX runtime components are missing» se arregla ejecutando con <code>mvn javafx:run</code>.</p>
+          </div>
+          <div class="lower-third" id="s7-lt-2">
+            <span class="lt-bar"></span>
+            <p>Si el error nombra un paquete y un módulo, agrega el <code>opens</code> correspondiente.</p>
+          </div>
+          <div class="lower-third" id="s7-lt-3">
+            <span class="lt-bar"></span>
+            <p>Un <code>NullPointerException</code> en <code>initialize</code> casi siempre es un <code>fx:id</code> mal escrito.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESCENA 8 · CIERRE ===================== -->
+      <section id="scene-8" class="clip scene-section" data-start="368" data-duration="12" data-track-index="8">
+        <div class="scene" id="s8">
+          <div class="scene-tag">CAPÍTULO 08 · CIERRE</div>
+
+          <header class="scene-head scene-head--center" id="s8-head">
+            <div class="kicker">CHECKLIST FINAL</div>
+            <h2>Lo que debe quedar <span class="accent">funcionando</span></h2>
+          </header>
+
+          <div class="checks" id="s8-checks">
+            <div class="check-item">
+              <span class="check-mark">✓</span>
+              <span>Proyecto Maven con <strong>JDK 21</strong></span>
+            </div>
+            <div class="check-item">
+              <span class="check-mark">✓</span>
+              <span><code>module-info</code> con <code>requires</code> y <code>opens</code></span>
+            </div>
+            <div class="check-item">
+              <span class="check-mark">✓</span>
+              <span><code>fx:controller</code> + <code>fx:id</code> + <code>onAction</code></span>
+            </div>
+            <div class="check-item">
+              <span class="check-mark">✓</span>
+              <span>Una responsabilidad por capa</span>
+            </div>
+            <div class="check-item">
+              <span class="check-mark">✓</span>
+              <span>Leer la primera línea del error</span>
+            </div>
+          </div>
+
+          <div class="closing" id="s8-closing">
+            <div class="closing-eyebrow">PROYECTO COMPLETO</div>
+            <div class="closing-title">Pokedex<span class="accent">Cartas</span></div>
+            <div class="closing-rule"></div>
+            <div class="closing-sub">compila · abre la ventana · guarda datos</div>
+            <div class="closing-foot">guion completo en GUION.md</div>
+          </div>
+
+          <div class="lower-third" id="s8-lt">
+            <span class="lt-bar"></span>
+            <p>Si algo falla, lee la primera línea del error: casi siempre dice qué módulo o qué nombre no coincide.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- HUD global ---------- -->
+      <div id="hud" class="clip" data-start="0" data-duration="380" data-track-index="9">
+        <div class="hud-brand"><span class="hud-dot"></span>cl.duoc.pokedex · guía IntelliJ</div>
+        <div id="steps-meter">
+          <span class="seg"><i id="seg-1"></i></span>
+          <span class="seg"><i id="seg-2"></i></span>
+          <span class="seg"><i id="seg-3"></i></span>
+          <span class="seg"><i id="seg-4"></i></span>
+          <span class="seg"><i id="seg-5"></i></span>
+          <span class="seg"><i id="seg-6"></i></span>
+          <span class="seg"><i id="seg-7"></i></span>
+          <span class="seg"><i id="seg-8"></i></span>
+        </div>
+        <div class="hud-meta">1920×1080 · 30 fps · 6 min 20 s</div>
+      </div>
+
+      <div id="progress" class="clip" data-start="0" data-duration="380" data-track-index="10">
+        <div id="progress-fill"></div>
+      </div>
+
+      <div id="blackout" class="clip" data-start="379.2" data-duration="0.8" data-track-index="11"></div>
+    </div>
+
+    <script src="timeline.js"></script>
+  </body>
+</html>

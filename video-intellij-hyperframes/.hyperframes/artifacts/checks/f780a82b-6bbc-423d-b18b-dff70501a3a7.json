@@ -1,0 +1,4204 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 12,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 774 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"bg\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#bg",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"bg\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-1\"> is a timeline element that contains nested <div id=\"s1\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-1",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-2\"> is a timeline element that contains nested <div id=\"s2\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-2",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-3\"> is a timeline element that contains nested <div id=\"s3\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-3",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-4\"> is a timeline element that contains nested <div id=\"s4\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-4",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-5\"> is a timeline element that contains nested <div id=\"s5\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-5",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-6\"> is a timeline element that contains nested <div id=\"s6\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-6",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-6\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-7\"> is a timeline element that contains nested <div id=\"s7\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-7",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-7\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-8\"> is a timeline element that contains nested <div id=\"s8\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-8",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-8\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"hud\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#hud",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"hud\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"progress\"> is a timeline element that contains nested <div id=\"progress-fill\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#progress",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-intellij-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"progress\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 6,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 20.112,
+        "selector": "#s2-lt-1 > p:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 418.37,
+          "top": 949.83,
+          "right": 1186.92,
+          "bottom": 982.83,
+          "width": 768.55,
+          "height": 33
+        },
+        "containerSelector": "#s2-lt-2 > p:nth-of-type(1)",
+        "text": "File → New → Project. Elige Java y Maven: Maven descarga JavaFX y Gson por ti.",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 418.37,
+          "y": 949.83,
+          "width": 768.55,
+          "height": 33
+        },
+        "firstSeen": 20.112,
+        "lastSeen": 20.112,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          20.112
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 20.112,
+        "selector": "#s2-lt-1 > p:nth-of-type(1) > code:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 130.37,
+          "top": 951.83,
+          "right": 418.37,
+          "bottom": 982.83,
+          "width": 288,
+          "height": 31
+        },
+        "containerSelector": "#s2-lt-2 > p:nth-of-type(1)",
+        "text": "File → New → Project",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 130.37,
+          "y": 951.83,
+          "width": 288,
+          "height": 31
+        },
+        "firstSeen": 20.112,
+        "lastSeen": 20.112,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          20.112
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 50.279,
+        "selector": "#s2-lt-3 > p:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 137.08,
+          "top": 949.83,
+          "right": 1359.7,
+          "bottom": 982.83,
+          "width": 1222.62,
+          "height": 33
+        },
+        "containerSelector": "#s2-lt-4 > p:nth-of-type(1)",
+        "text": "El código va en src/main/java; el FXML en src/main/resources, con la misma ruta del paquete.",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 137.08,
+          "y": 949.83,
+          "width": 1222.62,
+          "height": 33
+        },
+        "firstSeen": 50.279,
+        "lastSeen": 50.279,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          50.279
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 50.279,
+        "selector": "#s2-lt-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 339.56,
+          "top": 951.83,
+          "right": 526.76,
+          "bottom": 982.83,
+          "width": 187.2,
+          "height": 31
+        },
+        "containerSelector": "#s2-lt-4 > p:nth-of-type(1)",
+        "text": "src/main/java",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 339.56,
+          "y": 951.83,
+          "width": 187.2,
+          "height": 31
+        },
+        "firstSeen": 50.279,
+        "lastSeen": 50.279,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          50.279
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 50.279,
+        "selector": "#s2-lt-3 > p:nth-of-type(1) > code:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 693.28,
+          "top": 951.83,
+          "right": 952.48,
+          "bottom": 982.83,
+          "width": 259.2,
+          "height": 31
+        },
+        "containerSelector": "#s2-lt-4 > p:nth-of-type(1)",
+        "text": "src/main/resources",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 693.28,
+          "y": 951.83,
+          "width": 259.2,
+          "height": 31
+        },
+        "firstSeen": 50.279,
+        "lastSeen": 50.279,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          50.279
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 186.034,
+        "selector": "#s5-lt-2 > p:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 130.01,
+          "top": 949.83,
+          "right": 1289.5,
+          "bottom": 982.83,
+          "width": 1159.49,
+          "height": 33
+        },
+        "containerSelector": "#s5-lt-3 > p:nth-of-type(1)",
+        "text": "La vista declara; el controlador coordina; el modelo decide; el repository y el DAO guardan.",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply. Decoration nobody needs to read can take data-layout-ignore.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 130.01,
+          "y": 949.83,
+          "width": 1159.49,
+          "height": 33
+        },
+        "firstSeen": 186.034,
+        "lastSeen": 186.034,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          186.034
+        ]
+      }
+    ],
+    "duration": 300,
+    "samples": [
+      162,
+      190,
+      218,
+      238,
+      284
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 6,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      162,
+      190,
+      218,
+      238,
+      284
+    ],
+    "checked": 240,
+    "passed": 240
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "film_silent",
+        "severity": "warning",
+        "message": "This 300 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 458 text elements stay under it for 0.5 s or more, the smallest \"EJECUTAR\" at 12 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "EJECUTAR",
+        "selector": "#s7-e1 > div:nth-of-type(1) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 558.88,
+          "y": 234.25,
+          "width": 69.12,
+          "height": 16
+        },
+        "time": 248.915,
+        "times": [
+          0,
+          0,
+          0.501,
+          0.501,
+          2.504,
+          2.504,
+          2.504,
+          2.504,
+          2.504,
+          2.504,
+          2.504,
+          2.504,
+          2.504,
+          3.005,
+          3.005,
+          3.005,
+          3.506,
+          4.508,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          12.521,
+          13.022,
+          13.022,
+          13.022,
+          13.523,
+          13.523,
+          13.523,
+          13.523,
+          13.523,
+          13.523,
+          14.023,
+          14.023,
+          14.023,
+          14.524,
+          14.524,
+          14.524,
+          20.534,
+          20.534,
+          31.553,
+          32.053,
+          32.053,
+          32.053,
+          32.053,
+          32.053,
+          32.053,
+          32.053,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          32.554,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.055,
+          33.556,
+          34.057,
+          34.057,
+          34.057,
+          35.058,
+          42.07,
+          42.07,
+          42.07,
+          50.584,
+          50.584,
+          50.584,
+          56.594,
+          56.594,
+          56.594,
+          57.095,
+          57.095,
+          57.095,
+          57.095,
+          57.095,
+          57.095,
+          57.596,
+          57.596,
+          57.596,
+          58.097,
+          58.097,
+          58.097,
+          58.097,
+          58.097,
+          58.097,
+          58.097,
+          58.598,
+          58.598,
+          58.598,
+          58.598,
+          66.11,
+          66.11,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          76.628,
+          77.129,
+          77.129,
+          77.629,
+          77.629,
+          78.13,
+          78.13,
+          78.13,
+          78.13,
+          79.132,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          84.641,
+          86.144,
+          86.144,
+          90.651,
+          90.651,
+          90.651,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          96.661,
+          97.162,
+          97.162,
+          97.162,
+          97.663,
+          97.663,
+          97.663,
+          97.663,
+          97.663,
+          97.663,
+          97.663,
+          98.164,
+          98.164,
+          104.174,
+          112.187,
+          112.688,
+          113.189,
+          113.189,
+          113.189,
+          113.189,
+          113.189,
+          113.189,
+          113.189,
+          113.189,
+          113.189,
+          113.689,
+          113.689,
+          113.689,
+          113.689,
+          113.689,
+          114.691,
+          114.691,
+          114.691,
+          114.691,
+          114.691,
+          116.194,
+          116.194,
+          121.202,
+          121.202,
+          131.219,
+          131.219,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          131.72,
+          132.22,
+          132.22,
+          132.22,
+          132.22,
+          132.22,
+          132.22,
+          132.22,
+          132.22,
+          132.22,
+          132.22,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          132.721,
+          133.222,
+          133.222,
+          133.222,
+          136.728,
+          136.728,
+          136.728,
+          136.728,
+          136.728,
+          136.728,
+          136.728,
+          136.728,
+          136.728,
+          141.235,
+          141.235,
+          141.235,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          141.736,
+          150.751,
+          150.751,
+          150.751,
+          151.252,
+          151.753,
+          151.753,
+          151.753,
+          158.264,
+          158.765,
+          158.765,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.265,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          159.766,
+          161.269,
+          161.269,
+          161.269,
+          161.269,
+          161.269,
+          161.269,
+          172.287,
+          186.311,
+          186.311,
+          200.334,
+          214.357,
+          214.357,
+          214.858,
+          214.858,
+          214.858,
+          214.858,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.359,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          215.86,
+          216.361,
+          216.361,
+          216.361,
+          216.361,
+          216.361,
+          216.361,
+          216.361,
+          224.374,
+          224.374,
+          233.89,
+          248.414,
+          248.414,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          248.915,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.416,
+          249.917,
+          249.917,
+          249.917,
+          249.917,
+          249.917,
+          249.917,
+          249.917,
+          249.917,
+          249.917,
+          250.918,
+          261.436,
+          261.436,
+          274.457,
+          274.457,
+          274.457,
+          274.457,
+          288.481,
+          288.481,
+          288.982,
+          288.982,
+          288.982,
+          288.982,
+          288.982,
+          288.982,
+          289.482,
+          289.482,
+          289.482,
+          289.482,
+          289.482,
+          290.484,
+          290.484,
+          290.484,
+          293.489
+        ],
+        "fontPx": 12,
+        "floorPx": 28,
+        "seconds": 39.065,
+        "elements": [
+          {
+            "selector": "#s7-e1 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "EJECUTAR",
+            "fontPx": 12,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e2 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "MÓDULO",
+            "fontPx": 12,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e3 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "EVENTO",
+            "fontPx": 12,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "NULL",
+            "fontPx": 12,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e5 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "RUTA",
+            "fontPx": 12,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e6 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "GSON",
+            "fontPx": 12,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s5-l3 > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "HACE",
+            "fontPx": 12.95,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l3 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "NO HACE",
+            "fontPx": 12.95,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l2 > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "HACE",
+            "fontPx": 12.99,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l2 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "NO HACE",
+            "fontPx": 12.99,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l1 > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "HACE",
+            "fontPx": 13,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l1 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "NO HACE",
+            "fontPx": 13,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l4 > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "HACE",
+            "fontPx": 13,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-l4 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "NO HACE",
+            "fontPx": 13,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-l5 > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "HACE",
+            "fontPx": 13,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-l5 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "NO HACE",
+            "fontPx": 13,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s4-map1 > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "crea la clase",
+            "fontPx": 14,
+            "time": 113.189,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s4-map2 > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "mismo nombre",
+            "fontPx": 14,
+            "time": 113.689,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-map3 > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "mismo nombre + @FXML",
+            "fontPx": 14,
+            "time": 114.691,
+            "seconds": 16.528
+          },
+          {
+            "selector": "#s5-l3 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "PokedexController",
+            "fontPx": 14.95,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l2 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "pokedex-view.fxml",
+            "fontPx": 14.99,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "MAVEN",
+            "fontPx": 15,
+            "time": 32.053,
+            "seconds": 24.041
+          },
+          {
+            "selector": "#s3-code > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "JAVA",
+            "fontPx": 15,
+            "time": 76.628,
+            "seconds": 19.532
+          },
+          {
+            "selector": "#s4-map1 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "FXML · VBox",
+            "fontPx": 15,
+            "time": 113.189,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s4-map1 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "JAVA",
+            "fontPx": 15,
+            "time": 113.189,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s4-map2 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "FXML · ComboBox",
+            "fontPx": 15,
+            "time": 113.689,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-map2 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "JAVA",
+            "fontPx": 15,
+            "time": 113.689,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-map3 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "FXML · Button",
+            "fontPx": 15,
+            "time": 114.691,
+            "seconds": 16.528
+          },
+          {
+            "selector": "#s4-map3 > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "JAVA",
+            "fontPx": 15,
+            "time": 114.691,
+            "seconds": 16.528
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "FXML",
+            "fontPx": 15,
+            "time": 131.219,
+            "seconds": 19.032
+          },
+          {
+            "selector": "#s4-java > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "JAVA",
+            "fontPx": 15,
+            "time": 131.72,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s5-l1 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "arranque",
+            "fontPx": 15,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l4 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "Carta · CartaPokemon · CartaEnergia",
+            "fontPx": 15,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-l5 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "memoria · Gson · JSON",
+            "fontPx": 15,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-dep > span:nth-of-type(1)",
+            "text": "DEPENDENCIAS",
+            "fontPx": 15,
+            "time": 161.269,
+            "seconds": 53.088
+          },
+          {
+            "selector": "#s6-dep > span:nth-of-type(1)",
+            "text": "DIRECCIÓN",
+            "fontPx": 15,
+            "time": 216.361,
+            "seconds": 31.552
+          },
+          {
+            "selector": "#s3-w1 > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 16,
+            "time": 58.097,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-w2 > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 16,
+            "time": 58.097,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-w3 > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 16,
+            "time": 58.598,
+            "seconds": 17.529
+          },
+          {
+            "selector": "div.cmp-head > span:nth-of-type(1)",
+            "text": "Directiva",
+            "fontPx": 16,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "div.cmp-head > span:nth-of-type(2)",
+            "text": "Qué permite",
+            "fontPx": 16,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "div.cmp-head > span:nth-of-type(3)",
+            "text": "Cuándo usarla",
+            "fontPx": 16,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "#s4-rule1 > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 16,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule2 > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 16,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule3 > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 16,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule4 > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 16,
+            "time": 133.222,
+            "seconds": 17.029
+          },
+          {
+            "selector": "span.dep-never",
+            "text": "nunca al revés",
+            "fontPx": 16,
+            "time": 216.361,
+            "seconds": 31.552
+          },
+          {
+            "selector": "#s7-e1 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "01",
+            "fontPx": 16,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e1 > div:nth-of-type(2)",
+            "text": "JavaFX runtime components are missing",
+            "fontPx": 16,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e1 > p:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "mvn javafx:run",
+            "fontPx": 16,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e2 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "02",
+            "fontPx": 16,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e2 > div:nth-of-type(2)",
+            "text": "does not \"opens … to module javafx.fxml\"",
+            "fontPx": 16,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e2 > p:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "opens …controller to javafx.fxml;",
+            "fontPx": 16,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e3 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "03",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e3 > div:nth-of-type(2)",
+            "text": "Controller method not found",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "onAction",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "p.err-cause > code:nth-of-type(2)",
+            "text": "@FXML",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "04",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > div:nth-of-type(2)",
+            "text": "NullPointerException en initialize()",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "fx:id",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e5 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "05",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e5 > div:nth-of-type(2)",
+            "text": "Location is not set",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e5 > p:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "getResource(\"/cl/duoc/…/pokedex-view.fxml\")",
+            "fontPx": 16,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e6 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "06",
+            "fontPx": 16,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s7-e6 > div:nth-of-type(2)",
+            "text": "Cannot access field / JSON inválido",
+            "fontPx": 16,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s7-e6 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "opens",
+            "fontPx": 16,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s7-e6 > p:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "model",
+            "fontPx": 16,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "span.wiz-title",
+            "text": "New Project",
+            "fontPx": 17,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "span.wiz-off",
+            "text": "desactivado",
+            "fontPx": 17,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s2-st1 > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 17,
+            "time": 13.523,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s2-st2 > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 17,
+            "time": 13.523,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s2-st3 > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 17,
+            "time": 14.023,
+            "seconds": 17.029
+          },
+          {
+            "selector": "#s2-st4 > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 17,
+            "time": 14.524,
+            "seconds": 16.528
+          },
+          {
+            "selector": "span.term-title",
+            "text": "Run · PokedexCartas",
+            "fontPx": 17,
+            "time": 56.594,
+            "seconds": 19.533
+          },
+          {
+            "selector": "#s4-map1 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "fx:controller=\"cl.duoc.pokedex.controller.PokedexController\"",
+            "fontPx": 17,
+            "time": 113.189,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s4-map1 > div:nth-of-type(3) > span:nth-of-type(2)",
+            "text": "public class PokedexController",
+            "fontPx": 17,
+            "time": 113.189,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s4-map2 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "<ComboBox fx:id=\"categoriaComboBox\"/>",
+            "fontPx": 17,
+            "time": 113.689,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-map2 > div:nth-of-type(3) > span:nth-of-type(2)",
+            "text": "@FXML private ComboBox<String> categoriaComboBox;",
+            "fontPx": 17,
+            "time": 113.689,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-map3 > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "<Button onAction=\"#registrarCarta\"/>",
+            "fontPx": 17,
+            "time": 114.691,
+            "seconds": 16.528
+          },
+          {
+            "selector": "#s4-map3 > div:nth-of-type(3) > span:nth-of-type(2)",
+            "text": "@FXML private void registrarCarta() { … }",
+            "fontPx": 17,
+            "time": 114.691,
+            "seconds": 16.528
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "eventos y validación",
+            "fontPx": 17,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "datos y reglas",
+            "fontPx": 17,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(5) > span:nth-of-type(1)",
+            "text": "colección en memoria",
+            "fontPx": 17,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(6) > span:nth-of-type(1)",
+            "text": "lectura / escritura JSON",
+            "fontPx": 17,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(7) > span:nth-of-type(1)",
+            "text": "pokedex-view.fxml (resources)",
+            "fontPx": 17,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "#s5-l3 > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 17.94,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l2 > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 17.99,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l5 > span:nth-of-type(1)",
+            "text": "5",
+            "fontPx": 17.99,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "div.hud-meta",
+            "text": "1920×1080 · 30 fps · 5 min",
+            "fontPx": 18,
+            "time": 0,
+            "seconds": 300
+          },
+          {
+            "selector": "#s1 > div:nth-of-type(1)",
+            "text": "GUÍA COMPLETA · 5 MIN",
+            "fontPx": 18,
+            "time": 0.501,
+            "seconds": 11.519
+          },
+          {
+            "selector": "#s2 > div:nth-of-type(1)",
+            "text": "CAPÍTULO 01 · PROYECTO",
+            "fontPx": 18,
+            "time": 12.521,
+            "seconds": 43.573
+          },
+          {
+            "selector": "span.wiz-value.wiz-value--mono",
+            "text": "~/IdeaProjects/PokedexCartas",
+            "fontPx": 18,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.wiz-body > div:nth-of-type(3) > span:nth-of-type(2)",
+            "text": "Java",
+            "fontPx": 18,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "span.wiz-chip.wiz-chip--blue",
+            "text": "Maven",
+            "fontPx": 18,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "span.wiz-chip.wiz-chip--green",
+            "text": "21 · OpenJDK",
+            "fontPx": 18,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s2-steps > div:nth-of-type(1)",
+            "text": "Paso a paso",
+            "fontPx": 18,
+            "time": 13.022,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(1)",
+            "text": "Estructura del proyecto",
+            "fontPx": 18,
+            "time": 31.553,
+            "seconds": 24.541
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 18,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 18,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 18,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 18,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(5) > span:nth-of-type(1)",
+            "text": "5",
+            "fontPx": 18,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(1)",
+            "text": "6",
+            "fontPx": 18,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(7) > span:nth-of-type(1)",
+            "text": "7",
+            "fontPx": 18,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(8) > span:nth-of-type(1)",
+            "text": "8",
+            "fontPx": 18,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom-note",
+            "text": "+ Gson 2.11.0 · javafx-maven-plugin",
+            "fontPx": 18,
+            "time": 33.556,
+            "seconds": 22.538
+          },
+          {
+            "selector": "#s2-run > div:nth-of-type(1)",
+            "text": "Ejecutar",
+            "fontPx": 18,
+            "time": 34.057,
+            "seconds": 22.037
+          },
+          {
+            "selector": "#s3 > div:nth-of-type(1)",
+            "text": "CAPÍTULO 02 · MODULE-INFO",
+            "fontPx": 18,
+            "time": 56.594,
+            "seconds": 55.593
+          },
+          {
+            "selector": "#s3-why > div:nth-of-type(1)",
+            "text": "¿Por qué pasa?",
+            "fontPx": 18,
+            "time": 57.095,
+            "seconds": 19.032
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 18,
+            "time": 76.628,
+            "seconds": 1.002
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 18,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 18,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 18,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(5) > span:nth-of-type(1)",
+            "text": "5",
+            "fontPx": 18,
+            "time": 77.129,
+            "seconds": 0.501
+          },
+          {
+            "selector": "#s3-legend > div:nth-of-type(1)",
+            "text": "Qué significa cada línea",
+            "fontPx": 18,
+            "time": 77.129,
+            "seconds": 19.031
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(6) > span:nth-of-type(1)",
+            "text": "6",
+            "fontPx": 18,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(7) > span:nth-of-type(1)",
+            "text": "7",
+            "fontPx": 18,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(8) > span:nth-of-type(1)",
+            "text": "8",
+            "fontPx": 18,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(9) > span:nth-of-type(1)",
+            "text": "9",
+            "fontPx": 18,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(10) > span:nth-of-type(1)",
+            "text": "10",
+            "fontPx": 18,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(12) > span:nth-of-type(1)",
+            "text": "12",
+            "fontPx": 18,
+            "time": 90.651,
+            "seconds": 5.509
+          },
+          {
+            "selector": "#s3-cmp > div:nth-of-type(1)",
+            "text": "opens no es lo mismo que exports",
+            "fontPx": 18,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "#s3-rules > div:nth-of-type(1)",
+            "text": "Regla práctica",
+            "fontPx": 18,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "#s3-r1 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "opens … to javafx.fxml",
+            "fontPx": 18,
+            "time": 97.663,
+            "seconds": 14.524
+          },
+          {
+            "selector": "#s3-r2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "opens … to com.google.gson",
+            "fontPx": 18,
+            "time": 97.663,
+            "seconds": 14.524
+          },
+          {
+            "selector": "#s3-r3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "exports",
+            "fontPx": 18,
+            "time": 98.164,
+            "seconds": 14.023
+          },
+          {
+            "selector": "#s4 > div:nth-of-type(1)",
+            "text": "CAPÍTULO 03 · VISTA + CONTROLADOR",
+            "fontPx": 18,
+            "time": 112.187,
+            "seconds": 46.077
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 18,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 18,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 18,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(1)",
+            "text": "6",
+            "fontPx": 18,
+            "time": 132.22,
+            "seconds": 1.002
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 18,
+            "time": 132.22,
+            "seconds": 4.508
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 18,
+            "time": 132.22,
+            "seconds": 1.002
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(7) > span:nth-of-type(1)",
+            "text": "7",
+            "fontPx": 18,
+            "time": 132.22,
+            "seconds": 1.002
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(10) > span:nth-of-type(1)",
+            "text": "10",
+            "fontPx": 18,
+            "time": 132.721,
+            "seconds": 0.501
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(11) > span:nth-of-type(1)",
+            "text": "11",
+            "fontPx": 18,
+            "time": 132.721,
+            "seconds": 0.501
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 18,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 18,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(5) > span:nth-of-type(1)",
+            "text": "5",
+            "fontPx": 18,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(6) > span:nth-of-type(1)",
+            "text": "6",
+            "fontPx": 18,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 18,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(5) > span:nth-of-type(1)",
+            "text": "5",
+            "fontPx": 18,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(8) > span:nth-of-type(1)",
+            "text": "8",
+            "fontPx": 18,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(9) > span:nth-of-type(1)",
+            "text": "9",
+            "fontPx": 18,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s5 > div:nth-of-type(1)",
+            "text": "CAPÍTULO 04 · CAPAS",
+            "fontPx": 18,
+            "time": 158.264,
+            "seconds": 56.093
+          },
+          {
+            "selector": "#s5-l1 > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 18,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l4 > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 18,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "div.layer-do > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "calcularValorEstimado()",
+            "fontPx": 18,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s6 > div:nth-of-type(1)",
+            "text": "CAPÍTULO 05 · ORGANIZAR",
+            "fontPx": 18,
+            "time": 214.357,
+            "seconds": 33.556
+          },
+          {
+            "selector": "#s6-tree > div:nth-of-type(1)",
+            "text": "src/main/java/cl/duoc/pokedex",
+            "fontPx": 18,
+            "time": 214.858,
+            "seconds": 33.055
+          },
+          {
+            "selector": "#s6-rules > div:nth-of-type(1)",
+            "text": "Reglas de organización",
+            "fontPx": 18,
+            "time": 214.858,
+            "seconds": 33.055
+          },
+          {
+            "selector": "#s6-r2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "Carta",
+            "fontPx": 18,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r2 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "CartaDaoJson",
+            "fontPx": 18,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "src/main/resources",
+            "fontPx": 18,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r4 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "javafx.*",
+            "fontPx": 18,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r5 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "java.io.*",
+            "fontPx": 18,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s7 > div:nth-of-type(1)",
+            "text": "CAPÍTULO 06 · ERRORES",
+            "fontPx": 18,
+            "time": 248.414,
+            "seconds": 39.566
+          },
+          {
+            "selector": "#s7-e1 > p:nth-of-type(1)",
+            "text": "ejecutar sin el plugin o sin módulo.",
+            "fontPx": 18,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e1 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Causa:",
+            "fontPx": 18,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e1 > p:nth-of-type(2)",
+            "text": "usa .",
+            "fontPx": 18,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e1 > p:nth-of-type(2) > strong:nth-of-type(1)",
+            "text": "Fix:",
+            "fontPx": 18,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e2 > p:nth-of-type(1)",
+            "text": "falta abrir el paquete del controlador.",
+            "fontPx": 18,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e2 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Causa:",
+            "fontPx": 18,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e2 > p:nth-of-type(2) > strong:nth-of-type(1)",
+            "text": "Fix:",
+            "fontPx": 18,
+            "time": 248.915,
+            "seconds": 39.065
+          },
+          {
+            "selector": "#s7-e3 > p:nth-of-type(1)",
+            "text": "no coincide o falta .",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e3 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Causa:",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e3 > p:nth-of-type(2)",
+            "text": "iguala el nombre y anota el método.",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e3 > p:nth-of-type(2) > strong:nth-of-type(1)",
+            "text": "Fix:",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > p:nth-of-type(1)",
+            "text": "el no coincide con el campo.",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Causa:",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > p:nth-of-type(2)",
+            "text": "mismo nombre en FXML y en Java.",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e4 > p:nth-of-type(2) > strong:nth-of-type(1)",
+            "text": "Fix:",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e5 > p:nth-of-type(1)",
+            "text": "la ruta del FXML no existe.",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e5 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Causa:",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e5 > p:nth-of-type(2) > strong:nth-of-type(1)",
+            "text": "Fix:",
+            "fontPx": 18,
+            "time": 249.416,
+            "seconds": 38.564
+          },
+          {
+            "selector": "#s7-e6 > p:nth-of-type(1)",
+            "text": "falta del modelo o JSON corrupto.",
+            "fontPx": 18,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s7-e6 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Causa:",
+            "fontPx": 18,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s7-e6 > p:nth-of-type(2)",
+            "text": "abre a Gson y valida el JSON.",
+            "fontPx": 18,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s7-e6 > p:nth-of-type(2) > strong:nth-of-type(1)",
+            "text": "Fix:",
+            "fontPx": 18,
+            "time": 249.917,
+            "seconds": 38.063
+          },
+          {
+            "selector": "#s8 > div:nth-of-type(1)",
+            "text": "CAPÍTULO 07 · CIERRE",
+            "fontPx": 18,
+            "time": 288.481,
+            "seconds": 11.519
+          },
+          {
+            "selector": "#s4-rule1 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "fx:controller",
+            "fontPx": 18.4,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "fx:id",
+            "fontPx": 18.4,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule2 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "@FXML",
+            "fontPx": 18.4,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "onAction",
+            "fontPx": 18.4,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule3 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "@FXML",
+            "fontPx": 18.4,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule3 > p:nth-of-type(1) > code:nth-of-type(3)",
+            "text": "private",
+            "fontPx": 18.4,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule4 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "initialize()",
+            "fontPx": 18.4,
+            "time": 133.222,
+            "seconds": 17.029
+          },
+          {
+            "selector": "#s5-l3 > div:nth-of-type(2) > p:nth-of-type(1)",
+            "text": "Recibe eventos, valida y actualiza la tabla.",
+            "fontPx": 18.93,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l3 > div:nth-of-type(3) > p:nth-of-type(1)",
+            "text": "Leer o escribir archivos.",
+            "fontPx": 18.93,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l2 > div:nth-of-type(2) > p:nth-of-type(1)",
+            "text": "Declara controles, layout y eventos.",
+            "fontPx": 18.99,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l2 > div:nth-of-type(3) > p:nth-of-type(1)",
+            "text": "Validar ni guardar datos.",
+            "fontPx": 18.99,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l5 > div:nth-of-type(2) > p:nth-of-type(1)",
+            "text": "Colección en memoria y persistencia con Gson.",
+            "fontPx": 18.99,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-l5 > div:nth-of-type(3) > p:nth-of-type(1)",
+            "text": "Mostrar mensajes ni tocar la vista.",
+            "fontPx": 18.99,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "div.closing-foot",
+            "text": "guion completo en GUION.md",
+            "fontPx": 18.99,
+            "time": 290.484,
+            "seconds": 9.516
+          },
+          {
+            "selector": "div.hud-brand",
+            "text": "cl.duoc.pokedex · guía IntelliJ",
+            "fontPx": 19,
+            "time": 0,
+            "seconds": 300
+          },
+          {
+            "selector": "#s2-head > div:nth-of-type(1)",
+            "text": "CREAR EL PROYECTO",
+            "fontPx": 19,
+            "time": 12.521,
+            "seconds": 43.573
+          },
+          {
+            "selector": "div.wiz-body > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "Name",
+            "fontPx": 19,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.wiz-body > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "Location",
+            "fontPx": 19,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.wiz-body > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "Language",
+            "fontPx": 19,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.wiz-body > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "Build system",
+            "fontPx": 19,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.wiz-body > div:nth-of-type(5) > span:nth-of-type(1)",
+            "text": "JDK",
+            "fontPx": 19,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.wiz-field.wiz-field--check > span:nth-of-type(1)",
+            "text": "Add sample code",
+            "fontPx": 19,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(1)",
+            "text": "PokedexCartas/",
+            "fontPx": 19,
+            "time": 32.053,
+            "seconds": 24.041
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "├─ src/main/java/cl/duoc/pokedex/",
+            "fontPx": 19,
+            "time": 32.053,
+            "seconds": 24.041
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(3)",
+            "text": "│ ├─ App.java",
+            "fontPx": 19,
+            "time": 32.053,
+            "seconds": 24.041
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(4)",
+            "text": "│ ├─ Launcher.java",
+            "fontPx": 19,
+            "time": 32.053,
+            "seconds": 24.041
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(5)",
+            "text": "│ ├─ controller/PokedexController.java",
+            "fontPx": 19,
+            "time": 32.053,
+            "seconds": 24.041
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "pom.xml",
+            "fontPx": 19,
+            "time": 32.053,
+            "seconds": 24.041
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(6)",
+            "text": "│ ├─ model/ · repository/ · dao/",
+            "fontPx": 19,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(7)",
+            "text": "├─ src/main/resources/cl/duoc/pokedex/view/",
+            "fontPx": 19,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(8)",
+            "text": "│ └─ pokedex-view.fxml",
+            "fontPx": 19,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-tree > div:nth-of-type(2) > div:nth-of-type(9)",
+            "text": "└─ pom.xml",
+            "fontPx": 19,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s3-head > div:nth-of-type(1)",
+            "text": "EL ERROR QUE A TODOS NOS PASA",
+            "fontPx": 19,
+            "time": 56.594,
+            "seconds": 55.593
+          },
+          {
+            "selector": "#s3-code > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "module-info.java",
+            "fontPx": 19,
+            "time": 76.628,
+            "seconds": 19.532
+          },
+          {
+            "selector": "#s3-leg-note",
+            "text": "Abre solo lo necesario: no todo el proyecto.",
+            "fontPx": 19,
+            "time": 79.132,
+            "seconds": 17.028
+          },
+          {
+            "selector": "#s3-cmp1 > span:nth-of-type(1)",
+            "text": "requires",
+            "fontPx": 19,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "#s3-cmp2 > span:nth-of-type(1)",
+            "text": "opens … to",
+            "fontPx": 19,
+            "time": 97.162,
+            "seconds": 15.025
+          },
+          {
+            "selector": "#s3-cmp3 > span:nth-of-type(1)",
+            "text": "exports",
+            "fontPx": 19,
+            "time": 97.663,
+            "seconds": 14.524
+          },
+          {
+            "selector": "#s3-r1 > p:nth-of-type(1)",
+            "text": "¿La clase se carga desde FXML? →",
+            "fontPx": 19,
+            "time": 97.663,
+            "seconds": 14.524
+          },
+          {
+            "selector": "#s3-r2 > p:nth-of-type(1)",
+            "text": "¿Gson lee o escribe el modelo? →",
+            "fontPx": 19,
+            "time": 97.663,
+            "seconds": 14.524
+          },
+          {
+            "selector": "#s3-r3 > p:nth-of-type(1)",
+            "text": "¿Solo lo usa tu app? → no necesitas .",
+            "fontPx": 19,
+            "time": 98.164,
+            "seconds": 14.023
+          },
+          {
+            "selector": "#s4-head > div:nth-of-type(1)",
+            "text": "CÓMO SE CONECTAN",
+            "fontPx": 19,
+            "time": 112.688,
+            "seconds": 45.576
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "pokedex-view.fxml",
+            "fontPx": 19,
+            "time": 131.219,
+            "seconds": 19.032
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "VBox",
+            "fontPx": 19,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "fx:controller",
+            "fontPx": 19,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "\"cl.duoc.pokedex.controller.PokedexController\"",
+            "fontPx": 19,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "ComboBox",
+            "fontPx": 19,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "fx:id",
+            "fontPx": 19,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(3)",
+            "text": "\"categoriaComboBox\"",
+            "fontPx": 19,
+            "time": 131.72,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "PokedexController.java",
+            "fontPx": 19,
+            "time": 131.72,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "VBox",
+            "fontPx": 19,
+            "time": 132.22,
+            "seconds": 1.002
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "Button",
+            "fontPx": 19,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "text",
+            "fontPx": 19,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(3)",
+            "text": "\"Registrar\"",
+            "fontPx": 19,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(5) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "onAction",
+            "fontPx": 19,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-fxml > div:nth-of-type(2) > div:nth-of-type(5) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "\"#registrarCarta\"",
+            "fontPx": 19,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s5-head > div:nth-of-type(1)",
+            "text": "PATRÓN DE CAPAS",
+            "fontPx": 19,
+            "time": 158.765,
+            "seconds": 55.592
+          },
+          {
+            "selector": "#s5-l1 > div:nth-of-type(2) > p:nth-of-type(1)",
+            "text": "Arranca JavaFX y carga el FXML.",
+            "fontPx": 19,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l1 > div:nth-of-type(3) > p:nth-of-type(1)",
+            "text": "Lógica de negocio.",
+            "fontPx": 19,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l4 > div:nth-of-type(2) > p:nth-of-type(1)",
+            "text": "Datos, reglas y .",
+            "fontPx": 19,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-l4 > div:nth-of-type(3) > p:nth-of-type(1)",
+            "text": "Conocer JavaFX o JSON.",
+            "fontPx": 19,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-dep > div:nth-of-type(1)",
+            "text": "Vista",
+            "fontPx": 19,
+            "time": 161.269,
+            "seconds": 53.088
+          },
+          {
+            "selector": "#s5-dep > div:nth-of-type(2)",
+            "text": "Controlador",
+            "fontPx": 19,
+            "time": 161.269,
+            "seconds": 53.088
+          },
+          {
+            "selector": "#s5-dep > div:nth-of-type(3)",
+            "text": "Modelo / Repository",
+            "fontPx": 19,
+            "time": 161.269,
+            "seconds": 53.088
+          },
+          {
+            "selector": "#s5-dep > div:nth-of-type(4)",
+            "text": "DAO",
+            "fontPx": 19,
+            "time": 161.269,
+            "seconds": 53.088
+          },
+          {
+            "selector": "#s5-dep > div:nth-of-type(5)",
+            "text": "JSON",
+            "fontPx": 19,
+            "time": 161.269,
+            "seconds": 53.088
+          },
+          {
+            "selector": "#s6-head > div:nth-of-type(1)",
+            "text": "ORDEN DEL PROYECTO",
+            "fontPx": 19,
+            "time": 214.357,
+            "seconds": 33.556
+          },
+          {
+            "selector": "#s6-r1 > p:nth-of-type(1)",
+            "text": "Un paquete por responsabilidad, no por tipo de archivo.",
+            "fontPx": 19,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "#s6-r2 > p:nth-of-type(1)",
+            "text": "Nombres en singular: , .",
+            "fontPx": 19,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r3 > p:nth-of-type(1)",
+            "text": "El FXML vive en con la ruta del paquete.",
+            "fontPx": 19,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r4 > p:nth-of-type(1)",
+            "text": "El modelo importa .",
+            "fontPx": 19,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r4 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "no",
+            "fontPx": 19,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r5 > p:nth-of-type(1)",
+            "text": "La vista importa .",
+            "fontPx": 19,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-r5 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "no",
+            "fontPx": 19,
+            "time": 215.86,
+            "seconds": 32.053
+          },
+          {
+            "selector": "#s6-dep > div:nth-of-type(1)",
+            "text": "Vista",
+            "fontPx": 19,
+            "time": 216.361,
+            "seconds": 31.552
+          },
+          {
+            "selector": "#s6-dep > div:nth-of-type(2)",
+            "text": "Controlador",
+            "fontPx": 19,
+            "time": 216.361,
+            "seconds": 31.552
+          },
+          {
+            "selector": "#s6-dep > div:nth-of-type(3)",
+            "text": "Modelo / Repository",
+            "fontPx": 19,
+            "time": 216.361,
+            "seconds": 31.552
+          },
+          {
+            "selector": "#s6-dep > div:nth-of-type(4)",
+            "text": "DAO",
+            "fontPx": 19,
+            "time": 216.361,
+            "seconds": 31.552
+          },
+          {
+            "selector": "#s6-dep > div:nth-of-type(5)",
+            "text": "JSON",
+            "fontPx": 19,
+            "time": 216.361,
+            "seconds": 31.552
+          },
+          {
+            "selector": "#s7-head > div:nth-of-type(1)",
+            "text": "DIAGNÓSTICO RÁPIDO",
+            "fontPx": 19,
+            "time": 248.414,
+            "seconds": 39.566
+          },
+          {
+            "selector": "#s8-head > div:nth-of-type(1)",
+            "text": "CHECKLIST FINAL",
+            "fontPx": 19,
+            "time": 288.481,
+            "seconds": 11.519
+          },
+          {
+            "selector": "#s3-w1 > p:nth-of-type(1) > strong:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "new PokedexController()",
+            "fontPx": 19.32,
+            "time": 58.097,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-w3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "module-info.java",
+            "fontPx": 19.32,
+            "time": 58.598,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s3-w3 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "opens",
+            "fontPx": 19.32,
+            "time": 58.598,
+            "seconds": 17.529
+          },
+          {
+            "selector": "div.closing-eyebrow",
+            "text": "PROYECTO COMPLETO",
+            "fontPx": 19.99,
+            "time": 290.484,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-eyebrow",
+            "text": "JAVAFX · INTELLIJ IDEA · MVC",
+            "fontPx": 20,
+            "time": 0.501,
+            "seconds": 11.519
+          },
+          {
+            "selector": "#s2-create",
+            "text": "Create",
+            "fontPx": 20,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s2-st1 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "En la barra superior de IntelliJ.",
+            "fontPx": 20,
+            "time": 13.523,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s2-st2 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "PokedexCartas en tu carpeta de proyectos.",
+            "fontPx": 20,
+            "time": 13.523,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s2-st3 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "JDK 21. Sin Gradle y sin sample code.",
+            "fontPx": 20,
+            "time": 14.023,
+            "seconds": 17.029
+          },
+          {
+            "selector": "#s2-st4 > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "Maven descarga JavaFX y Gson.",
+            "fontPx": 20,
+            "time": 14.524,
+            "seconds": 16.528
+          },
+          {
+            "selector": "#s2-run-status",
+            "text": "BUILD SUCCESS · ventana abierta",
+            "fontPx": 20,
+            "time": 35.058,
+            "seconds": 21.036
+          },
+          {
+            "selector": "div.term-body > div:nth-of-type(1)",
+            "text": "Exception in Application start method",
+            "fontPx": 20,
+            "time": 57.095,
+            "seconds": 19.032
+          },
+          {
+            "selector": "div.term-body > div:nth-of-type(2)",
+            "text": "Caused by: java.lang.IllegalAccessException:",
+            "fontPx": 20,
+            "time": 57.095,
+            "seconds": 19.032
+          },
+          {
+            "selector": "div.term-body > div:nth-of-type(3)",
+            "text": "module cl.duoc.pokedex does not",
+            "fontPx": 20,
+            "time": 57.095,
+            "seconds": 19.032
+          },
+          {
+            "selector": "#s3-hi",
+            "text": "\"opens cl.duoc.pokedex.controller\"",
+            "fontPx": 20,
+            "time": 57.596,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.term-body > div:nth-of-type(5)",
+            "text": "to module javafx.fxml",
+            "fontPx": 20,
+            "time": 57.596,
+            "seconds": 18.531
+          },
+          {
+            "selector": "div.term-line.term-line--dim",
+            "text": "at javafx.fxml.FXMLLoader…",
+            "fontPx": 20,
+            "time": 57.596,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s3-leg1 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Mi módulo necesita este otro módulo.",
+            "fontPx": 20,
+            "time": 77.629,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s3-leg2 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Permite reflexión, solo al módulo indicado.",
+            "fontPx": 20,
+            "time": 78.13,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-leg3 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Hace público un paquete para otros módulos.",
+            "fontPx": 20,
+            "time": 78.13,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-cmp1 > span:nth-of-type(2)",
+            "text": "Usar otro módulo.",
+            "fontPx": 20,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "#s3-cmp1 > span:nth-of-type(3)",
+            "text": "JavaFX, FXML, Gson.",
+            "fontPx": 20,
+            "time": 96.661,
+            "seconds": 15.526
+          },
+          {
+            "selector": "#s3-cmp2 > span:nth-of-type(2)",
+            "text": "Acceso por reflexión.",
+            "fontPx": 20,
+            "time": 97.162,
+            "seconds": 15.025
+          },
+          {
+            "selector": "#s3-cmp2 > span:nth-of-type(3)",
+            "text": "FXML → controlador · Gson → modelo.",
+            "fontPx": 20,
+            "time": 97.162,
+            "seconds": 15.025
+          },
+          {
+            "selector": "#s3-cmp3 > span:nth-of-type(2)",
+            "text": "Acceso público normal.",
+            "fontPx": 20,
+            "time": 97.663,
+            "seconds": 14.524
+          },
+          {
+            "selector": "#s3-cmp3 > span:nth-of-type(3)",
+            "text": "Cuando otro módulo importa tus clases.",
+            "fontPx": 20,
+            "time": 97.663,
+            "seconds": 14.524
+          },
+          {
+            "selector": "#s4-rule1 > p:nth-of-type(1)",
+            "text": "usa el de la clase.",
+            "fontPx": 20,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule1 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "nombre completo",
+            "fontPx": 20,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule2 > p:nth-of-type(1)",
+            "text": "= nombre exacto del campo .",
+            "fontPx": 20,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule3 > p:nth-of-type(1)",
+            "text": "= método , aunque sea .",
+            "fontPx": 20,
+            "time": 132.721,
+            "seconds": 17.53
+          },
+          {
+            "selector": "#s4-rule4 > p:nth-of-type(1)",
+            "text": "corre después de inyectar los campos.",
+            "fontPx": 20,
+            "time": 133.222,
+            "seconds": 17.029
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "fx:id · @FXML",
+            "fontPx": 20.73,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "IntelliJ + Maven",
+            "fontPx": 21,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "requires · opens",
+            "fontPx": 21,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "responsabilidades",
+            "fontPx": 21,
+            "time": 3.005,
+            "seconds": 9.015
+          },
+          {
+            "selector": "#s1-note",
+            "text": "5 minutos · ritmo lento · cada error tiene su porqué.",
+            "fontPx": 21,
+            "time": 3.506,
+            "seconds": 8.514
+          },
+          {
+            "selector": "div.wiz-body > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "PokedexCartas",
+            "fontPx": 21,
+            "time": 12.521,
+            "seconds": 18.531
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "dependency",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "<>org.openjfx</>",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "groupId",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "groupId",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2)",
+            "text": "<>javafx-controls</>",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "artifactId",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "artifactId",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "dependency",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(5) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "dependency",
+            "fontPx": 21,
+            "time": 32.554,
+            "seconds": 23.54
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(2)",
+            "text": "<>org.openjfx</>",
+            "fontPx": 21,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "groupId",
+            "fontPx": 21,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "groupId",
+            "fontPx": 21,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(7) > span:nth-of-type(2)",
+            "text": "<>javafx-fxml</>",
+            "fontPx": 21,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(7) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "artifactId",
+            "fontPx": 21,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(7) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "artifactId",
+            "fontPx": 21,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s2-pom > div:nth-of-type(2) > div:nth-of-type(8) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "dependency",
+            "fontPx": 21,
+            "time": 33.055,
+            "seconds": 23.039
+          },
+          {
+            "selector": "#s3-w1 > p:nth-of-type(1)",
+            "text": "FXML : lo crea por reflexión.",
+            "fontPx": 21,
+            "time": 58.097,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-w1 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "no hace",
+            "fontPx": 21,
+            "time": 58.097,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-w2 > p:nth-of-type(1)",
+            "text": "La reflexión necesita un del módulo.",
+            "fontPx": 21,
+            "time": 58.097,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-w2 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "permiso explícito",
+            "fontPx": 21,
+            "time": 58.097,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s3-w3 > p:nth-of-type(1)",
+            "text": "Ese permiso se escribe en con .",
+            "fontPx": 21,
+            "time": 58.598,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "cl.duoc.pokedex {",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 1.002
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "module",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 1.002
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "javafx.controls;",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(2) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "requires",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(3) > span:nth-of-type(2)",
+            "text": "javafx.fxml;",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "requires",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(4) > span:nth-of-type(2)",
+            "text": "com.google.gson;",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "requires",
+            "fontPx": 21,
+            "time": 76.628,
+            "seconds": 8.013
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(6) > span:nth-of-type(2)",
+            "text": "cl.duoc.pokedex.controller",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(6) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "opens",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(7) > span:nth-of-type(2)",
+            "text": "javafx.fxml;",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(7) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "to",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(9) > span:nth-of-type(2)",
+            "text": "cl.duoc.pokedex.model",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(9) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "opens",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(10) > span:nth-of-type(2)",
+            "text": "com.google.gson;",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(10) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "to",
+            "fontPx": 21,
+            "time": 84.641,
+            "seconds": 6.01
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(12) > span:nth-of-type(2)",
+            "text": "cl.duoc.pokedex;",
+            "fontPx": 21,
+            "time": 90.651,
+            "seconds": 5.509
+          },
+          {
+            "selector": "#s3-java > div:nth-of-type(12) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "exports",
+            "fontPx": 21,
+            "time": 90.651,
+            "seconds": 5.509
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "<> categoriaComboBox;",
+            "fontPx": 21,
+            "time": 132.22,
+            "seconds": 4.508
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "@FXML",
+            "fontPx": 21,
+            "time": 132.22,
+            "seconds": 4.508
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "private",
+            "fontPx": 21,
+            "time": 132.22,
+            "seconds": 4.508
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(3)",
+            "text": "ComboBox",
+            "fontPx": 21,
+            "time": 132.22,
+            "seconds": 4.508
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(4)",
+            "text": "String",
+            "fontPx": 21,
+            "time": 132.22,
+            "seconds": 4.508
+          },
+          {
+            "selector": "span.cm",
+            "text": "// se ejecuta al presionar el botón",
+            "fontPx": 21,
+            "time": 132.721,
+            "seconds": 0.501
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "@FXML",
+            "fontPx": 21,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "public void",
+            "fontPx": 21,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "initialize",
+            "fontPx": 21,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(5) > span:nth-of-type(2)",
+            "text": "categoriaComboBox.(…);",
+            "fontPx": 21,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(5) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "setItems",
+            "fontPx": 21,
+            "time": 136.728,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(8) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "@FXML",
+            "fontPx": 21,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(9) > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "private void",
+            "fontPx": 21,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-java-body > div:nth-of-type(9) > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "registrarCarta",
+            "fontPx": 21,
+            "time": 141.736,
+            "seconds": 8.515
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(1)",
+            "text": "cl.duoc.pokedex",
+            "fontPx": 21,
+            "time": 214.858,
+            "seconds": 33.055
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(2)",
+            "text": "├─ App.java · Launcher.java",
+            "fontPx": 21,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(3)",
+            "text": "├─ controller/",
+            "fontPx": 21,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(4)",
+            "text": "├─ model/",
+            "fontPx": 21,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(5)",
+            "text": "├─ repository/",
+            "fontPx": 21,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(6)",
+            "text": "├─ dao/",
+            "fontPx": 21,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "div.tree.tree--big > div:nth-of-type(7)",
+            "text": "└─ view/",
+            "fontPx": 21,
+            "time": 215.359,
+            "seconds": 32.554
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(2) > span:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "module-info",
+            "fontPx": 21,
+            "time": 288.982,
+            "seconds": 11.018
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(2) > span:nth-of-type(2) > code:nth-of-type(2)",
+            "text": "requires",
+            "fontPx": 21,
+            "time": 288.982,
+            "seconds": 11.018
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(2) > span:nth-of-type(2) > code:nth-of-type(3)",
+            "text": "opens",
+            "fontPx": 21,
+            "time": 288.982,
+            "seconds": 11.018
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(3) > span:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "fx:controller",
+            "fontPx": 21,
+            "time": 289.482,
+            "seconds": 10.518
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(3) > span:nth-of-type(2) > code:nth-of-type(2)",
+            "text": "fx:id",
+            "fontPx": 21,
+            "time": 289.482,
+            "seconds": 10.518
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(3) > span:nth-of-type(2) > code:nth-of-type(3)",
+            "text": "onAction",
+            "fontPx": 21,
+            "time": 289.482,
+            "seconds": 10.518
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "03",
+            "fontPx": 21.71,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "01",
+            "fontPx": 22,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "02",
+            "fontPx": 22,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "04",
+            "fontPx": 22,
+            "time": 3.005,
+            "seconds": 9.015
+          },
+          {
+            "selector": "#s4-map-note > code:nth-of-type(1)",
+            "text": "null",
+            "fontPx": 22.08,
+            "time": 116.194,
+            "seconds": 15.025
+          },
+          {
+            "selector": "#s2-st1 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "File → New → Project…",
+            "fontPx": 23,
+            "time": 13.523,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s2-st2 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Nombre y ubicación",
+            "fontPx": 23,
+            "time": 13.523,
+            "seconds": 17.529
+          },
+          {
+            "selector": "#s2-st3 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Build system: Maven",
+            "fontPx": 23,
+            "time": 14.023,
+            "seconds": 17.029
+          },
+          {
+            "selector": "#s2-st4 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Create",
+            "fontPx": 23,
+            "time": 14.524,
+            "seconds": 16.528
+          },
+          {
+            "selector": "strong.leg-k.leg-k--blue",
+            "text": "requires",
+            "fontPx": 23,
+            "time": 77.629,
+            "seconds": 18.531
+          },
+          {
+            "selector": "strong.leg-k.leg-k--green",
+            "text": "opens … to",
+            "fontPx": 23,
+            "time": 78.13,
+            "seconds": 18.03
+          },
+          {
+            "selector": "strong.leg-k.leg-k--amber",
+            "text": "exports",
+            "fontPx": 23,
+            "time": 78.13,
+            "seconds": 18.03
+          },
+          {
+            "selector": "#s7-note",
+            "text": "Lee la primera línea del error: casi siempre dice el módulo o el nombre que no coincide.",
+            "fontPx": 23,
+            "time": 250.918,
+            "seconds": 37.062
+          },
+          {
+            "selector": "#s2-lt-1 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "File → New → Project",
+            "fontPx": 24,
+            "time": 13.022,
+            "seconds": 7.512
+          },
+          {
+            "selector": "#s2-lt-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "src/main/java",
+            "fontPx": 24,
+            "time": 42.07,
+            "seconds": 8.514
+          },
+          {
+            "selector": "#s2-lt-3 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "src/main/resources",
+            "fontPx": 24,
+            "time": 42.07,
+            "seconds": 8.514
+          },
+          {
+            "selector": "#s2-lt-4 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "mvn javafx:run",
+            "fontPx": 24,
+            "time": 50.584,
+            "seconds": 5.51
+          },
+          {
+            "selector": "#s3-lt-1 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "javafx.fxml",
+            "fontPx": 24,
+            "time": 57.095,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s3-lt-2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "opens",
+            "fontPx": 24,
+            "time": 66.11,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s3-lt-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "requires",
+            "fontPx": 24,
+            "time": 76.628,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s3-lt-3 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "opens … to",
+            "fontPx": 24,
+            "time": 76.628,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s3-lt-3 > p:nth-of-type(1) > code:nth-of-type(3)",
+            "text": "exports",
+            "fontPx": 24,
+            "time": 76.628,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s3-lt-4 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "javafx.fxml",
+            "fontPx": 24,
+            "time": 86.144,
+            "seconds": 10.016
+          },
+          {
+            "selector": "#s3-lt-5 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "exports",
+            "fontPx": 24,
+            "time": 96.661,
+            "seconds": 8.014
+          },
+          {
+            "selector": "#s3-lt-5 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "opens",
+            "fontPx": 24,
+            "time": 96.661,
+            "seconds": 8.014
+          },
+          {
+            "selector": "#s4-lt-1 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "fx:controller",
+            "fontPx": 24,
+            "time": 113.189,
+            "seconds": 8.514
+          },
+          {
+            "selector": "#s4-lt-1 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "fx:id",
+            "fontPx": 24,
+            "time": 113.189,
+            "seconds": 8.514
+          },
+          {
+            "selector": "#s4-lt-1 > p:nth-of-type(1) > code:nth-of-type(3)",
+            "text": "onAction",
+            "fontPx": 24,
+            "time": 113.189,
+            "seconds": 8.514
+          },
+          {
+            "selector": "#s4-map-note",
+            "text": "Si un nombre no coincide: el campo queda en o el botón no hace nada.",
+            "fontPx": 24,
+            "time": 116.194,
+            "seconds": 15.025
+          },
+          {
+            "selector": "#s4-lt-2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "null",
+            "fontPx": 24,
+            "time": 121.202,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s4-lt-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "initialize()",
+            "fontPx": 24,
+            "time": 132.721,
+            "seconds": 9.015
+          },
+          {
+            "selector": "#s4-lt-3 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "@FXML",
+            "fontPx": 24,
+            "time": 132.721,
+            "seconds": 9.015
+          },
+          {
+            "selector": "#s4-lt-4 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "onAction",
+            "fontPx": 24,
+            "time": 141.235,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-lt-4 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "@FXML",
+            "fontPx": 24,
+            "time": 141.235,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-flow-caption",
+            "text": "Un clic recorre las capas y vuelve a la tabla: la vista nunca guarda datos por su cuenta.",
+            "fontPx": 24,
+            "time": 151.753,
+            "seconds": 6.511
+          },
+          {
+            "selector": "#s5-lt-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "Repository",
+            "fontPx": 24,
+            "time": 186.311,
+            "seconds": 14.023
+          },
+          {
+            "selector": "#s6-lt-2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "resources",
+            "fontPx": 24,
+            "time": 224.374,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s7-lt-1 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "mvn javafx:run",
+            "fontPx": 24,
+            "time": 248.915,
+            "seconds": 12.521
+          },
+          {
+            "selector": "#s7-lt-2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "opens",
+            "fontPx": 24,
+            "time": 261.436,
+            "seconds": 13.022
+          },
+          {
+            "selector": "#s7-lt-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "NullPointerException",
+            "fontPx": 24,
+            "time": 274.457,
+            "seconds": 13.523
+          },
+          {
+            "selector": "#s7-lt-3 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "initialize",
+            "fontPx": 24,
+            "time": 274.457,
+            "seconds": 13.523
+          },
+          {
+            "selector": "#s7-lt-3 > p:nth-of-type(1) > code:nth-of-type(3)",
+            "text": "fx:id",
+            "fontPx": 24,
+            "time": 274.457,
+            "seconds": 13.523
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(1) > span:nth-of-type(2)",
+            "text": "Proyecto Maven con",
+            "fontPx": 24,
+            "time": 288.982,
+            "seconds": 11.018
+          },
+          {
+            "selector": "div.check-item > span:nth-of-type(2) > strong:nth-of-type(1)",
+            "text": "JDK 21",
+            "fontPx": 24,
+            "time": 288.982,
+            "seconds": 11.018
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "con y",
+            "fontPx": 24,
+            "time": 288.982,
+            "seconds": 11.018
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(4) > span:nth-of-type(2)",
+            "text": "Una responsabilidad por capa",
+            "fontPx": 24,
+            "time": 289.482,
+            "seconds": 10.518
+          },
+          {
+            "selector": "#s8-checks > div:nth-of-type(5) > span:nth-of-type(2)",
+            "text": "Leer la primera línea del error",
+            "fontPx": 24,
+            "time": 289.482,
+            "seconds": 10.518
+          },
+          {
+            "selector": "#s5-l3 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Controlador",
+            "fontPx": 24.91,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l2 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Vista",
+            "fontPx": 24.99,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l5 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Repository + DAO",
+            "fontPx": 24.99,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s5-l1 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "App / Launcher",
+            "fontPx": 25,
+            "time": 159.265,
+            "seconds": 55.092
+          },
+          {
+            "selector": "#s5-l4 > div:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Modelo",
+            "fontPx": 25,
+            "time": 159.766,
+            "seconds": 54.591
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "text": "Vista + Controlador",
+            "fontPx": 25.66,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "div.closing-sub",
+            "text": "compila · abre la ventana · guarda datos",
+            "fontPx": 25.99,
+            "time": 290.484,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "text": "Proyecto",
+            "fontPx": 26,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "text": "module-info",
+            "fontPx": 26,
+            "time": 2.504,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s1-roadmap > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "text": "Capas y errores",
+            "fontPx": 26,
+            "time": 3.005,
+            "seconds": 9.015
+          },
+          {
+            "selector": "div.run-cmd",
+            "text": "mvn javafx:run",
+            "fontPx": 26,
+            "time": 34.057,
+            "seconds": 22.037
+          },
+          {
+            "selector": "span.run-prompt",
+            "text": "$",
+            "fontPx": 26,
+            "time": 34.057,
+            "seconds": 22.037
+          },
+          {
+            "selector": "#s4-flow > div:nth-of-type(1)",
+            "text": "Button",
+            "fontPx": 26,
+            "time": 150.751,
+            "seconds": 7.513
+          },
+          {
+            "selector": "#s4-flow > div:nth-of-type(2)",
+            "text": "onAction",
+            "fontPx": 26,
+            "time": 150.751,
+            "seconds": 7.513
+          },
+          {
+            "selector": "div.flow-chip.flow-chip--blue",
+            "text": "Controlador",
+            "fontPx": 26,
+            "time": 151.252,
+            "seconds": 7.012
+          },
+          {
+            "selector": "div.flow-chip.flow-chip--green",
+            "text": "Repository / DAO",
+            "fontPx": 26,
+            "time": 151.753,
+            "seconds": 6.511
+          },
+          {
+            "selector": "#s4-flow > div:nth-of-type(5)",
+            "text": "TableView",
+            "fontPx": 26,
+            "time": 151.753,
+            "seconds": 6.511
+          },
+          {
+            "selector": "#s1-lt > p:nth-of-type(1)",
+            "text": "Al final tendrás un proyecto que compila, abre la ventana y guarda datos.",
+            "fontPx": 27,
+            "time": 4.508,
+            "seconds": 5.008
+          },
+          {
+            "selector": "#s2-lt-1 > p:nth-of-type(1)",
+            "text": ". Elige Java y Maven: Maven descarga JavaFX y Gson por ti.",
+            "fontPx": 27,
+            "time": 13.022,
+            "seconds": 7.512
+          },
+          {
+            "selector": "#s2-lt-2 > p:nth-of-type(1)",
+            "text": "y «Add sample code» desactivado: partimos de un proyecto limpio.",
+            "fontPx": 27,
+            "time": 20.534,
+            "seconds": 10.518
+          },
+          {
+            "selector": "#s2-lt-2 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "JDK 21",
+            "fontPx": 27,
+            "time": 20.534,
+            "seconds": 10.518
+          },
+          {
+            "selector": "#s2-lt-5 > p:nth-of-type(1)",
+            "text": "Maven administra las dependencias: JavaFX y Gson se descargan solos al sincronizar.",
+            "fontPx": 27,
+            "time": 33.055,
+            "seconds": 9.015
+          },
+          {
+            "selector": "#s2-lt-3 > p:nth-of-type(1)",
+            "text": "El código va en ; el FXML en , con la misma ruta del paquete.",
+            "fontPx": 27,
+            "time": 42.07,
+            "seconds": 8.514
+          },
+          {
+            "selector": "#s2-lt-4 > p:nth-of-type(1)",
+            "text": "Ejecuta con o con el botón de IntelliJ.",
+            "fontPx": 27,
+            "time": 50.584,
+            "seconds": 5.51
+          },
+          {
+            "selector": "#s2-lt-4 > p:nth-of-type(1) > strong:nth-of-type(1)",
+            "text": "Run",
+            "fontPx": 27,
+            "time": 50.584,
+            "seconds": 5.51
+          },
+          {
+            "selector": "#s3-lt-1 > p:nth-of-type(1)",
+            "text": "Este es el error más común al empezar: el módulo no abre el paquete del controlador a .",
+            "fontPx": 27,
+            "time": 57.095,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s3-lt-2 > p:nth-of-type(1)",
+            "text": "FXML crea el controlador por reflexión; sin , la JVM bloquea el acceso.",
+            "fontPx": 27,
+            "time": 66.11,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s3-lt-3 > p:nth-of-type(1)",
+            "text": "declara lo que necesitas; autoriza la reflexión; publica un paquete.",
+            "fontPx": 27,
+            "time": 76.628,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s3-lt-4 > p:nth-of-type(1)",
+            "text": "Abre solo lo necesario: el controlador a y el modelo a Gson.",
+            "fontPx": 27,
+            "time": 86.144,
+            "seconds": 10.016
+          },
+          {
+            "selector": "#s3-lt-5 > p:nth-of-type(1)",
+            "text": "no reemplaza a : uno publica clases, el otro permite reflexión.",
+            "fontPx": 27,
+            "time": 96.661,
+            "seconds": 8.014
+          },
+          {
+            "selector": "#s3-lt-6 > p:nth-of-type(1)",
+            "text": "Si el error menciona un paquete, abre ese paquete al módulo que lo pide.",
+            "fontPx": 27,
+            "time": 104.174,
+            "seconds": 7.512
+          },
+          {
+            "selector": "#s4-lt-1 > p:nth-of-type(1)",
+            "text": "apunta a la clase; debe coincidir con el campo; con el método.",
+            "fontPx": 27,
+            "time": 113.189,
+            "seconds": 8.514
+          },
+          {
+            "selector": "#s4-lt-2 > p:nth-of-type(1)",
+            "text": "Si un nombre no coincide, el campo queda en o el botón no hace nada.",
+            "fontPx": 27,
+            "time": 121.202,
+            "seconds": 10.017
+          },
+          {
+            "selector": "#s4-lt-3 > p:nth-of-type(1)",
+            "text": "se ejecuta al cargar la vista, cuando los campos ya están listos.",
+            "fontPx": 27,
+            "time": 132.721,
+            "seconds": 9.015
+          },
+          {
+            "selector": "#s4-lt-4 > p:nth-of-type(1)",
+            "text": "El método de puede ser privado, pero debe llamarse igual y llevar .",
+            "fontPx": 27,
+            "time": 141.235,
+            "seconds": 8.515
+          },
+          {
+            "selector": "#s4-lt-5 > p:nth-of-type(1)",
+            "text": "Un clic recorre las capas y vuelve a la tabla: la vista nunca guarda datos por su cuenta.",
+            "fontPx": 27,
+            "time": 150.751,
+            "seconds": 7.012
+          },
+          {
+            "selector": "#s5-lt-1 > p:nth-of-type(1)",
+            "text": "Cada capa tiene una sola responsabilidad: si una hace dos cosas, algo está mal ubicado.",
+            "fontPx": 27,
+            "time": 158.765,
+            "seconds": 14.023
+          },
+          {
+            "selector": "#s5-lt-2 > p:nth-of-type(1)",
+            "text": "La vista declara; el controlador coordina; el modelo decide; el repository y el DAO guardan.",
+            "fontPx": 27,
+            "time": 172.287,
+            "seconds": 14.024
+          },
+          {
+            "selector": "#s5-lt-3 > p:nth-of-type(1)",
+            "text": "El controlador nunca lee archivos: delega en , que usa el DAO con Gson.",
+            "fontPx": 27,
+            "time": 186.311,
+            "seconds": 14.023
+          },
+          {
+            "selector": "#s5-lt-4 > p:nth-of-type(1)",
+            "text": "El modelo no conoce JavaFX: por eso se puede probar y reutilizar sin la interfaz.",
+            "fontPx": 27,
+            "time": 200.334,
+            "seconds": 13.523
+          },
+          {
+            "selector": "#s6-lt-1 > p:nth-of-type(1)",
+            "text": "Organiza por responsabilidad, no por tipo de archivo. Un paquete por capa.",
+            "fontPx": 27,
+            "time": 214.858,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s6-lt-2 > p:nth-of-type(1)",
+            "text": "El FXML va en con la misma ruta del paquete; el modelo no importa JavaFX.",
+            "fontPx": 27,
+            "time": 224.374,
+            "seconds": 9.516
+          },
+          {
+            "selector": "#s6-lt-3 > p:nth-of-type(1)",
+            "text": "La dependencia siempre baja: vista → controlador → modelo/repository → DAO. Nunca al revés.",
+            "fontPx": 27,
+            "time": 233.89,
+            "seconds": 14.023
+          },
+          {
+            "selector": "#s7-lt-1 > p:nth-of-type(1)",
+            "text": "«JavaFX runtime components are missing» se arregla ejecutando con .",
+            "fontPx": 27,
+            "time": 248.915,
+            "seconds": 12.521
+          },
+          {
+            "selector": "#s7-lt-2 > p:nth-of-type(1)",
+            "text": "Si el error nombra un paquete y un módulo, agrega el correspondiente.",
+            "fontPx": 27,
+            "time": 261.436,
+            "seconds": 13.022
+          },
+          {
+            "selector": "#s7-lt-3 > p:nth-of-type(1)",
+            "text": "Un en casi siempre es un mal escrito.",
+            "fontPx": 27,
+            "time": 274.457,
+            "seconds": 13.523
+          },
+          {
+            "selector": "#s8-lt > p:nth-of-type(1)",
+            "text": "Si algo falla, lee la primera línea del error: casi siempre dice qué módulo o qué nombre no coincide.",
+            "fontPx": 27,
+            "time": 293.489,
+            "seconds": 6.01
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.5010000000000012,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

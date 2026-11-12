@@ -1,0 +1,39 @@
+# Maven build output
+/target/
+
+# Compiled class files (usually in target)
+*.class
+
+# Package outputs
+*.jar
+*.war
+*.ear
+*.zip
+
+# Maven wrapper (track this; not ignored)
+#mvnw
+#mvnw.cmd
+#.mvn/**/*
+
+# IDE and editor files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files and backups
+*.tmp
+*.bak
+*~
+
+# Environment variables
+.env
+
+*.mp4

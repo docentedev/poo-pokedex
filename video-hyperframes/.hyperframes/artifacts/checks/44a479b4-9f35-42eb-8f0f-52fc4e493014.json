@@ -1,0 +1,2015 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 8,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 305 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"bg\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#bg",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"bg\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-1\"> is a timeline element that contains nested <div id=\"s1\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-1",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-2\"> is a timeline element that contains nested <div id=\"s2\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-2",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-3\"> is a timeline element that contains nested <div id=\"s3\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-3",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-4\"> is a timeline element that contains nested <div id=\"s4\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-4",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"hud\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#hud",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"hud\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"progress\"> is a timeline element that contains nested <div id=\"progress-fill\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#progress",
+        "dataAttributes": {},
+        "sourceFile": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"progress\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "text_box_overflow",
+        "severity": "error",
+        "time": 24,
+        "selector": "#cl-4 > span:nth-of-type(2) > span:nth-of-type(3)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 697.23,
+          "top": 477.06,
+          "right": 1221.64,
+          "bottom": 499.14,
+          "width": 524.41,
+          "height": 22.08
+        },
+        "containerSelector": "#s3-editor",
+        "text": "\"El año debe estar entre 1996 y 2026.\"",
+        "fixHint": "Text is 524px x 22px inside 1096px x 611px and overflows by up to 30px; widen the container to at least ~1126px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 96,
+          "top": 292,
+          "right": 1192,
+          "bottom": 903,
+          "width": 1096,
+          "height": 611
+        },
+        "overflow": {
+          "right": 29.64
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 697.23,
+          "y": 477.06,
+          "width": 524.41,
+          "height": 22.08
+        },
+        "firstSeen": 24,
+        "lastSeen": 33,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 24,
+        "selector": "#cl-4 > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 159,
+          "top": 472,
+          "right": 1249.25,
+          "bottom": 502,
+          "width": 1090.25,
+          "height": 30
+        },
+        "containerSelector": "#ex-1",
+        "text": "();",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.08,
+        "lifetime": {
+          "start": 21,
+          "end": 36
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 159,
+          "y": 472,
+          "width": 1090.25,
+          "height": 30
+        },
+        "firstSeen": 24,
+        "lastSeen": 33,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          24,
+          33
+        ]
+      }
+    ],
+    "duration": 45,
+    "samples": [
+      2,
+      12,
+      24,
+      33,
+      42
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 2,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": false,
+    "errorCount": 16,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.23:1; WCAG AA requires 4.5:1.",
+        "text": "1920×1080 · 30 fps · 45 s · 1350 frames",
+        "fg": "rgb(95,104,113)",
+        "bg": "rgb(12,23,20)",
+        "ratio": 3.23,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(119,127,135)",
+        "large": false,
+        "selector": "div > div:nth-of-type(2) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1359.890625,
+          "y": 1024,
+          "width": 464.109375,
+          "height": 22
+        },
+        "time": 42,
+        "times": [
+          2,
+          12,
+          24,
+          33,
+          42
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.8:1; WCAG AA requires 4.5:1.",
+        "text": "eventos",
+        "fg": "rgb(110,118,129)",
+        "bg": "rgb(15,26,43)",
+        "ratio": 3.8,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(123,130,140)",
+        "large": false,
+        "selector": "div > section:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(4)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 436,
+          "y": 386,
+          "width": 122,
+          "height": 22
+        },
+        "time": 12,
+        "times": [
+          12
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.12:1; WCAG AA requires 4.5:1.",
+        "text": "Carta",
+        "fg": "rgb(110,118,129)",
+        "bg": "rgb(13,17,23)",
+        "ratio": 4.12,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(117,125,135)",
+        "large": false,
+        "selector": "div > section:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(4)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 898,
+          "y": 386,
+          "width": 122,
+          "height": 22
+        },
+        "time": 12,
+        "times": [
+          12
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.12:1; WCAG AA requires 4.5:1.",
+        "text": "interfaz DAO",
+        "fg": "rgb(110,118,129)",
+        "bg": "rgb(13,17,23)",
+        "ratio": 4.12,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(117,125,135)",
+        "large": false,
+        "selector": "div > section:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(4)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1360,
+          "y": 386,
+          "width": 122,
+          "height": 44
+        },
+        "time": 12,
+        "times": [
+          12
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.83:1; WCAG AA requires 4.5:1.",
+        "text": "1",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(23,39,57)",
+        "ratio": 1.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(137,141,147)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 374,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.83:1; WCAG AA requires 4.5:1.",
+        "text": "2",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(23,39,57)",
+        "ratio": 1.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(137,141,147)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 408,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.83:1; WCAG AA requires 4.5:1.",
+        "text": "3",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(23,39,57)",
+        "ratio": 1.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(137,141,147)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 442,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.83:1; WCAG AA requires 4.5:1.",
+        "text": "4",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(23,39,57)",
+        "ratio": 1.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(137,141,147)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(5) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 476,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.83:1; WCAG AA requires 4.5:1.",
+        "text": "5",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(23,39,57)",
+        "ratio": 1.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(137,141,147)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(6) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 510,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "6",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(7) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 544,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "7",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(8) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 578,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "8",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(9) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 612,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "9",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(10) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 646,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "10",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(11) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 680,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "11",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(12) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 714,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "12",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(13) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 748,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.32:1; WCAG AA requires 4.5:1.",
+        "text": "13",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(11,15,20)",
+        "ratio": 2.32,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,123,130)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(14) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 782,
+          "width": 62,
+          "height": 25
+        },
+        "time": 24,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.83:1; WCAG AA requires 4.5:1.",
+        "text": "14",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(23,39,57)",
+        "ratio": 1.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(137,141,147)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(15) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 816,
+          "width": 62,
+          "height": 25
+        },
+        "time": 33,
+        "times": [
+          24,
+          33
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.83:1; WCAG AA requires 4.5:1.",
+        "text": "15",
+        "fg": "rgb(72,79,88)",
+        "bg": "rgb(23,39,57)",
+        "ratio": 1.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(137,141,147)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(16) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 97,
+          "y": 850,
+          "width": 62,
+          "height": 25
+        },
+        "time": 33,
+        "times": [
+          24,
+          33
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      2,
+      12,
+      24,
+      33,
+      42
+    ],
+    "checked": 185,
+    "passed": 147
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "film_silent",
+        "severity": "warning",
+        "message": "This 45 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 122 text elements stay under it for 0.5 s or more, the smallest \"MODELO DEL DOMINIO\" at 15 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "MODELO DEL DOMINIO",
+        "selector": "#sub-model > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 585,
+          "y": 630.27,
+          "width": 226.81,
+          "height": 20
+        },
+        "time": 13.5,
+        "times": [
+          0,
+          0,
+          0.125,
+          0.5,
+          2.25,
+          2.375,
+          2.5,
+          2.625,
+          2.75,
+          2.875,
+          8.125,
+          8.375,
+          8.625,
+          8.625,
+          8.625,
+          8.625,
+          8.75,
+          8.875,
+          9,
+          9.125,
+          12.625,
+          12.625,
+          12.625,
+          13.125,
+          13.5,
+          13.5,
+          13.5,
+          13.5,
+          13.5,
+          13.5,
+          13.5,
+          16.75,
+          16.75,
+          16.75,
+          16.75,
+          16.75,
+          16.75,
+          17.125,
+          17.5,
+          17.5,
+          17.5,
+          17.5,
+          21.125,
+          21.375,
+          21.5,
+          21.875,
+          21.875,
+          21.875,
+          21.875,
+          21.875,
+          21.875,
+          21.875,
+          21.875,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22.125,
+          23.25,
+          23.25,
+          23.25,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.125,
+          27.25,
+          27.25,
+          27.25,
+          27.25,
+          27.25,
+          27.25,
+          27.25,
+          31.625,
+          31.625,
+          31.625,
+          31.625,
+          31.625,
+          31.625,
+          31.625,
+          31.625,
+          31.875,
+          31.875,
+          31.875,
+          31.875,
+          36.125,
+          36.375,
+          36.75,
+          37,
+          37.25,
+          37.25,
+          37.25,
+          37.5,
+          41.375,
+          41.375
+        ],
+        "fontPx": 15,
+        "floorPx": 28,
+        "seconds": 7.5,
+        "elements": [
+          {
+            "selector": "#sub-model > div:nth-of-type(1)",
+            "text": "MODELO DEL DOMINIO",
+            "fontPx": 15,
+            "time": 13.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "#sub-files > div:nth-of-type(1)",
+            "text": "PERSISTENCIA",
+            "fontPx": 15,
+            "time": 17.5,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#node-vista > div:nth-of-type(2)",
+            "text": "VIEW",
+            "fontPx": 16,
+            "time": 8.625,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#node-ctrl > div:nth-of-type(2)",
+            "text": "CONTROLLER",
+            "fontPx": 16,
+            "time": 12.625,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#node-repo > div:nth-of-type(2)",
+            "text": "REPOSITORY",
+            "fontPx": 16,
+            "time": 16.75,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#node-dao > div:nth-of-type(2)",
+            "text": "DAO",
+            "fontPx": 16,
+            "time": 16.75,
+            "seconds": 4.25
+          },
+          {
+            "selector": "div.hud-meta",
+            "text": "1920×1080 · 30 fps · 45 s · 1350 frames",
+            "fontPx": 17,
+            "time": 0,
+            "seconds": 45
+          },
+          {
+            "selector": "#link-1 > span:nth-of-type(4)",
+            "text": "eventos",
+            "fontPx": 17,
+            "time": 8.75,
+            "seconds": 12.25
+          },
+          {
+            "selector": "#link-2 > span:nth-of-type(4)",
+            "text": "Carta",
+            "fontPx": 17,
+            "time": 8.875,
+            "seconds": 12.125
+          },
+          {
+            "selector": "#link-3 > span:nth-of-type(4)",
+            "text": "interfaz DAO",
+            "fontPx": 17,
+            "time": 9.125,
+            "seconds": 11.875
+          },
+          {
+            "selector": "span.editor-path",
+            "text": "src/main/java/cl/duoc/pokedex/controller/PokedexController.java",
+            "fontPx": 17,
+            "time": 21.5,
+            "seconds": 14.5
+          },
+          {
+            "selector": "div.sub-note > code:nth-of-type(1)",
+            "text": "calcularValorEstimado()",
+            "fontPx": 17.86,
+            "time": 13.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "div.sub-note > code:nth-of-type(2)",
+            "text": "Evolucionable",
+            "fontPx": 17.86,
+            "time": 13.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "#s3 > div:nth-of-type(1)",
+            "text": "ESCENA 03 · CÓDIGO CLAVE",
+            "fontPx": 17.87,
+            "time": 21.125,
+            "seconds": 14.875
+          },
+          {
+            "selector": "#s1 > div:nth-of-type(1)",
+            "text": "ESCENA 01 · INTRODUCCIÓN",
+            "fontPx": 18,
+            "time": 0.125,
+            "seconds": 7.875
+          },
+          {
+            "selector": "#s2 > div:nth-of-type(1)",
+            "text": "ESCENA 02 · ARQUITECTURA",
+            "fontPx": 18,
+            "time": 8.125,
+            "seconds": 12.875
+          },
+          {
+            "selector": "#ex-1 > div:nth-of-type(1)",
+            "text": "PASO 01 · VALIDACIÓN",
+            "fontPx": 18,
+            "time": 23.25,
+            "seconds": 3.625
+          },
+          {
+            "selector": "#ex-2 > div:nth-of-type(1)",
+            "text": "PASO 02 · POLIMORFISMO",
+            "fontPx": 18,
+            "time": 27.25,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#ex-3 > div:nth-of-type(1)",
+            "text": "PASO 03 · PERSISTENCIA",
+            "fontPx": 18,
+            "time": 31.875,
+            "seconds": 4.125
+          },
+          {
+            "selector": "#s4 > div:nth-of-type(1)",
+            "text": "ESCENA 04 · RESUMEN",
+            "fontPx": 18,
+            "time": 36.125,
+            "seconds": 8.875
+          },
+          {
+            "selector": "#s3-head > div:nth-of-type(1)",
+            "text": "CONTROLADOR",
+            "fontPx": 18.99,
+            "time": 21.375,
+            "seconds": 14.625
+          },
+          {
+            "selector": "div.hud-brand",
+            "text": "cl.duoc.pokedex · análisis técnico",
+            "fontPx": 19,
+            "time": 0,
+            "seconds": 45
+          },
+          {
+            "selector": "#s2-head > div:nth-of-type(1)",
+            "text": "DISEÑO DE CAPAS",
+            "fontPx": 19,
+            "time": 8.375,
+            "seconds": 12.625
+          },
+          {
+            "selector": "#node-vista > div:nth-of-type(4)",
+            "text": "pokedex-view.fxml",
+            "fontPx": 19,
+            "time": 8.625,
+            "seconds": 4.625
+          },
+          {
+            "selector": "div.node-desc > code:nth-of-type(1)",
+            "text": "onAction",
+            "fontPx": 19,
+            "time": 8.625,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#node-ctrl > div:nth-of-type(4)",
+            "text": "PokedexController.java",
+            "fontPx": 19,
+            "time": 12.625,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#sub-model > div:nth-of-type(3)",
+            "text": "· interfaz",
+            "fontPx": 19,
+            "time": 13.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "#node-repo > div:nth-of-type(4)",
+            "text": "CartaRepository.java",
+            "fontPx": 19,
+            "time": 16.75,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#node-dao > div:nth-of-type(4)",
+            "text": "CartaDaoJson.java",
+            "fontPx": 19,
+            "time": 16.75,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#sub-files > div:nth-of-type(3)",
+            "text": "se reescribe tras cada registro o eliminación",
+            "fontPx": 19,
+            "time": 17.5,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#cl-1 > span:nth-of-type(1)",
+            "text": "1",
+            "fontPx": 19,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-2 > span:nth-of-type(1)",
+            "text": "2",
+            "fontPx": 19,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-3 > span:nth-of-type(1)",
+            "text": "3",
+            "fontPx": 19,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-4 > span:nth-of-type(1)",
+            "text": "4",
+            "fontPx": 19,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-5 > span:nth-of-type(1)",
+            "text": "5",
+            "fontPx": 19,
+            "time": 22.125,
+            "seconds": 5
+          },
+          {
+            "selector": "#cl-6 > span:nth-of-type(1)",
+            "text": "6",
+            "fontPx": 19,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-7 > span:nth-of-type(1)",
+            "text": "7",
+            "fontPx": 19,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-8 > span:nth-of-type(1)",
+            "text": "8",
+            "fontPx": 19,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-9 > span:nth-of-type(1)",
+            "text": "9",
+            "fontPx": 19,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-10 > span:nth-of-type(1)",
+            "text": "10",
+            "fontPx": 19,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-11 > span:nth-of-type(1)",
+            "text": "11",
+            "fontPx": 19,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-12 > span:nth-of-type(1)",
+            "text": "12",
+            "fontPx": 19,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-13 > span:nth-of-type(1)",
+            "text": "13",
+            "fontPx": 19,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-14 > span:nth-of-type(1)",
+            "text": "14",
+            "fontPx": 19,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#cl-15 > span:nth-of-type(1)",
+            "text": "15",
+            "fontPx": 19,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#s4-head > div:nth-of-type(1)",
+            "text": "CIERRE TÉCNICO",
+            "fontPx": 19,
+            "time": 36.375,
+            "seconds": 4.5
+          },
+          {
+            "selector": "p.ex-note > code:nth-of-type(1)",
+            "text": "calcularValorEstimado()",
+            "fontPx": 20.68,
+            "time": 27.25,
+            "seconds": 4.25
+          },
+          {
+            "selector": "div.closing-eyebrow",
+            "text": "ANÁLISIS DEL PROYECTO",
+            "fontPx": 20.71,
+            "time": 41.375,
+            "seconds": 3.625
+          },
+          {
+            "selector": "#s1-eyebrow",
+            "text": "EVALUACIÓN PARCIAL 2 · DSY1102 PROGRAMACIÓN ORIENTADA A OBJETOS",
+            "fontPx": 21,
+            "time": 0.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "#node-vista > div:nth-of-type(5)",
+            "text": "ComboBox · TableViewbotones con",
+            "fontPx": 21,
+            "time": 8.625,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#node-ctrl > div:nth-of-type(5)",
+            "text": "valida · construyeactualiza la tabla",
+            "fontPx": 21,
+            "time": 12.625,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#node-repo > div:nth-of-type(5)",
+            "text": "colección en memoriacopy-on-write",
+            "fontPx": 21,
+            "time": 16.75,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#node-dao > div:nth-of-type(5)",
+            "text": "Gson · lecturay escritura",
+            "fontPx": 21,
+            "time": 16.75,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#sub-model > div:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "Carta",
+            "fontPx": 21.62,
+            "time": 13.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "#sub-model > div:nth-of-type(2) > code:nth-of-type(2)",
+            "text": "CartaPokemon",
+            "fontPx": 21.62,
+            "time": 13.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "div.sub-line > code:nth-of-type(3)",
+            "text": "CartaEnergia",
+            "fontPx": 21.62,
+            "time": 13.5,
+            "seconds": 7.5
+          },
+          {
+            "selector": "#sub-files > div:nth-of-type(2) > code:nth-of-type(1)",
+            "text": "pokemons.json",
+            "fontPx": 21.62,
+            "time": 17.5,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#sub-files > div:nth-of-type(2) > code:nth-of-type(2)",
+            "text": "energias.json",
+            "fontPx": 21.62,
+            "time": 17.5,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#ex-1 > p:nth-of-type(2)",
+            "text": "Si algo falla, el mensaje indica el campo y el motivo — la app sigue viva.",
+            "fontPx": 22,
+            "time": 23.25,
+            "seconds": 3.625
+          },
+          {
+            "selector": "#ex-2 > p:nth-of-type(2)",
+            "text": "La columna «Valor estimado» llama a en tiempo real.",
+            "fontPx": 22,
+            "time": 27.25,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#ex-3 > p:nth-of-type(2)",
+            "text": "Copy-on-write: si el guardado falla, la tabla no muestra datos inexistentes.",
+            "fontPx": 22,
+            "time": 31.875,
+            "seconds": 4.125
+          },
+          {
+            "selector": "#sum-3 > div:nth-of-type(1) > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "pokemons.json",
+            "fontPx": 22.56,
+            "time": 37.25,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#sum-3 > div:nth-of-type(1) > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "energias.json",
+            "fontPx": 22.56,
+            "time": 37.25,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#s1-badges > span:nth-of-type(4)",
+            "text": "MVC + DAO/Repository",
+            "fontPx": 22.89,
+            "time": 2.625,
+            "seconds": 5.375
+          },
+          {
+            "selector": "#s1-badges > span:nth-of-type(5)",
+            "text": "Maven",
+            "fontPx": 22.91,
+            "time": 2.75,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#s1-badges > span:nth-of-type(6)",
+            "text": "cl.duoc.pokedex",
+            "fontPx": 22.92,
+            "time": 2.875,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#s1-badges > span:nth-of-type(1)",
+            "text": "OpenJDK 21",
+            "fontPx": 22.97,
+            "time": 2.25,
+            "seconds": 5.75
+          },
+          {
+            "selector": "#s1-badges > span:nth-of-type(2)",
+            "text": "JavaFX 21.0.6",
+            "fontPx": 22.98,
+            "time": 2.375,
+            "seconds": 5.625
+          },
+          {
+            "selector": "#s1-badges > span:nth-of-type(3)",
+            "text": "Gson 2.11.0",
+            "fontPx": 22.99,
+            "time": 2.5,
+            "seconds": 5.5
+          },
+          {
+            "selector": "#cl-1 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "// PokedexController.registrarCarta()",
+            "fontPx": 23,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-2 > span:nth-of-type(2)",
+            "text": "anio = (anioField.(), );",
+            "fontPx": 23,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-2 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "int",
+            "fontPx": 23,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-2 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "leerEntero",
+            "fontPx": 23,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-2 > span:nth-of-type(2) > span:nth-of-type(3)",
+            "text": "getText",
+            "fontPx": 23,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-2 > span:nth-of-type(2) > span:nth-of-type(4)",
+            "text": "\"año de edición\"",
+            "fontPx": 23,
+            "time": 21.875,
+            "seconds": 5.25
+          },
+          {
+            "selector": "#cl-3 > span:nth-of-type(2)",
+            "text": "(anio < || anio > ) {",
+            "fontPx": 23,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-3 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "if",
+            "fontPx": 23,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-3 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "1996",
+            "fontPx": 23,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-3 > span:nth-of-type(2) > span:nth-of-type(3)",
+            "text": "2026",
+            "fontPx": 23,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-4 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "throw new",
+            "fontPx": 23,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-4 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "IllegalArgumentException",
+            "fontPx": 23,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-4 > span:nth-of-type(2) > span:nth-of-type(3)",
+            "text": "\"El año debe estar entre 1996 y 2026.\"",
+            "fontPx": 23,
+            "time": 22,
+            "seconds": 5.125
+          },
+          {
+            "selector": "#cl-6 > span:nth-of-type(2)",
+            "text": "carta;",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-6 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "Carta",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-7 > span:nth-of-type(2)",
+            "text": "(.(categoria)) {",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-7 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "if",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "span.fl",
+            "text": "CATEGORIA_POKEMON",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-7 > span:nth-of-type(2) > span:nth-of-type(3)",
+            "text": "equals",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-8 > span:nth-of-type(2)",
+            "text": "carta = (nombre, anio, cantidad,",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-8 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "new",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-8 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "CartaPokemon",
+            "fontPx": 23,
+            "time": 27,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#cl-9 > span:nth-of-type(2)",
+            "text": "tipoElemental.(), brillanteCheckBox.());",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-9 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "trim",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-9 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "isSelected",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-10 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "else",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-11 > span:nth-of-type(2)",
+            "text": "carta = (nombre, anio, cantidad,",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-11 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "new",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-11 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "CartaEnergia",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-12 > span:nth-of-type(2)",
+            "text": "(cantidadEnergiaField.()));",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-12 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "leerDecimal",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-12 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "getText",
+            "fontPx": 23,
+            "time": 27.125,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#cl-14 > span:nth-of-type(2)",
+            "text": "repository.(carta);",
+            "fontPx": 23,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#cl-14 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "registrar",
+            "fontPx": 23,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#cl-14 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "// Gson → pokemons.json / energias.json",
+            "fontPx": 23,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#cl-15 > span:nth-of-type(2)",
+            "text": "cartas.(carta);",
+            "fontPx": 23,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#cl-15 > span:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "add",
+            "fontPx": 23,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#cl-15 > span:nth-of-type(2) > span:nth-of-type(2)",
+            "text": "// la TableView se actualiza al instante",
+            "fontPx": 23,
+            "time": 31.625,
+            "seconds": 4.375
+          },
+          {
+            "selector": "#ex-2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "CartaPokemon",
+            "fontPx": 23.5,
+            "time": 27.25,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#ex-2 > p:nth-of-type(1) > code:nth-of-type(2)",
+            "text": "CartaEnergia",
+            "fontPx": 23.5,
+            "time": 27.25,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#ex-2 > p:nth-of-type(1) > code:nth-of-type(3)",
+            "text": "Carta",
+            "fontPx": 23.5,
+            "time": 27.25,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#ex-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "repository.registrar()",
+            "fontPx": 23.5,
+            "time": 31.875,
+            "seconds": 4.125
+          },
+          {
+            "selector": "div.closing-foot",
+            "text": "DSY1102 Programación Orientada a Objetos · 45 s · 1350 frames",
+            "fontPx": 23.67,
+            "time": 41.375,
+            "seconds": 3.625
+          },
+          {
+            "selector": "#sum-1 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "MVC + DAO: el controlador no lee ni escribe archivos.",
+            "fontPx": 24,
+            "time": 36.75,
+            "seconds": 4.125
+          },
+          {
+            "selector": "#sum-2 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Formulario con mensajes en pantalla y modelo con setters que rechazan datos inválidos.",
+            "fontPx": 24,
+            "time": 37,
+            "seconds": 4
+          },
+          {
+            "selector": "#sum-3 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Gson reescribe y tras cada operación.",
+            "fontPx": 24,
+            "time": 37.25,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#sum-4 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Cada mensaje reemplaza al anterior; cero salidas por consola.",
+            "fontPx": 24,
+            "time": 37.5,
+            "seconds": 3.625
+          },
+          {
+            "selector": "#s2-lt-1 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "onAction",
+            "fontPx": 25,
+            "time": 9,
+            "seconds": 4
+          },
+          {
+            "selector": "#s2-lt-2 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "PokedexController",
+            "fontPx": 25,
+            "time": 13.125,
+            "seconds": 3.875
+          },
+          {
+            "selector": "#s2-lt-3 > p:nth-of-type(1) > code:nth-of-type(1)",
+            "text": "CartaRepository",
+            "fontPx": 25,
+            "time": 17.125,
+            "seconds": 3.625
+          },
+          {
+            "selector": "#ex-1 > p:nth-of-type(1)",
+            "text": "Nombre, año (1996–2026), cantidad > 0 y tipo elemental se validan antes de crear el objeto.",
+            "fontPx": 25,
+            "time": 23.25,
+            "seconds": 3.625
+          },
+          {
+            "selector": "#ex-2 > p:nth-of-type(1)",
+            "text": "Según la categoría se instancia o sobre la clase abstracta .",
+            "fontPx": 25,
+            "time": 27.25,
+            "seconds": 4.25
+          },
+          {
+            "selector": "#ex-3 > p:nth-of-type(1)",
+            "text": "escribe los dos JSON con Gson y solo después actualiza la memoria.",
+            "fontPx": 25,
+            "time": 31.875,
+            "seconds": 4.125
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Nombre, año (1996–2026), cantidad > 0 y tipo elemental se...\" (16 words) is on screen 3.66 s (±0.01 s), under its 3.97 s floor: hold it about 0.5 s + 0.3 s a word (5.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Nombre, año (1996–2026), cantidad > 0 y tipo elemental se validan antes de crear el objeto.",
+        "selector": "#ex-1 > p:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1290.9,
+          "y": 484.14,
+          "width": 497.1399999999999,
+          "height": 105
+        },
+        "time": 23.172,
+        "words": 16,
+        "seconds": 3.664,
+        "floorSeconds": 3.975,
+        "measured": [
+          {
+            "time": 22.875,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 23,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 23.125,
+            "opacity": 0.32,
+            "heightPx": 105
+          },
+          {
+            "time": 23.25,
+            "opacity": 0.8,
+            "heightPx": 105
+          },
+          {
+            "time": 23.375,
+            "opacity": 0.97,
+            "heightPx": 105
+          },
+          {
+            "time": 23.5,
+            "opacity": 1,
+            "heightPx": 105
+          },
+          {
+            "time": 23.625,
+            "opacity": 1,
+            "heightPx": 105
+          },
+          {
+            "time": 26.375,
+            "opacity": 1,
+            "heightPx": 105
+          },
+          {
+            "time": 26.5,
+            "opacity": 1,
+            "heightPx": 105
+          },
+          {
+            "time": 26.625,
+            "opacity": 1,
+            "heightPx": 105
+          },
+          {
+            "time": 26.75,
+            "opacity": 0.86,
+            "heightPx": 105
+          },
+          {
+            "time": 26.875,
+            "opacity": 0.26,
+            "heightPx": 105
+          },
+          {
+            "time": 27,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 27.125,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Si algo falla, el mensaje indica el campo y el motivo — l...\" (15 words) is on screen 3.66 s (±0.01 s), under its 3.75 s floor: hold it about 0.5 s + 0.3 s a word (5.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Si algo falla, el mensaje indica el campo y el motivo — la app sigue viva.",
+        "selector": "#ex-1 > p:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1290.9,
+          "y": 627.64,
+          "width": 456.3800000000001,
+          "height": 59
+        },
+        "time": 23.172,
+        "words": 15,
+        "seconds": 3.664,
+        "floorSeconds": 3.75,
+        "measured": [
+          {
+            "time": 22.875,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 23,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 23.125,
+            "opacity": 0.32,
+            "heightPx": 59
+          },
+          {
+            "time": 23.25,
+            "opacity": 0.8,
+            "heightPx": 59
+          },
+          {
+            "time": 23.375,
+            "opacity": 0.97,
+            "heightPx": 59
+          },
+          {
+            "time": 23.5,
+            "opacity": 1,
+            "heightPx": 59
+          },
+          {
+            "time": 23.625,
+            "opacity": 1,
+            "heightPx": 59
+          },
+          {
+            "time": 26.375,
+            "opacity": 1,
+            "heightPx": 59
+          },
+          {
+            "time": 26.5,
+            "opacity": 1,
+            "heightPx": 59
+          },
+          {
+            "time": 26.625,
+            "opacity": 1,
+            "heightPx": 59
+          },
+          {
+            "time": 26.75,
+            "opacity": 0.86,
+            "heightPx": 59
+          },
+          {
+            "time": 26.875,
+            "opacity": 0.26,
+            "heightPx": 59
+          },
+          {
+            "time": 27,
+            "opacity": null,
+            "heightPx": null
+          },
+          {
+            "time": 27.125,
+            "opacity": null,
+            "heightPx": null
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 360
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

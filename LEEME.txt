@@ -1,0 +1,71 @@
+PROYECTO BASE - EVALUACIÓN PARCIAL 2
+Pokédex de Cartas - DSY1102 Programación Orientada a Objetos
+======================================================================
+
+CONTENIDO
+---------
+pom.xml                                   Proyecto Maven configurado para Java 21, con las
+                                          dependencias de JavaFX y Gson ya incluidas.
+src/main/java/cl/duoc/pokedex/
+    Launcher.java                         Punto de entrada: ejecuta esta clase para iniciar la aplicación.
+    App.java                              Aplicación JavaFX: carga la vista principal y abre la ventana.
+src/main/java/cl/duoc/pokedex/model/      Modelo del sistema:
+    Evolucionable.java
+    Carta.java
+    CartaPokemon.java
+    CartaEnergia.java
+src/main/java/cl/duoc/pokedex/dao/        Acceso a datos (Gson + archivos JSON):
+    CartaDao.java
+    CartaDaoJson.java
+src/main/java/cl/duoc/pokedex/repository/ Colección en memoria y delegación al DAO:
+    CartaRepository.java
+src/main/java/cl/duoc/pokedex/controller/ Controlador de la ventana:
+    PokedexController.java
+src/main/resources/cl/duoc/pokedex/view/  Vista FXML:
+    pokedex-view.fxml
+
+CÓMO ABRIR EL PROYECTO EN INTELLIJ IDEA
+---------------------------------------
+1. Descomprime este archivo en una carpeta de trabajo.
+2. En IntelliJ IDEA: File > Open... y selecciona la carpeta del proyecto.
+3. Si IntelliJ lo pregunta, elige "Trust Project" y abre el proyecto como proyecto Maven.
+4. Verifica que el JDK del proyecto sea 21 (File > Project Structure > Project).
+
+CÓMO EJECUTAR LA APLICACIÓN
+---------------------------
+- Ejecuta la clase Launcher (botón Run junto al método main), o bien:
+      mvn javafx:run
+- La clase App carga la vista principal desde:
+      src/main/resources/cl/duoc/pokedex/view/pokedex-view.fxml
+
+IMPORTANTE
+----------
+- No modifiques la lógica de las clases del modelo (Carta, CartaPokemon, CartaEnergia, Evolucionable).
+- No es necesario modificar Launcher ni App.
+- Puedes agregar tus propios paquetes, clases y recursos al proyecto.
+- La guía completa, paso a paso, para construir este proyecto desde cero está en docs/GUIA.md.
+
+OPERACIONES DISPONIBLES EN EL MODELO
+------------------------------------
+Carta (clase abstracta)
+    getNombre()        / setNombre(String)
+    getAnioEdicion()   / setAnioEdicion(int)
+    getCantidad()      / setCantidad(int)
+    calcularValorEstimado()   valor de mercado estimado según el tipo de carta
+    getCategoria()            "Pokémon" o "Energía"
+    toString()                nombre y año de edición de la carta
+    Los métodos set rechazan datos inválidos con un mensaje que explica el motivo:
+        nombre:        no puede ser nulo ni vacío
+        año de edición: entre 1996 y 2026
+        cantidad:      mayor que cero
+
+CartaPokemon (extiende Carta, implementa Evolucionable)
+    CartaPokemon(nombre, anioEdicion, cantidad, tipoElemental, brillante)
+    getTipoElemental()  / setTipoElemental(String)
+    isBrillante()       / setBrillante(boolean)
+    tieneEvolucionActiva()
+    activarEvolucion()
+
+CartaEnergia (extiende Carta)
+    CartaEnergia(nombre, anioEdicion, cantidad, cantidadEnergia)
+    getCantidadEnergia() / setCantidadEnergia(double)

@@ -1,0 +1,474 @@
+{
+  "version": 1,
+  "historyId": "190b0669-1a3c-41a6-8aac-17f8b61b7434",
+  "currentRevision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+  "pendingChanges": false,
+  "files": {
+    "README.md": {
+      "hash": "a78ec68a62dc6285a6f611e5222b5c3fd779fa3687143ae0dfa1956fb8842938",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/a7/a78ec68a62dc6285a6f611e5222b5c3fd779fa3687143ae0dfa1956fb8842938"
+    },
+    "hyperframes.json": {
+      "hash": "0e28fd2ca2e7eb9c56cfa82cc77a3cf9f7d82a10a2f24083db8fdd5e693ec9b5",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/0e/0e28fd2ca2e7eb9c56cfa82cc77a3cf9f7d82a10a2f24083db8fdd5e693ec9b5"
+    },
+    "index.html": {
+      "hash": "aa0e13b9fa7d9fae72848915e56f8076af5d824ad773cd97066977c34cdd3eee",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/aa/aa0e13b9fa7d9fae72848915e56f8076af5d824ad773cd97066977c34cdd3eee"
+    },
+    "lib/gsap.min.js": {
+      "hash": "96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/96/96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6"
+    },
+    "styles.css": {
+      "hash": "b85b80adf32dca61bf76cb863136588ae119b0b1a04d5614df1c2fb17fb44b1d",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/b8/b85b80adf32dca61bf76cb863136588ae119b0b1a04d5614df1c2fb17fb44b1d"
+    },
+    "timeline.js": {
+      "hash": "0bccdb896b93d4373dfd81dbcc8d9a4de3a55057c385b80e94d2cc9595e56b4f",
+      "content": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/0b/0bccdb896b93d4373dfd81dbcc8d9a4de3a55057c385b80e94d2cc9595e56b4f"
+    }
+  },
+  "revisions": {
+    "52073ff6-9789-48a4-8440-b4efd29786e1": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794461134134,
+      "endedAt": 1794461134137,
+      "files": {
+        "index.html": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/74/740af1d812378e8cc09daf9da9a6b9996fd7043ea19184c04924030a975c0d90",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/aa/aa0e13b9fa7d9fae72848915e56f8076af5d824ad773cd97066977c34cdd3eee"
+        },
+        "styles.css": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/bb/bbbdb67a770acda07d26ed80de69be3009bb47ab05afc51ccebff3ce25e94434",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/af/afd361ce606836472b2b56b3e3280cdda9f1feb875017c1fae5f06a3b130cca8"
+        }
+      }
+    },
+    "efc43f9b-35ef-456a-9c36-097186c60da8": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794461363204,
+      "endedAt": 1794461363205,
+      "files": {
+        "styles.css": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/af/afd361ce606836472b2b56b3e3280cdda9f1feb875017c1fae5f06a3b130cca8",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/b8/b85b80adf32dca61bf76cb863136588ae119b0b1a04d5614df1c2fb17fb44b1d"
+        },
+        "timeline.js": {
+          "before": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/ce/ce0a869a3369a70bb32f8497e69bd9858847531082e342fa0181e85883de0b47",
+          "after": "/Users/claudio.viajando/.cache/hyperframes/history/190b0669-1a3c-41a6-8aac-17f8b61b7434/blobs/0b/0bccdb896b93d4373dfd81dbcc8d9a4de3a55057c385b80e94d2cc9595e56b4f"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+      "id": "c1701853-5721-43a6-98eb-ddc05db70fd2"
+    },
+    "revisions": {
+      "52073ff6-9789-48a4-8440-b4efd29786e1": [
+        {
+          "id": "e4343b54-5317-462b-8234-54c489282b40",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "at": [
+                2,
+                12,
+                24,
+                33,
+                42
+              ],
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": true,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794461139331,
+          "contentHash": "83111dc2df0dd4020945bfbcf6f2042eb069f808f03a327b265bd3b10748c2df",
+          "revision": "52073ff6-9789-48a4-8440-b4efd29786e1",
+          "inputFingerprint": "a408724a85c8a389194ca2431446179f0ef58f915fd881050c3d07976164b4a8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "eb177835-b29a-4b09-95ec-f28518406770"
+        }
+      ],
+      "efc43f9b-35ef-456a-9c36-097186c60da8": [
+        {
+          "id": "c1701853-5721-43a6-98eb-ddc05db70fd2",
+          "scope": "project",
+          "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/checks/c1701853-5721-43a6-98eb-ddc05db70fd2.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "at": [
+                2,
+                12,
+                15,
+                24,
+                33,
+                42
+              ],
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": true,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794461367392,
+          "contentHash": "401d5c10a6745f806c6a5f2d5cfa0bba06da2e44c0c531c30ca8a551e146b6c1",
+          "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+          "inputFingerprint": "95f9d953923521c6c6f8e4bc67de3c6237e08357d5d020750b61ae0718be51b3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "9cf4dea9-6fb8-4d92-8248-70ba7b881c5a",
+        "scope": "project",
+        "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/checks/9cf4dea9-6fb8-4d92-8248-70ba7b881c5a.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "at": [
+              2,
+              12,
+              24,
+              33,
+              42
+            ],
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794460744523,
+        "contentHash": "c86b3affa8c217bb12d53adf4f334b0b218e3c83e57acfee3c30445c71c509a7",
+        "revision": null,
+        "inputFingerprint": "79429f3e4f197c38a932ad48cca2479cafa793c58825080ed2feca059cc56e7f",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "f8e6898f-fcc6-4a7d-ad14-f3d1c314a81e",
+        "scope": "project",
+        "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/checks/f8e6898f-fcc6-4a7d-ad14-f3d1c314a81e.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "at": [
+              2,
+              12,
+              24,
+              33,
+              42
+            ],
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794460756328,
+        "contentHash": "c86b3affa8c217bb12d53adf4f334b0b218e3c83e57acfee3c30445c71c509a7",
+        "revision": null,
+        "inputFingerprint": "79429f3e4f197c38a932ad48cca2479cafa793c58825080ed2feca059cc56e7f",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "44a479b4-9f35-42eb-8f0f-52fc4e493014",
+        "scope": "project",
+        "report": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/checks/44a479b4-9f35-42eb-8f0f-52fc4e493014.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "at": [
+              2,
+              12,
+              24,
+              33,
+              42
+            ],
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794460949645,
+        "contentHash": "c86b3affa8c217bb12d53adf4f334b0b218e3c83e57acfee3c30445c71c509a7",
+        "revision": null,
+        "inputFingerprint": "79429f3e4f197c38a932ad48cca2479cafa793c58825080ed2feca059cc56e7f",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+      "id": "c1701853-5721-43a6-98eb-ddc05db70fd2-4"
+    },
+    "revisions": {
+      "52073ff6-9789-48a4-8440-b4efd29786e1": [
+        {
+          "id": "e4343b54-5317-462b-8234-54c489282b40-0",
+          "scope": "full",
+          "time": 2,
+          "metadata": {
+            "checkId": "e4343b54-5317-462b-8234-54c489282b40",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461139331,
+          "contentHash": "b08195c873e7d36dbd40e5764ab37118ae3e2ed19021fd09040d5a264d140f43",
+          "revision": "52073ff6-9789-48a4-8440-b4efd29786e1",
+          "inputFingerprint": "a408724a85c8a389194ca2431446179f0ef58f915fd881050c3d07976164b4a8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "eb177835-b29a-4b09-95ec-f28518406770"
+        },
+        {
+          "id": "e4343b54-5317-462b-8234-54c489282b40-1",
+          "scope": "full",
+          "time": 12,
+          "metadata": {
+            "checkId": "e4343b54-5317-462b-8234-54c489282b40",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461139331,
+          "contentHash": "8d1e5e0653561ecb10f9b9d65523d38188a379264eeba2f42f9f27019e161056",
+          "revision": "52073ff6-9789-48a4-8440-b4efd29786e1",
+          "inputFingerprint": "a408724a85c8a389194ca2431446179f0ef58f915fd881050c3d07976164b4a8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "eb177835-b29a-4b09-95ec-f28518406770"
+        },
+        {
+          "id": "e4343b54-5317-462b-8234-54c489282b40-2",
+          "scope": "full",
+          "time": 24,
+          "metadata": {
+            "checkId": "e4343b54-5317-462b-8234-54c489282b40",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461139331,
+          "contentHash": "6e2ef49addbcada8a301b63047e4994fa566139caddf71d24f5992caa0a301fd",
+          "revision": "52073ff6-9789-48a4-8440-b4efd29786e1",
+          "inputFingerprint": "a408724a85c8a389194ca2431446179f0ef58f915fd881050c3d07976164b4a8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "eb177835-b29a-4b09-95ec-f28518406770"
+        },
+        {
+          "id": "e4343b54-5317-462b-8234-54c489282b40-3",
+          "scope": "full",
+          "time": 33,
+          "metadata": {
+            "checkId": "e4343b54-5317-462b-8234-54c489282b40",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461139331,
+          "contentHash": "3a4c58edd4a055770210af8cefe7400af6e81f7302b966cc43ee0ca8c14f0073",
+          "revision": "52073ff6-9789-48a4-8440-b4efd29786e1",
+          "inputFingerprint": "a408724a85c8a389194ca2431446179f0ef58f915fd881050c3d07976164b4a8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "eb177835-b29a-4b09-95ec-f28518406770"
+        },
+        {
+          "id": "e4343b54-5317-462b-8234-54c489282b40-4",
+          "scope": "full",
+          "time": 42,
+          "metadata": {
+            "checkId": "e4343b54-5317-462b-8234-54c489282b40",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461139331,
+          "contentHash": "6b9acd4252f4aa0d64e9f60e63e8a031ca1d2d955d5d38b6406823e428ccdbe6",
+          "revision": "52073ff6-9789-48a4-8440-b4efd29786e1",
+          "inputFingerprint": "a408724a85c8a389194ca2431446179f0ef58f915fd881050c3d07976164b4a8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "eb177835-b29a-4b09-95ec-f28518406770"
+        }
+      ],
+      "efc43f9b-35ef-456a-9c36-097186c60da8": [
+        {
+          "id": "c1701853-5721-43a6-98eb-ddc05db70fd2-0",
+          "scope": "full",
+          "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/snapshots/64130fa1-017e-4179-8002-a30a65758768/frame-00-at-2.0s.png",
+          "time": 2,
+          "metadata": {
+            "checkId": "c1701853-5721-43a6-98eb-ddc05db70fd2",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461367392,
+          "contentHash": "b08195c873e7d36dbd40e5764ab37118ae3e2ed19021fd09040d5a264d140f43",
+          "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+          "inputFingerprint": "95f9d953923521c6c6f8e4bc67de3c6237e08357d5d020750b61ae0718be51b3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "c1701853-5721-43a6-98eb-ddc05db70fd2-1",
+          "scope": "full",
+          "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/snapshots/64130fa1-017e-4179-8002-a30a65758768/frame-01-at-12.0s.png",
+          "time": 12,
+          "metadata": {
+            "checkId": "c1701853-5721-43a6-98eb-ddc05db70fd2",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461367392,
+          "contentHash": "80ba993029212da63609290a74bbd454b351a76d9ef0ad075de44f7230e8044d",
+          "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+          "inputFingerprint": "95f9d953923521c6c6f8e4bc67de3c6237e08357d5d020750b61ae0718be51b3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "c1701853-5721-43a6-98eb-ddc05db70fd2-2",
+          "scope": "full",
+          "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/snapshots/64130fa1-017e-4179-8002-a30a65758768/frame-02-at-15.0s.png",
+          "time": 15,
+          "metadata": {
+            "checkId": "c1701853-5721-43a6-98eb-ddc05db70fd2",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461367392,
+          "contentHash": "b30bc3b1bb87ef4b46bee32aa373955828b8d439577cd32f56d014bcd6eb8615",
+          "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+          "inputFingerprint": "95f9d953923521c6c6f8e4bc67de3c6237e08357d5d020750b61ae0718be51b3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "c1701853-5721-43a6-98eb-ddc05db70fd2-3",
+          "scope": "full",
+          "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/snapshots/64130fa1-017e-4179-8002-a30a65758768/frame-03-at-24.0s.png",
+          "time": 24,
+          "metadata": {
+            "checkId": "c1701853-5721-43a6-98eb-ddc05db70fd2",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461367392,
+          "contentHash": "6e2ef49addbcada8a301b63047e4994fa566139caddf71d24f5992caa0a301fd",
+          "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+          "inputFingerprint": "95f9d953923521c6c6f8e4bc67de3c6237e08357d5d020750b61ae0718be51b3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "c1701853-5721-43a6-98eb-ddc05db70fd2-4",
+          "scope": "full",
+          "image": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/.hyperframes/artifacts/snapshots/64130fa1-017e-4179-8002-a30a65758768/frame-04-at-42.0s.png",
+          "time": 42,
+          "metadata": {
+            "checkId": "c1701853-5721-43a6-98eb-ddc05db70fd2",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1794461367392,
+          "contentHash": "6b9acd4252f4aa0d64e9f60e63e8a031ca1d2d955d5d38b6406823e428ccdbe6",
+          "revision": "efc43f9b-35ef-456a-9c36-097186c60da8",
+          "inputFingerprint": "95f9d953923521c6c6f8e4bc67de3c6237e08357d5d020750b61ae0718be51b3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "eb177835-b29a-4b09-95ec-f28518406770",
+      "completedAt": 1794461410558,
+      "output": "/Users/claudio.viajando/src/duocuc/RAMOS/poo/Sumativa 2 POO v3/Proyectos Base/AutoFix_EP2_Base/video-hyperframes/renders/pokedex-analisis.mp4",
+      "status": "completed",
+      "revision": "efc43f9b-35ef-456a-9c36-097186c60da8"
+    },
+    "retainedRevisions": [
+      "efc43f9b-35ef-456a-9c36-097186c60da8"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}
